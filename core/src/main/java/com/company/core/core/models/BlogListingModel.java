@@ -10,9 +10,13 @@ import javax.annotation.PostConstruct;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
+import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
+import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.Self;
+import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 import org.apache.sling.models.annotations.injectorspecific.ScriptVariable;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
@@ -31,6 +35,12 @@ public class BlogListingModel {
     private static final String DEFAULT_BLOG_ROOT = "/content/company/us/en/blog";
     private static final int DEFAULT_MAX_ITEMS = 5;
 
+    @Self
+    private SlingHttpServletRequest request;
+
+    @SlingObject
+    private Resource resource;
+
     @ScriptVariable
     private Page currentPage;
 
@@ -48,8 +58,27 @@ public class BlogListingModel {
     @PostConstruct
     protected void init() {
         blogItems = new ArrayList<>();
+        if (currentPage == null && request != null) {
+            ResourceResolver resolver = request.getResourceResolver();
+            PageManager pageManager = resolver.adaptTo(PageManager.class);
+            if (pageManager != null && request.getResource() != null) {
+                currentPage = pageManager.getContainingPage(request.getResource());
+            }
+        }
+
         if (currentPage == null) {
             return;
+        }
+
+        ValueMap authoredValues = resource != null ? resource.getValueMap() : null;
+        if (StringUtils.isBlank(sectionTitle) && authoredValues != null) {
+            sectionTitle = authoredValues.get("sectionTitle", String.class);
+        }
+        if (StringUtils.isBlank(blogRootPath) && authoredValues != null) {
+            blogRootPath = authoredValues.get("blogRootPath", String.class);
+        }
+        if (maxItems == null && authoredValues != null) {
+            maxItems = authoredValues.get("maxItems", Integer.class);
         }
 
         ResourceResolver resolver = currentPage.getContentResource().getResourceResolver();
