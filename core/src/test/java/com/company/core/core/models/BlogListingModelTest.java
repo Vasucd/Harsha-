@@ -23,6 +23,8 @@ class BlogListingModelTest {
 
     @BeforeEach
     void setUp() {
+        context.addModelsForClasses(BlogListingModel.class);
+
         context.create().page("/content/company/us/en/blog");
         context.create().page("/content/company/us/en/blog/post-one");
         context.create().page("/content/company/us/en/blog/post-two");
@@ -55,6 +57,7 @@ class BlogListingModelTest {
                 "blogRootPath", "/content/company/us/en/blog",
                 "maxItems", 1);
         context.currentResource(listingResource);
+        context.request().setResource(listingResource);
         context.currentPage(context.pageManager().getPage("/content/test"));
         model = context.request().adaptTo(BlogListingModel.class);
     }
