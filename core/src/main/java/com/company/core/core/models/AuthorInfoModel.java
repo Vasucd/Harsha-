@@ -36,11 +36,18 @@ public class AuthorInfoModel {
             return;
         }
 
+        authorName = currentPage.getProperties().get("authorName", String.class);
+        authorRole = currentPage.getProperties().get("authorRole", String.class);
+        authorBio = currentPage.getProperties().get("authorBio", String.class);
+        if (!isEmpty()) {
+            return;
+        }
+
+        // Optional fallback: allow authoring through a content fragment path when available.
         String fragmentPath = currentPage.getProperties().get("authorFragmentPath", String.class);
         if (StringUtils.isBlank(fragmentPath) && resource != null) {
             fragmentPath = resource.getValueMap().get("authorFragmentPath", String.class);
         }
-
         if (StringUtils.isBlank(fragmentPath)) {
             return;
         }

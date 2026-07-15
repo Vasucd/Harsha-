@@ -2,7 +2,9 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        authorFragmentPath="/content/dam/company/authors/head-coach-ava"
+        authorBio="Ava is a certified strength coach who has helped 500+ members improve performance and confidence through structured training and recovery."
+        authorName="Ava Martinez"
+        authorRole="Head Fitness Coach"
         cq:template="/conf/company/settings/wcm/templates/blog"
         jcr:primaryType="cq:PageContent"
         jcr:title="Progressive Overload Explained"
