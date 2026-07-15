@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Locale;
 
 import javax.servlet.Servlet;
 import javax.servlet.ServletException;
@@ -30,69 +31,129 @@ public class BlogSearchServlet extends SlingSafeMethodsServlet {
 
     private static final long serialVersionUID = 1L;
     private static final String DEFAULT_ROOT = "/content/company/us/en/blog";
+    private static final int DEFAULT_LIMIT = 10;
 
     @Override
-    protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response)
+    protected void doGet(
+            SlingHttpServletRequest request,
+            SlingHttpServletResponse response)
             throws ServletException, IOException {
-        String query = StringUtils.lowerCase(StringUtils.trimToEmpty(request.getParameter("q")));
-        String rootPath = StringUtils.defaultIfBlank(request.getParameter("rootPath"), DEFAULT_ROOT);
-        int limit = parseLimit(request.getParameter("limit"));
+
+        final String query = StringUtils
+                .trimToEmpty(request.getParameter("q"))
+                .toLowerCase(Locale.ROOT);
+
+        final String rootPath = StringUtils.defaultIfBlank(
+                request.getParameter("rootPath"),
+                DEFAULT_ROOT
+        );
+
+        final int limit = parseLimit(request.getParameter("limit"));
 
         ResourceResolver resolver = request.getResourceResolver();
         PageManager pageManager = resolver.adaptTo(PageManager.class);
-        List<Page> matches = new ArrayList<>();
+
+        final List<Page> matches = new ArrayList<>();
+
         if (pageManager != null) {
             Page rootPage = pageManager.getPage(rootPath);
+
             if (rootPage != null) {
                 rootPage.listChildren().forEachRemaining(page -> {
-                    String title = StringUtils.defaultString(page.getTitle(), page.getName());
-                    String description = StringUtils.defaultString(page.getDescription());
-                    String searchable = (title + " " + description).toLowerCase();
-                    if (StringUtils.isBlank(query) || searchable.contains(query)) {
+                    String title = StringUtils.defaultString(
+                            page.getTitle(),
+                            page.getName()
+                    );
+
+                    String description = StringUtils.defaultString(
+                            page.getDescription()
+                    );
+
+                    String searchable = (title + " " + description)
+                            .toLowerCase(Locale.ROOT);
+
+                    if (StringUtils.isBlank(query)
+                            || searchable.contains(query)) {
                         matches.add(page);
                     }
                 });
             }
         }
 
-        matches.sort(Comparator.comparing(Page::getLastModified, Comparator.nullsLast(Comparator.naturalOrder())).reversed());
+        matches.sort(
+                Comparator.comparing(
+                        Page::getLastModified,
+                        Comparator.nullsLast(Comparator.naturalOrder())
+                ).reversed()
+        );
+
+        List<Page> results;
+
         if (matches.size() > limit) {
-            matches = matches.subList(0, limit);
+            results = matches.subList(0, limit);
+        } else {
+            results = matches;
         }
 
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
-        response.getWriter().write(toJson(matches));
+        response.getWriter().write(toJson(results));
     }
 
     private int parseLimit(String limitParam) {
         try {
             int limit = Integer.parseInt(limitParam);
-            return limit > 0 ? limit : 10;
+            return limit > 0 ? limit : DEFAULT_LIMIT;
         } catch (NumberFormatException e) {
-            return 10;
+            return DEFAULT_LIMIT;
         }
     }
 
     private String toJson(List<Page> pages) {
         StringBuilder builder = new StringBuilder();
+
         builder.append("{\"results\":[");
+
         for (int i = 0; i < pages.size(); i++) {
             Page page = pages.get(i);
+
             if (i > 0) {
                 builder.append(',');
             }
+
+            String title = StringUtils.defaultString(
+                    page.getTitle(),
+                    page.getName()
+            );
+
+            String description = StringUtils.defaultString(
+                    page.getDescription()
+            );
+
             builder.append('{')
-                    .append("\"title\":\"").append(escapeJson(StringUtils.defaultString(page.getTitle(), page.getName()))).append("\",")
-                    .append("\"description\":\"").append(escapeJson(StringUtils.defaultString(page.getDescription()))).append("\",")
-                    .append("\"path\":\"").append(escapeJson(page.getPath())).append(".html\"")
+                    .append("\"title\":\"")
+                    .append(escapeJson(title))
+                    .append("\",")
+                    .append("\"description\":\"")
+                    .append(escapeJson(description))
+                    .append("\",")
+                    .append("\"path\":\"")
+                    .append(escapeJson(page.getPath()))
+                    .append(".html\"")
                     .append('}');
         }
+
         builder.append("]}");
+
         return builder.toString();
     }
 
     private String escapeJson(String value) {
-        return value.replace("\\", "\\\\").replace("\"", "\\\"");
+        return value
+                .replace("\\", "\\\\")
+                .replace("\"", "\\\"")
+                .replace("\n", "\\n")
+                .replace("\r", "\\r")
+                .replace("\t", "\\t");
     }
 }
