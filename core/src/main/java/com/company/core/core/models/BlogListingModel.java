@@ -15,6 +15,7 @@ import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.Via;
 import org.apache.sling.models.annotations.injectorspecific.Self;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 import org.apache.sling.models.annotations.injectorspecific.ScriptVariable;
@@ -45,12 +46,15 @@ public class BlogListingModel {
     private Page currentPage;
 
     @ValueMapValue
+    @Via("resource")
     private String sectionTitle;
 
     @ValueMapValue
+    @Via("resource")
     private String blogRootPath;
 
     @ValueMapValue
+    @Via("resource")
     private Integer maxItems;
 
     private List<BlogItem> blogItems;
