@@ -1,0 +1,39 @@
+<sly data-sly-use.model="com.company.core.core.models.HeroBannerModel"/>
+
+<section
+        data-sly-test="${!model.empty}"
+        class="cmp-hero-banner"
+        style="--hero-background-image: url('${model.image @ context='uri'}');">
+
+    <div class="cmp-hero-banner__overlay">
+        <div class="cmp-hero-banner__content">
+
+            <h1
+                    data-sly-test="${model.title}"
+                    class="cmp-hero-banner__title">
+                ${model.title}
+            </h1>
+
+            <div
+                    data-sly-test="${model.description}"
+                    class="cmp-hero-banner__description">
+                ${model.description @ context='html'}
+            </div>
+
+            <a
+                    data-sly-test="${model.ctaLabel && model.ctaLink}"
+                    class="cmp-hero-banner__cta"
+                    href="${model.ctaLink @ context='uri'}"
+                    target="${model.openInNewTab ? '_blank' : ''}"
+                    rel="${model.openInNewTab ? 'noopener noreferrer' : ''}">
+                ${model.ctaLabel}
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<sly
+        data-sly-test="${model.empty}"
+        data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+        data-sly-call="${template.placeholder @ isEmpty=true}"/>

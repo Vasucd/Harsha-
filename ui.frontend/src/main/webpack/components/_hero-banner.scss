@@ -1,0 +1,75 @@
+.cmp-hero-banner {
+  position: relative;
+  min-height: 28rem;
+  display: flex;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+
+  &__overlay {
+    width: 100%;
+    min-height: inherit;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  &__content {
+    width: min(75rem, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 4rem 1rem;
+  }
+
+  &__title {
+    max-width: 48rem;
+    margin: 0 0 1rem;
+    font-size: clamp(2.25rem, 6vw, 4.5rem);
+    line-height: 1.1;
+  }
+
+  &__description {
+    max-width: 42rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+  }
+
+  &__cta {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    background: #1473e6;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.cmp-hero-banner--compact .cmp-hero-banner {
+  min-height: 20rem;
+}
+
+.cmp-hero-banner--light-overlay .cmp-hero-banner__overlay {
+  background: rgba(255, 255, 255, 0.72);
+  color: #1f2937;
+}
+
+.cmp-hero-banner--center .cmp-hero-banner__content {
+  text-align: center;
+}
+
+.cmp-hero-banner--center .cmp-hero-banner__title,
+.cmp-hero-banner--center .cmp-hero-banner__description {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 48rem) {
+  .cmp-hero-banner {
+    min-height: 22rem;
+
+    &__content {
+      padding: 3rem 1rem;
+    }
+  }
+}

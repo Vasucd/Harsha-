@@ -1,0 +1,16 @@
+<sly data-sly-use.model="com.company.core.core.models.BlogListingModel"/>
+
+<section data-sly-test="${!model.empty}" class="cmp-blog-listing">
+    <h2 data-sly-test="${model.sectionTitle}" class="cmp-blog-listing__title">${model.sectionTitle}</h2>
+    <ul class="cmp-blog-listing__items">
+        <li data-sly-list.item="${model.blogItems}" class="cmp-blog-listing__item">
+            <a href="${item.path @ context='uri'}" class="cmp-blog-listing__link">${item.title}</a>
+            <p data-sly-test="${item.description}" class="cmp-blog-listing__description">${item.description}</p>
+        </li>
+    </ul>
+</section>
+
+<sly
+        data-sly-test="${model.empty}"
+        data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+        data-sly-call="${template.placeholder @ isEmpty=true}"/>

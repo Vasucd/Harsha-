@@ -1,0 +1,21 @@
+<sly data-sly-use.model="com.company.core.core.models.ServicesCardModel"/>
+
+<section data-sly-test="${!model.empty}" class="cmp-services-card">
+    <h2 data-sly-test="${model.sectionTitle}" class="cmp-services-card__title">${model.sectionTitle}</h2>
+
+    <div class="cmp-services-card__grid">
+        <article data-sly-list.service="${model.services}" class="cmp-services-card__item">
+            <h3 data-sly-test="${service.title}" class="cmp-services-card__item-title">${service.title}</h3>
+            <p data-sly-test="${service.description}" class="cmp-services-card__item-description">${service.description}</p>
+            <a
+                    data-sly-test="${service.ctaLabel && service.ctaLink}"
+                    class="cmp-services-card__item-link"
+                    href="${service.ctaLink @ context='uri'}">${service.ctaLabel}</a>
+        </article>
+    </div>
+</section>
+
+<sly
+        data-sly-test="${model.empty}"
+        data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+        data-sly-call="${template.placeholder @ isEmpty=true}"/>
