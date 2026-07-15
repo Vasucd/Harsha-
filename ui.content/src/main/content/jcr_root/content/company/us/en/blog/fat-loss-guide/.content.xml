@@ -5,7 +5,7 @@
         authorBio="Ava is a certified strength coach who has helped 500+ members improve performance and confidence through structured training and recovery."
         authorName="Ava Martinez"
         authorRole="Head Fitness Coach"
-        cq:template="/conf/company/settings/wcm/templates/blog"
+        cq:template="/conf/company/settings/wcm/templates/page-content"
         jcr:primaryType="cq:PageContent"
         jcr:title="Fat Loss Guide: 5 Habits That Work"
         jcr:description="Simple habit-based fat loss strategies for sustainable progress."
