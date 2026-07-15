@@ -58,6 +58,22 @@ public class BlogListingModel {
     @PostConstruct
     protected void init() {
         blogItems = new ArrayList<>();
+        Resource componentResource = resource;
+        if (componentResource == null && request != null) {
+            componentResource = request.getResource();
+        }
+
+        ValueMap authoredValues = componentResource != null ? componentResource.getValueMap() : null;
+        if (StringUtils.isBlank(sectionTitle) && authoredValues != null) {
+            sectionTitle = authoredValues.get("sectionTitle", String.class);
+        }
+        if (StringUtils.isBlank(blogRootPath) && authoredValues != null) {
+            blogRootPath = authoredValues.get("blogRootPath", String.class);
+        }
+        if (maxItems == null && authoredValues != null) {
+            maxItems = authoredValues.get("maxItems", Integer.class);
+        }
+
         if (currentPage == null && request != null) {
             ResourceResolver resolver = request.getResourceResolver();
             PageManager pageManager = resolver.adaptTo(PageManager.class);
@@ -68,17 +84,6 @@ public class BlogListingModel {
 
         if (currentPage == null) {
             return;
-        }
-
-        ValueMap authoredValues = resource != null ? resource.getValueMap() : null;
-        if (StringUtils.isBlank(sectionTitle) && authoredValues != null) {
-            sectionTitle = authoredValues.get("sectionTitle", String.class);
-        }
-        if (StringUtils.isBlank(blogRootPath) && authoredValues != null) {
-            blogRootPath = authoredValues.get("blogRootPath", String.class);
-        }
-        if (maxItems == null && authoredValues != null) {
-            maxItems = authoredValues.get("maxItems", Integer.class);
         }
 
         ResourceResolver resolver = currentPage.getContentResource().getResourceResolver();
