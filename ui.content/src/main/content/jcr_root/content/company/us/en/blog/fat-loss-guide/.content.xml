@@ -2,11 +2,11 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2026-07-15T09:31:17.208+05:30"
-        cq:lastModifiedBy="admin"
+        authorFragmentPath="/content/dam/company/authors/head-coach-ava"
         cq:template="/conf/company/settings/wcm/templates/blog"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Blog"
+        jcr:title="Fat Loss Guide: 5 Habits That Work"
+        jcr:description="Simple habit-based fat loss strategies for sustainable progress."
         sling:resourceType="company/components/page">
         <root
             jcr:primaryType="nt:unstructured"
@@ -16,21 +16,14 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="company/components/container"
                 layout="responsiveGrid">
-                <blogHero
+                <articleBody
                     jcr:primaryType="nt:unstructured"
-                    altText="Athlete stretching before a training session"
-                    ctaLabel="Contact a Coach"
-                    ctaLink="/content/company/us/en/contact-us"
-                    description="&lt;p>Actionable fitness advice from certified coaches on training, nutrition, and recovery.&lt;/p>"
-                    image="/content/dam/company/fitness/blog-hero.jpg"
-                    sling:resourceType="company/components/hero-banner"
-                    title="Fitness Blog"/>
-                <fitnessBlogListing
-                    blogRootPath="/content/company/us/en/blog"
+                    sling:resourceType="company/components/text"
+                    text="&lt;h2>Fat Loss Without Burnout&lt;/h2>&#xa;&lt;p>Build consistency with manageable calorie deficits, protein-rich meals, and daily movement targets.&lt;/p>&#xa;&lt;ol>&#xa;&lt;li>Hit protein first&lt;/li>&#xa;&lt;li>Track portions for two weeks&lt;/li>&#xa;&lt;li>Walk 8-10k steps daily&lt;/li>&#xa;&lt;li>Lift weights 3-4x weekly&lt;/li>&#xa;&lt;li>Prioritize sleep quality&lt;/li>&#xa;&lt;/ol>"
+                    textIsRich="true"/>
+                <authorInfo
                     jcr:primaryType="nt:unstructured"
-                    maxItems="{Long}6"
-                    sectionTitle="Read the Latest Articles"
-                    sling:resourceType="company/components/blog-listing"/>
+                    sling:resourceType="company/components/author-info"/>
             </container>
         </root>
     </jcr:content>

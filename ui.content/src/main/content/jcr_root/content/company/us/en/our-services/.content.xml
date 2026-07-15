@@ -15,7 +15,42 @@
             <container
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="company/components/container"
-                layout="responsiveGrid"/>
+                layout="responsiveGrid">
+                <servicesHero
+                    jcr:primaryType="nt:unstructured"
+                    altText="Athlete performing battle rope workout"
+                    ctaLabel="Join Today"
+                    ctaLink="/content/company/us/en/contact-us"
+                    description="&lt;p>Choose a coaching path that fits your current level and personal target goals.&lt;/p>"
+                    image="/content/dam/company/fitness/services-hero.jpg"
+                    sling:resourceType="company/components/hero-banner"
+                    title="Programs for Strength, Fat Loss, and Endurance"/>
+                <programCards
+                    jcr:primaryType="nt:unstructured"
+                    sectionTitle="Fitness Services"
+                    sling:resourceType="company/components/services-card">
+                    <services jcr:primaryType="nt:unstructured">
+                        <item_0
+                            jcr:primaryType="nt:unstructured"
+                            ctaLabel="Speak to Coach"
+                            ctaLink="/content/company/us/en/contact-us"
+                            description="Targeted sessions for muscle gain and power development with form correction."
+                            title="Strength Coaching"/>
+                        <item_1
+                            jcr:primaryType="nt:unstructured"
+                            ctaLabel="Learn More"
+                            ctaLink="/content/company/us/en/blog/fat-loss-guide"
+                            description="Cardio and conditioning protocols to improve stamina and burn fat efficiently."
+                            title="Fat Loss Transformation"/>
+                        <item_2
+                            jcr:primaryType="nt:unstructured"
+                            ctaLabel="See Tips"
+                            ctaLink="/content/company/us/en/blog/mobility-basics"
+                            description="Mobility and recovery sessions to improve movement quality and prevent injury."
+                            title="Mobility and Recovery"/>
+                    </services>
+                </programCards>
+            </container>
         </root>
     </jcr:content>
 </jcr:root>

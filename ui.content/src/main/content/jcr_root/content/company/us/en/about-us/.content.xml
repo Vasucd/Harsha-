@@ -15,7 +15,22 @@
             <container
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="company/components/container"
-                layout="responsiveGrid"/>
+                layout="responsiveGrid">
+                <aboutHero
+                    jcr:primaryType="nt:unstructured"
+                    altText="Fitness group training with coach support"
+                    ctaLabel="Explore Programs"
+                    ctaLink="/content/company/us/en/our-services"
+                    description="&lt;p>We are a performance-focused fitness studio helping members build strength, improve mobility, and stay consistent for life.&lt;/p>"
+                    image="/content/dam/company/fitness/about-hero.jpg"
+                    sling:resourceType="company/components/hero-banner"
+                    title="Built by Coaches, Backed by Science"/>
+                <aboutStory
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="company/components/text"
+                    text="&lt;h2>Our Mission&lt;/h2>&#xa;&lt;p>We make fitness practical for busy people. Every plan is personalized, measurable, and designed to deliver sustainable results.&lt;/p>&#xa;&lt;h3>What Makes Us Different&lt;/h3>&#xa;&lt;ul>&#xa;&lt;li>Certified trainers with real-world coaching experience&lt;/li>&#xa;&lt;li>Programs that adapt to your progress and recovery&lt;/li>&#xa;&lt;li>Supportive community and accountability check-ins&lt;/li>&#xa;&lt;/ul>"
+                    textIsRich="true"/>
+            </container>
         </root>
     </jcr:content>
 </jcr:root>

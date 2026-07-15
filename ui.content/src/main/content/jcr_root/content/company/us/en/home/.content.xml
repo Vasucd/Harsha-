@@ -15,7 +15,48 @@
             <container
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="company/components/container"
-                layout="responsiveGrid"/>
+                layout="responsiveGrid">
+                <heroBanner
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="company/components/hero-banner"
+                    altText="Personal trainer coaching an athlete in a fitness studio"
+                    ctaLabel="Start Your Fitness Plan"
+                    ctaLink="/content/company/us/en/contact-us"
+                    description="&lt;p>Train smarter with expert-led classes, tailored workout plans, and nutrition coaching for every fitness level.&lt;/p>"
+                    image="/content/dam/company/fitness/home-hero.jpg"
+                    title="Transform Your Body, Build Your Confidence"/>
+                <servicesHighlights
+                    jcr:primaryType="nt:unstructured"
+                    sectionTitle="Signature Programs"
+                    sling:resourceType="company/components/services-card">
+                    <services jcr:primaryType="nt:unstructured">
+                        <item_0
+                            jcr:primaryType="nt:unstructured"
+                            ctaLabel="View Services"
+                            ctaLink="/content/company/us/en/our-services"
+                            description="Strength cycles with progressive overload designed by certified coaches."
+                            title="Strength and Conditioning"/>
+                        <item_1
+                            jcr:primaryType="nt:unstructured"
+                            ctaLabel="Book a Call"
+                            ctaLink="/content/company/us/en/contact-us"
+                            description="Sustainable meal plans and macros tracking adapted to your body goals."
+                            title="Nutrition Coaching"/>
+                        <item_2
+                            jcr:primaryType="nt:unstructured"
+                            ctaLabel="Meet the Team"
+                            ctaLink="/content/company/us/en/about-us"
+                            description="Weekly check-ins, accountability, and lifestyle guidance with personal coaches."
+                            title="1:1 Personal Training"/>
+                    </services>
+                </servicesHighlights>
+                <latestFitnessBlogs
+                    jcr:primaryType="nt:unstructured"
+                    blogRootPath="/content/company/us/en/blog"
+                    maxItems="{Long}3"
+                    sectionTitle="Latest Fitness Insights"
+                    sling:resourceType="company/components/blog-listing"/>
+            </container>
         </root>
     </jcr:content>
 </jcr:root>

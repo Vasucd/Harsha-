@@ -1,6 +1,11 @@
 <sly data-sly-use.model="com.company.core.core.models.BlogListingModel"/>
 
-<section data-sly-test="${!model.empty}" class="cmp-blog-listing">
+<section
+        data-sly-test="${!model.empty}"
+        class="cmp-blog-listing"
+        data-dynamic="true"
+        data-blog-root="${properties.blogRootPath || '/content/company/us/en/blog'}"
+        data-limit="${properties.maxItems || '5'}">
     <h2 data-sly-test="${model.sectionTitle}" class="cmp-blog-listing__title">${model.sectionTitle}</h2>
     <ul class="cmp-blog-listing__items">
         <li data-sly-list.item="${model.blogItems}" class="cmp-blog-listing__item">

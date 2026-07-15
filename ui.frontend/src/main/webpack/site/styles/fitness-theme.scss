@@ -1,0 +1,238 @@
+:root {
+  --fitness-bg: #070b14;
+  --fitness-bg-soft: #101a2a;
+  --fitness-surface: rgba(15, 23, 38, 0.84);
+  --fitness-text: #e7edf8;
+  --fitness-muted: #9daac3;
+  --fitness-primary: #22d3ee;
+  --fitness-accent: #f97316;
+  --fitness-border: rgba(138, 161, 197, 0.26);
+}
+
+html,
+body {
+  background: radial-gradient(circle at top right, #182940 0%, var(--fitness-bg) 46%, #05070d 100%);
+  color: var(--fitness-text);
+}
+
+.root.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem 3rem;
+}
+
+header.experiencefragment {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(8, 13, 22, 0.84);
+  border-bottom: 1px solid var(--fitness-border);
+  backdrop-filter: blur(6px);
+}
+
+header.experiencefragment a {
+  color: var(--fitness-text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+header.experiencefragment a:hover,
+header.experiencefragment a:focus {
+  color: var(--fitness-primary);
+}
+
+.cmp-hero-banner {
+  min-height: 34rem;
+  margin: 1.25rem 0 2rem;
+  border: 1px solid var(--fitness-border);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 18px 65px rgba(0, 0, 0, 0.5);
+  animation: fitnessFadeIn 0.9s ease-out;
+}
+
+.cmp-hero-banner__overlay {
+  background: linear-gradient(100deg, rgba(4, 9, 16, 0.84), rgba(4, 9, 16, 0.42));
+}
+
+.cmp-hero-banner__title {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-shadow: 0 6px 25px rgba(0, 0, 0, 0.35);
+}
+
+.cmp-hero-banner__description {
+  color: #d3def2;
+  max-width: 36rem;
+}
+
+.cmp-hero-banner__cta {
+  border-radius: 999px;
+  background: linear-gradient(120deg, var(--fitness-primary), var(--fitness-accent));
+  color: #041018;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.3);
+  transform: translateY(0);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cmp-hero-banner__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(34, 211, 238, 0.32);
+}
+
+.cmp-services-card,
+.cmp-blog-listing,
+.cmp-contact-form,
+.cmp-author-info,
+.cmp-footer-config {
+  background: var(--fitness-surface);
+  border: 1px solid var(--fitness-border);
+  border-radius: 1rem;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+}
+
+.cmp-services-card__title,
+.cmp-blog-listing__title {
+  margin-top: 0;
+  color: var(--fitness-primary);
+  font-size: clamp(1.6rem, 3vw, 2rem);
+}
+
+.cmp-services-card__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.cmp-services-card__item {
+  background: rgba(10, 18, 30, 0.8);
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  border-radius: 0.85rem;
+  padding: 1rem;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.cmp-services-card__item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(34, 211, 238, 0.5);
+}
+
+.cmp-services-card__item-title {
+  margin: 0 0 0.5rem;
+}
+
+.cmp-services-card__item-description {
+  color: var(--fitness-muted);
+  margin-bottom: 0.85rem;
+}
+
+.cmp-services-card__item-link {
+  color: var(--fitness-accent);
+  font-weight: 600;
+}
+
+.cmp-blog-listing__items {
+  display: grid;
+  gap: 0.8rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cmp-blog-listing__item {
+  border: 1px solid rgba(157, 170, 195, 0.22);
+  border-radius: 0.75rem;
+  background: rgba(8, 14, 24, 0.68);
+  padding: 1rem;
+}
+
+.cmp-blog-listing__link {
+  color: var(--fitness-primary);
+  font-weight: 700;
+}
+
+.cmp-blog-listing__description {
+  color: var(--fitness-muted);
+}
+
+.cmp-contact-form__form {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.cmp-contact-form__form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.cmp-contact-form__form input,
+.cmp-contact-form__form textarea {
+  width: 100%;
+  border: 1px solid var(--fitness-border);
+  border-radius: 0.6rem;
+  background: rgba(6, 10, 18, 0.7);
+  color: var(--fitness-text);
+  padding: 0.65rem 0.75rem;
+}
+
+.cmp-contact-form__form button {
+  width: fit-content;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(120deg, var(--fitness-primary), var(--fitness-accent));
+  color: #08111a;
+  font-weight: 700;
+  padding: 0.7rem 1.3rem;
+  cursor: pointer;
+}
+
+.cmp-author-info__name {
+  margin-top: 0;
+  color: var(--fitness-primary);
+}
+
+.cmp-author-info__role {
+  color: var(--fitness-accent);
+  font-weight: 600;
+}
+
+.cmp-author-info__bio {
+  color: var(--fitness-muted);
+}
+
+.cmp-footer-config {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0;
+}
+
+.cmp-footer-config a {
+  color: var(--fitness-primary);
+}
+
+[data-animate-on-scroll] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+[data-animate-on-scroll].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fitnessFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
