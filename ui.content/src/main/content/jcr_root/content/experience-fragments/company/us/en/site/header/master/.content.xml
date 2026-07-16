@@ -27,7 +27,7 @@
                 collectAllPages="false"
                 navigationRoot="/content/company/us/en"
                 skipNavigationRoot="false"
-                structureDepth="1"/>
+                structureDepth="2"/>
             <languagenavigation
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="company/components/languagenavigation"
