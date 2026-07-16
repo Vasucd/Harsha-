@@ -103,7 +103,8 @@ header.experiencefragment,
 
 /* keep text off the runner: constrain the content column */
 .cmp-hero-banner__content {
-  max-width: 55%;
+
+  padding:40px;
 }
 
 .cmp-hero-banner__title {
