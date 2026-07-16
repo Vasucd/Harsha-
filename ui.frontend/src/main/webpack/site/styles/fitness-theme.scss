@@ -1,17 +1,22 @@
+/* =============================================================
+   Fitness theme — white background, mint hero, motion layer
+   Full drop-in replacement for fitness-theme.scss
+   ============================================================= */
+
 :root {
-  --fitness-bg: #070b14;
-  --fitness-bg-soft: #101a2a;
-  --fitness-surface: rgba(15, 23, 38, 0.84);
-  --fitness-text: #e7edf8;
-  --fitness-muted: #9daac3;
-  --fitness-primary: #22d3ee;
+  --fitness-bg: #ffffff;
+  --fitness-bg-soft: #f4f6fb;
+  --fitness-surface: #ffffff;
+  --fitness-text: #17202e;
+  --fitness-muted: #5a6a85;
+  --fitness-primary: #0e7490;
   --fitness-accent: #f97316;
-  --fitness-border: rgba(138, 161, 197, 0.26);
+  --fitness-border: rgba(20, 30, 50, 0.12);
 }
 
 html,
 body {
-  background: radial-gradient(circle at top right, #182940 0%, var(--fitness-bg) 46%, #05070d 100%);
+  background: var(--fitness-bg);
   color: var(--fitness-text);
 }
 
@@ -21,66 +26,165 @@ body {
   padding: 0 1rem 3rem;
 }
 
-header.experiencefragment {
+/* ---- Header / navigation ---- */
+header.experiencefragment,
+.experiencefragment--header {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(8, 13, 22, 0.84);
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid var(--fitness-border);
   backdrop-filter: blur(6px);
+  box-shadow: 0 4px 18px rgba(20, 30, 50, 0.05);
 }
 
-header.experiencefragment a {
-  color: var(--fitness-text);
+.cmp-navigation__group {
+  display: flex;
+  gap: 1.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.cmp-navigation__item {
+  margin: 0;
+}
+
+.cmp-navigation__item-link {
+  color: #17202e;
   font-weight: 600;
   text-decoration: none;
+  letter-spacing: 0.01em;
+  padding: 0.35rem 0;
+  position: relative;
+  transition: color 0.2s ease;
 }
 
-header.experiencefragment a:hover,
-header.experiencefragment a:focus {
+.cmp-navigation__item-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: var(--fitness-accent);
+  transition: width 0.25s ease;
+}
+
+.cmp-navigation__item-link:hover,
+.cmp-navigation__item--active > .cmp-navigation__item-link {
   color: var(--fitness-primary);
 }
 
+.cmp-navigation__item-link:hover::after,
+.cmp-navigation__item--active > .cmp-navigation__item-link::after {
+  width: 100%;
+}
+
+/* ---- Hero banner ---- */
 .cmp-hero-banner {
+  position: relative;
   min-height: 34rem;
   margin: 1.25rem 0 2rem;
   border: 1px solid var(--fitness-border);
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 18px 65px rgba(0, 0, 0, 0.5);
-  animation: fitnessFadeIn 0.9s ease-out;
+  box-shadow: 0 18px 55px rgba(20, 30, 50, 0.18);
+  background-size: cover;
+  background-position: center;
+  animation: fitnessFadeIn 0.9s ease-out, heroZoom 14s ease-out 0.2s both;
 }
 
 .cmp-hero-banner__overlay {
-  background: linear-gradient(100deg, rgba(4, 9, 16, 0.84), rgba(4, 9, 16, 0.42));
+  background: linear-gradient(100deg, rgba(233, 247, 240, 0.78), rgba(233, 247, 240, 0));
+}
+
+/* keep text off the runner: constrain the content column */
+.cmp-hero-banner__content {
+  max-width: 55%;
 }
 
 .cmp-hero-banner__title {
+  color: #15241d;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  text-shadow: 0 6px 25px rgba(0, 0, 0, 0.35);
+  text-shadow: none;
+  opacity: 0;
+  animation: heroRise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.25s forwards;
 }
 
 .cmp-hero-banner__description {
-  color: #d3def2;
+  color: #2f4a42;
   max-width: 36rem;
+  opacity: 0;
+  animation: heroRise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.45s forwards;
 }
 
+/* Proper pill button */
 .cmp-hero-banner__cta {
-  border-radius: 999px;
-  background: linear-gradient(120deg, var(--fitness-primary), var(--fitness-accent));
-  color: #041018;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 1.6rem;
+  padding: 0.9rem 1.9rem;
+  position: relative;
+  overflow: hidden;
+  background: #f97316;
+  color: #ffffff;
   font-weight: 700;
-  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.3);
-  transform: translateY(0);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-decoration: none;
+  border-radius: 999px;
+  box-shadow: 0 10px 26px rgba(249, 115, 22, 0.32);
+  opacity: 0;
+  animation: heroRise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.65s forwards;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cmp-hero-banner__cta::after {
+  content: "\2192";
+  font-size: 1.1em;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.cmp-hero-banner__cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+.cmp-hero-banner__cta:hover::before {
+  left: 150%;
 }
 
 .cmp-hero-banner__cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(34, 211, 238, 0.32);
+  background: #ea6a0c;
+  transform: translateY(-3px);
+  box-shadow: 0 16px 34px rgba(249, 115, 22, 0.45);
 }
 
+.cmp-hero-banner__cta:hover::after {
+  transform: translateX(4px);
+}
+
+.cmp-hero-banner__cta:focus-visible {
+  outline: 3px solid rgba(14, 116, 144, 0.6);
+  outline-offset: 3px;
+}
+
+/* ---- Content components ---- */
 .cmp-services-card,
 .cmp-blog-listing,
 .cmp-contact-form,
@@ -91,6 +195,7 @@ header.experiencefragment a:focus {
   border-radius: 1rem;
   margin: 1.5rem 0;
   padding: 1.5rem;
+  box-shadow: 0 6px 24px rgba(20, 30, 50, 0.06);
 }
 
 .cmp-services-card__title,
@@ -107,16 +212,17 @@ header.experiencefragment a:focus {
 }
 
 .cmp-services-card__item {
-  background: rgba(10, 18, 30, 0.8);
-  border: 1px solid rgba(34, 211, 238, 0.2);
+  background: var(--fitness-bg-soft);
+  border: 1px solid var(--fitness-border);
   border-radius: 0.85rem;
   padding: 1rem;
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .cmp-services-card__item:hover {
   transform: translateY(-4px);
-  border-color: rgba(34, 211, 238, 0.5);
+  border-color: rgba(14, 116, 144, 0.4);
+  box-shadow: 0 10px 24px rgba(20, 30, 50, 0.1);
 }
 
 .cmp-services-card__item-title {
@@ -142,10 +248,11 @@ header.experiencefragment a:focus {
 }
 
 .cmp-blog-listing__item {
-  border: 1px solid rgba(157, 170, 195, 0.22);
+  border: 1px solid var(--fitness-border);
   border-radius: 0.75rem;
-  background: rgba(8, 14, 24, 0.68);
+  background: var(--fitness-bg-soft);
   padding: 1rem;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .cmp-blog-listing__link {
@@ -173,7 +280,7 @@ header.experiencefragment a:focus {
   width: 100%;
   border: 1px solid var(--fitness-border);
   border-radius: 0.6rem;
-  background: rgba(6, 10, 18, 0.7);
+  background: #ffffff;
   color: var(--fitness-text);
   padding: 0.65rem 0.75rem;
 }
@@ -183,10 +290,16 @@ header.experiencefragment a:focus {
   border: none;
   border-radius: 999px;
   background: linear-gradient(120deg, var(--fitness-primary), var(--fitness-accent));
-  color: #08111a;
+  color: #ffffff;
   font-weight: 700;
   padding: 0.7rem 1.3rem;
   cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.cmp-contact-form__form button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
 }
 
 .cmp-author-info__name {
@@ -215,10 +328,30 @@ header.experiencefragment a:focus {
   color: var(--fitness-primary);
 }
 
+/* =============================================================
+   Motion layer
+   ============================================================= */
+
+@keyframes fitnessFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroRise {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroZoom {
+  from { background-size: 108%; }
+  to   { background-size: 100%; }
+}
+
 [data-animate-on-scroll] {
   opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 [data-animate-on-scroll].is-visible {
@@ -226,13 +359,24 @@ header.experiencefragment a:focus {
   transform: translateY(0);
 }
 
-@keyframes fitnessFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
+.is-visible .cmp-services-card__item:nth-child(1),
+.is-visible .cmp-blog-listing__item:nth-child(1) { animation: heroRise 0.6s ease 0.05s both; }
+.is-visible .cmp-services-card__item:nth-child(2),
+.is-visible .cmp-blog-listing__item:nth-child(2) { animation: heroRise 0.6s ease 0.15s both; }
+.is-visible .cmp-services-card__item:nth-child(3),
+.is-visible .cmp-blog-listing__item:nth-child(3) { animation: heroRise 0.6s ease 0.25s both; }
+.is-visible .cmp-services-card__item:nth-child(4),
+.is-visible .cmp-blog-listing__item:nth-child(4) { animation: heroRise 0.6s ease 0.35s both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  .cmp-hero-banner__title,
+  .cmp-hero-banner__description,
+  .cmp-hero-banner__cta { opacity: 1 !important; }
 }
