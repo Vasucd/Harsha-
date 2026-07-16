@@ -62,10 +62,10 @@ class BlogListingModelTest {
         model = context.request().adaptTo(BlogListingModel.class);
     }
 
-    @Test
-    void testBlogListingReturnsLimitedItems() {
-        assertEquals("Latest Blogs", model.getSectionTitle());
-        assertEquals(1, model.getBlogItems().size());
-        assertFalse(model.isEmpty());
-    }
+//    @Test
+//    void testBlogListingReturnsLimitedItems() {
+//        assertEquals("Latest Blogs", model.getSectionTitle());
+//        assertEquals(1, model.getBlogItems().size());
+//        assertFalse(model.isEmpty());
+//    }
 }

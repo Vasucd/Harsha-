@@ -4,4 +4,5 @@
     <filter root="/content/company" mode="merge"/>
     <filter root="/content/dam/company" mode="merge"/>
     <filter root="/content/experience-fragments/company" mode="merge"/>
+    <filter root="/content/experience-fragments" mode="merge"/>
 </workspaceFilter>
