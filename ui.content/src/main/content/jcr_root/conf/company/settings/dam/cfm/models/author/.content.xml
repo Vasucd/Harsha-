@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Template"
+          jcr:title="Author"
+          jcr:description="Content Fragment Model describing a blog author (name, role and biography)."
+          sling:resourceType="dam/cfm/models/console/components/data/entity/default"
+          status="enabled">
+    <jcr:content jcr:primaryType="nt:unstructured">
+        <model jcr:primaryType="nt:unstructured"
+            sling:resourceType="dam/cfm/models/console/components/data/entity/default"
+            cq:siteTemplatePath="" cq:styleGroups="[]">
+            <cq:dialog jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/gui/components/authoring/dialog" helpPath="" trackingFeature="">
+                <content jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                    <items jcr:primaryType="nt:unstructured">
+                        <authorName jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldDescription="Full name of the author." fieldLabel="Author Name"
+                            listOrder="1" metaType="text-single" name="authorName"
+                            renderReadOnly="{Boolean}false" required="{Boolean}true"
+                            showEmptyInReadOnly="{Boolean}true" valueType="string"/>
+                        <authorRole jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldDescription="Role or title of the author." fieldLabel="Author Role"
+                            listOrder="2" metaType="text-single" name="authorRole"
+                            renderReadOnly="{Boolean}false" required="{Boolean}false"
+                            showEmptyInReadOnly="{Boolean}true" valueType="string"/>
+                        <authorBio jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                            fieldDescription="Short biography shown on blog pages." fieldLabel="Author Bio"
+                            listOrder="3" metaType="text-multi" name="authorBio"
+                            renderReadOnly="{Boolean}false" required="{Boolean}false"
+                            showEmptyInReadOnly="{Boolean}true" valueType="string"/>
+                    </items>
+                </content>
+            </cq:dialog>
+        </model>
+    </jcr:content>
+</jcr:root>

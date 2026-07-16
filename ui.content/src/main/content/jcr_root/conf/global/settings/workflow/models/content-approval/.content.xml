@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Company Content Approval Workflow"
+        sling:resourceType="cq/workflow/components/pages/model"
+        cq:lastModified="{Date}2026-07-16T00:00:00.000+05:30"
+        cq:lastModifiedBy="admin">
+        <metaData
+            jcr:primaryType="nt:unstructured"
+            cq:actionResourceType="cq/workflow/components/pages/model"
+            description="Custom Content Approval Workflow that stamps approval metadata on the payload page via a custom process step."
+            title="Company Content Approval Workflow"/>
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="cq/workflow/components/model/flow">
+            <nodes jcr:primaryType="nt:unstructured">
+                <node0 jcr:primaryType="nt:unstructured" jcr:title="Start"
+                    sling:resourceType="cq/workflow/components/model/start" type="START">
+                    <metaData jcr:primaryType="nt:unstructured"/>
+                </node0>
+                <node1 jcr:primaryType="nt:unstructured" jcr:title="Content Approval Step"
+                    sling:resourceType="cq/workflow/components/model/process" type="PROCESS">
+                    <metaData jcr:primaryType="nt:unstructured"
+                        PROCESS="Company Content Approval Process Step"
+                        PROCESS_AUTO_ADVANCE="true"/>
+                </node1>
+                <node2 jcr:primaryType="nt:unstructured" jcr:title="End"
+                    sling:resourceType="cq/workflow/components/model/end" type="END">
+                    <metaData jcr:primaryType="nt:unstructured"/>
+                </node2>
+            </nodes>
+            <transitions jcr:primaryType="nt:unstructured">
+                <transition0 jcr:primaryType="nt:unstructured" from="node0" to="node1" rule="" type="transition">
+                    <metaData jcr:primaryType="nt:unstructured"/>
+                </transition0>
+                <transition1 jcr:primaryType="nt:unstructured" from="node1" to="node2" rule="" type="transition">
+                    <metaData jcr:primaryType="nt:unstructured"/>
+                </transition1>
+            </transitions>
+        </flow>
+    </jcr:content>
+</jcr:root>
