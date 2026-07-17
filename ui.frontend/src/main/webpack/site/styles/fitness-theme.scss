@@ -789,3 +789,22 @@ footer .cmp-text,
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+/* =============================================================
+   Header logo
+   ============================================================= */
+header.experiencefragment .cmp-image,
+.experiencefragment--header .cmp-image {
+  margin: 0;
+}
+header.experiencefragment .cmp-image__image,
+.experiencefragment--header .cmp-image__image {
+  height: 46px;
+  width: auto;
+  display: block;
+}
+header.experiencefragment .cmp-image__link,
+.experiencefragment--header .cmp-image__link {
+  display: inline-flex;
+  align-items: center;
+}
