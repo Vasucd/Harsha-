@@ -430,22 +430,30 @@ header.experiencefragment,
   transform: translateY(0) scale(1);
 }
 
+.cmp-navigation__item--level-0:has(.cmp-navigation__group) > .cmp-navigation__item-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
 .cmp-navigation__item--level-0:has(.cmp-navigation__group) > .cmp-navigation__item-link::before {
   content: "";
-  display: inline-block;
-  width: 0.4em;
-  height: 0.4em;
-  margin-left: 0.45em;
-  border-right: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
-  transform: rotate(45deg) translateY(-2px);
-  vertical-align: middle;
-  opacity: 0.7;
-  transition: transform 0.28s ease;
+  order: 2;
+  width: 0.42em;
+  height: 0.42em;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  transform-origin: center;
+  margin-top: -0.18em;
+  opacity: 0.6;
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), margin-top 0.28s ease, opacity 0.2s ease;
 }
 
 .cmp-navigation__item--level-0:has(.cmp-navigation__group):hover > .cmp-navigation__item-link::before {
-  transform: rotate(-135deg) translateY(1px);
+  transform: rotate(225deg);
+  margin-top: 0.16em;
+  opacity: 0.9;
 }
 
 .cmp-navigation__item--level-1 .cmp-navigation__item-link,
