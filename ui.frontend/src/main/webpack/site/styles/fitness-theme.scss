@@ -857,7 +857,7 @@ header.experiencefragment .cmp-logo,
 }
 
 .cmp-logo__svg {
-  height: 52px;
+  height: 40px;
   width: auto;
   display: block;
 }
@@ -865,5 +865,5 @@ header.experiencefragment .cmp-logo,
 @media (max-width: 640px) {
   header.experiencefragment .cmp-logo,
   .experiencefragment--header .cmp-logo { margin-right: 0; }
-  .cmp-logo__svg { height: 44px; }
+  .cmp-logo__svg { height: 34px; }
 }
