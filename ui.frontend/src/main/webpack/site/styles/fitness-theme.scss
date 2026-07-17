@@ -1193,3 +1193,75 @@ footer.experiencefragment .cmp-text a,
 .cmp-testimonials__card figcaption { color: var(--fitness-muted); }
 .cmp-testimonials__card figcaption strong { color: var(--fitness-primary); }
 @media (max-width: 800px) { .cmp-testimonials__grid { grid-template-columns: 1fr; } }
+
+/* =============================================================
+   CORRECTED header + logo (real .cmp-experiencefragment markup)
+   ============================================================= */
+.cmp-logo {
+  display: inline-flex !important;
+  align-items: center;
+  order: -1;
+  margin-right: auto;
+  text-decoration: none;
+}
+.cmp-logo__svg { height: 40px; width: auto; display: block; }
+
+.cmp-experiencefragment:has(.cmp-navigation) {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--fitness-border);
+  backdrop-filter: blur(6px);
+}
+.cmp-experiencefragment:has(.cmp-navigation) .cmp-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem 1.75rem;
+  flex-wrap: wrap;
+  padding: 0.55rem clamp(1rem, 4vw, 3rem);
+}
+
+/* =============================================================
+   Site footer (custom multi-column, dark)
+   ============================================================= */
+.cmp-site-footer {
+  background: #0b1a24;
+  color: #cfe0e6;
+  margin-top: 2.5rem;
+}
+.cmp-site-footer__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 3rem clamp(1.25rem, 4vw, 3rem) 2rem;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.3fr;
+  gap: 2rem;
+}
+.cmp-site-footer__logo { height: 42px; width: auto; display: block; margin-bottom: 1rem; }
+.cmp-site-footer__tagline { color: #9fbcc6; line-height: 1.6; max-width: 300px; margin: 0; }
+.cmp-site-footer__col { display: flex; flex-direction: column; gap: 0.65rem; }
+.cmp-site-footer__col h4 {
+  margin: 0 0 0.35rem; color: #ffffff; font-size: 0.95rem;
+  text-transform: uppercase; letter-spacing: 0.05em;
+}
+.cmp-site-footer__col a,
+.cmp-site-footer__col span {
+  color: #9fbcc6; text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease;
+}
+.cmp-site-footer__col a:hover { color: #ffb347; }
+.cmp-site-footer__bottom {
+  max-width: 1180px; margin: 0 auto;
+  padding: 1.25rem clamp(1.25rem, 4vw, 3rem);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 0.5rem;
+  color: #7f9aa4; font-size: 0.88rem;
+}
+@media (max-width: 860px) {
+  .cmp-site-footer__inner { grid-template-columns: 1fr 1fr; gap: 1.75rem; }
+}
+@media (max-width: 520px) {
+  .cmp-site-footer__inner { grid-template-columns: 1fr; }
+  .cmp-site-footer__bottom { flex-direction: column; text-align: center; }
+}
