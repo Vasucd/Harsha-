@@ -1,3 +1,27 @@
 .cmp-title {}
 .cmp-title__text {}
 .cmp-title__link {}
+/* Style System variants (registered in the Title policy) */
+.cmp-title--accent .cmp-title__text {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.4rem;
+}
+.cmp-title--accent .cmp-title__text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 56px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--fitness-accent, #f97316), #ffb347);
+}
+
+.cmp-title--center {
+  text-align: center;
+}
+.cmp-title--center .cmp-title__text::after {
+  left: 50%;
+  transform: translateX(-50%);
+}

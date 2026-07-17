@@ -117,10 +117,18 @@ header.experiencefragment,
 }
 
 .cmp-hero-banner__description {
-  color: #2f4a42;
-  max-width: 36rem;
+  max-width: 34rem;
+  margin-top: 0.85rem;
+  color: #33463f;
+  font-size: clamp(1.05rem, 1.5vw, 1.28rem);
+  line-height: 1.65;
+  font-weight: 400;
   opacity: 0;
   animation: heroRise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.45s forwards;
+}
+
+.cmp-hero-banner__description p {
+  margin: 0 0 0.5rem;
 }
 
 /* Proper pill button */
@@ -492,4 +500,210 @@ header.experiencefragment,
     margin-top: 0.18em;
     opacity: 1;
   }
+}
+
+/* =============================================================
+   Contact form — animated floating-label fields + submit
+   ============================================================= */
+.cmp-contact-form__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 1.1rem;
+}
+
+.cmp-contact-form__field {
+  position: relative;
+}
+
+.cmp-contact-form__field--full {
+  grid-column: 1 / -1;
+}
+
+.cmp-contact-form__field input,
+.cmp-contact-form__field textarea {
+  width: 100%;
+  padding: 1.25rem 0.9rem 0.55rem;
+  border: 1px solid var(--fitness-border);
+  border-radius: 0.6rem;
+  background: #ffffff;
+  color: var(--fitness-text);
+  font: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cmp-contact-form__field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.cmp-contact-form__field input:focus,
+.cmp-contact-form__field textarea:focus {
+  outline: none;
+  border-color: var(--fitness-primary);
+  box-shadow: 0 0 0 3px rgba(14, 116, 144, 0.14);
+}
+
+/* floating label */
+.cmp-contact-form__field label {
+  position: absolute;
+  left: 0.95rem;
+  top: 0.9rem;
+  color: var(--fitness-muted);
+  pointer-events: none;
+  transition: transform 0.18s ease, color 0.18s ease, font-size 0.18s ease;
+  transform-origin: left top;
+}
+
+.cmp-contact-form__field input:focus + label,
+.cmp-contact-form__field input:not(:placeholder-shown) + label,
+.cmp-contact-form__field textarea:focus + label,
+.cmp-contact-form__field textarea:not(:placeholder-shown) + label {
+  transform: translateY(-0.6rem) scale(0.78);
+  color: var(--fitness-primary);
+  font-weight: 600;
+}
+
+/* submit button with spinner */
+.cmp-contact-form__submit {
+  grid-column: 1 / -1;
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  border: none;
+  border-radius: 999px;
+  padding: 0.8rem 1.8rem;
+  background: linear-gradient(120deg, var(--fitness-primary), var(--fitness-accent));
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  box-shadow: 0 10px 26px rgba(14, 116, 144, 0.28);
+}
+
+.cmp-contact-form__submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(14, 116, 144, 0.36);
+}
+
+.cmp-contact-form__spinner {
+  width: 1em;
+  height: 1em;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  display: none;
+  animation: cfSpin 0.7s linear infinite;
+}
+
+.cmp-contact-form__submit.is-loading {
+  filter: saturate(0.9);
+  pointer-events: none;
+}
+.cmp-contact-form__submit.is-loading .cmp-contact-form__spinner { display: inline-block; }
+
+@keyframes cfSpin { to { transform: rotate(360deg); } }
+
+@media (max-width: 640px) {
+  .cmp-contact-form__form { grid-template-columns: 1fr; }
+}
+
+/* =============================================================
+   Popup modal (used by the contact form)
+   ============================================================= */
+.cmp-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s;
+}
+
+.cmp-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cmp-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 18, 30, 0.5);
+  backdrop-filter: blur(3px);
+}
+
+.cmp-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: calc(100% - 2rem);
+  max-width: 380px;
+  padding: 2.25rem 2rem 1.75rem;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 1.1rem;
+  box-shadow: 0 24px 60px rgba(20, 30, 50, 0.3);
+  transform: translateY(18px) scale(0.95);
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cmp-modal.is-open .cmp-modal__dialog {
+  transform: translateY(0) scale(1);
+}
+
+.cmp-modal__icon {
+  width: 66px;
+  height: 66px;
+  margin: 0 auto 1.1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: modalPop 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.05s both;
+}
+
+.cmp-modal--success .cmp-modal__icon { background: rgba(16, 185, 129, 0.16); }
+.cmp-modal--success .cmp-modal__icon::after {
+  content: "";
+  width: 13px;
+  height: 24px;
+  margin-top: -6px;
+  border: solid #10b981;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.cmp-modal--error .cmp-modal__icon { background: rgba(239, 68, 68, 0.16); }
+.cmp-modal--error .cmp-modal__icon::after {
+  content: "!";
+  color: #ef4444;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.cmp-modal__message {
+  color: var(--fitness-text);
+  font-size: 1.06rem;
+  line-height: 1.5;
+  margin: 0 0 1.35rem;
+}
+
+.cmp-modal__close {
+  border: none;
+  border-radius: 999px;
+  padding: 0.65rem 1.6rem;
+  background: linear-gradient(120deg, var(--fitness-primary), var(--fitness-accent));
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.cmp-modal__close:hover { transform: translateY(-2px); }
+
+@keyframes modalPop {
+  from { transform: scale(0.4); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
 }

@@ -1,23 +1,30 @@
 <sly data-sly-use.model="com.company.core.core.models.ContactFormModel"/>
-<section class="cmp-contact-form">
-    <h2 data-sly-test="${model.title}">${model.title}</h2>
-    <form class="cmp-contact-form__form" method="post" action="${model.actionPath}">
-        <div>
-            <label>Name</label>
-            <input type="text" name="name" required/>
+<section class="cmp-contact-form" data-animate-on-scroll>
+    <h2 class="cmp-contact-form__title" data-sly-test="${model.title}">${model.title}</h2>
+    <form class="cmp-contact-form__form"
+          method="post"
+          action="${model.actionPath}"
+          data-success="${model.successMessage}"
+          data-error="${model.errorMessage}">
+        <div class="cmp-contact-form__field">
+            <input type="text" name="name" id="cf-name" placeholder=" " required/>
+            <label for="cf-name">Name</label>
         </div>
-        <div>
-            <label>Email</label>
-            <input type="email" name="email" required/>
+        <div class="cmp-contact-form__field">
+            <input type="email" name="email" id="cf-email" placeholder=" " required/>
+            <label for="cf-email">Email</label>
         </div>
-        <div>
-            <label>Subject</label>
-            <input type="text" name="subject"/>
+        <div class="cmp-contact-form__field">
+            <input type="text" name="subject" id="cf-subject" placeholder=" "/>
+            <label for="cf-subject">Subject</label>
         </div>
-        <div>
-            <label>Message</label>
-            <textarea name="message" required></textarea>
+        <div class="cmp-contact-form__field cmp-contact-form__field--full">
+            <textarea name="message" id="cf-message" rows="4" placeholder=" " required></textarea>
+            <label for="cf-message">Message</label>
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" class="cmp-contact-form__submit">
+            <span class="cmp-contact-form__submit-text">Send Message</span>
+            <span class="cmp-contact-form__spinner" aria-hidden="true"></span>
+        </button>
     </form>
 </section>
