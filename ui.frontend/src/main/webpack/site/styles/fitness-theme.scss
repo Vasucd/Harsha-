@@ -21,9 +21,9 @@ body {
 }
 
 .root.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem 3rem;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 clamp(1rem, 4vw, 3rem) 3rem;
 }
 
 /* ---- Header / navigation ---- */
