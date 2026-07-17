@@ -383,37 +383,51 @@ header.experiencefragment,
 }
 
 /* =============================================================
-   Two-level (dropdown) navigation
+   Two-level (dropdown) navigation — animated
    ============================================================= */
-.cmp-navigation__item {
-  position: relative;
-}
+.cmp-navigation__item { position: relative; }
 
 .cmp-navigation__item .cmp-navigation__group {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 6px);
   left: 0;
-  min-width: 210px;
+  min-width: 220px;
   flex-direction: column;
   gap: 0;
   margin: 0;
   padding: 0.4rem 0;
   background: #ffffff;
   border: 1px solid var(--fitness-border);
-  border-radius: 0.6rem;
-  box-shadow: 0 14px 34px rgba(20, 30, 50, 0.14);
+  border-radius: 0.7rem;
+  box-shadow: 0 18px 40px rgba(20, 30, 50, 0.16);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(8px);
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  transform: translateY(10px) scale(0.98);
+  transform-origin: top center;
+  transition: opacity 0.25s ease,
+              transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+              visibility 0.25s;
   z-index: 30;
+}
+
+.cmp-navigation__item .cmp-navigation__group::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 22px;
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border-left: 1px solid var(--fitness-border);
+  border-top: 1px solid var(--fitness-border);
+  transform: rotate(45deg);
 }
 
 .cmp-navigation__item:hover > .cmp-navigation__group,
 .cmp-navigation__item:focus-within > .cmp-navigation__group {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 .cmp-navigation__item--level-0:has(.cmp-navigation__group) > .cmp-navigation__item-link::before {
@@ -421,29 +435,49 @@ header.experiencefragment,
   display: inline-block;
   width: 0.4em;
   height: 0.4em;
-  margin-left: 0.4em;
+  margin-left: 0.45em;
   border-right: 2px solid currentColor;
   border-bottom: 2px solid currentColor;
   transform: rotate(45deg) translateY(-2px);
   vertical-align: middle;
   opacity: 0.7;
+  transition: transform 0.28s ease;
+}
+
+.cmp-navigation__item--level-0:has(.cmp-navigation__group):hover > .cmp-navigation__item-link::before {
+  transform: rotate(-135deg) translateY(1px);
 }
 
 .cmp-navigation__item--level-1 .cmp-navigation__item-link,
 .cmp-navigation__item--level-2 .cmp-navigation__item-link {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0.55rem 1.1rem;
   white-space: nowrap;
   font-weight: 500;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.25s ease, transform 0.25s ease,
+              background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .cmp-navigation__item--level-1 .cmp-navigation__item-link::after,
-.cmp-navigation__item--level-2 .cmp-navigation__item-link::after {
-  display: none;
+.cmp-navigation__item--level-2 .cmp-navigation__item-link::after { display: none; }
+
+.cmp-navigation__item:hover > .cmp-navigation__group .cmp-navigation__item-link,
+.cmp-navigation__item:focus-within > .cmp-navigation__group .cmp-navigation__item-link {
+  opacity: 1;
+  transform: translateX(0);
 }
+
+.cmp-navigation__item:hover > .cmp-navigation__group > .cmp-navigation__item:nth-child(1) > .cmp-navigation__item-link { transition-delay: 0.05s; }
+.cmp-navigation__item:hover > .cmp-navigation__group > .cmp-navigation__item:nth-child(2) > .cmp-navigation__item-link { transition-delay: 0.10s; }
+.cmp-navigation__item:hover > .cmp-navigation__group > .cmp-navigation__item:nth-child(3) > .cmp-navigation__item-link { transition-delay: 0.15s; }
+.cmp-navigation__item:hover > .cmp-navigation__group > .cmp-navigation__item:nth-child(4) > .cmp-navigation__item-link { transition-delay: 0.20s; }
+.cmp-navigation__item:hover > .cmp-navigation__group > .cmp-navigation__item:nth-child(5) > .cmp-navigation__item-link { transition-delay: 0.25s; }
 
 .cmp-navigation__item--level-1 .cmp-navigation__item-link:hover,
 .cmp-navigation__item--level-2 .cmp-navigation__item-link:hover {
   background: var(--fitness-bg-soft);
   color: var(--fitness-primary);
+  box-shadow: inset 3px 0 0 var(--fitness-accent);
 }
