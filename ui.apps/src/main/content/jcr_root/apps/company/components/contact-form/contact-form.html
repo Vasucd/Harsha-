@@ -1,30 +1,52 @@
 <sly data-sly-use.model="com.company.core.core.models.ContactFormModel"/>
 <section class="cmp-contact-form" data-animate-on-scroll>
-    <h2 class="cmp-contact-form__title" data-sly-test="${model.title}">${model.title}</h2>
-    <form class="cmp-contact-form__form"
-          method="post"
-          action="${model.actionPath}"
-          data-success="${model.successMessage}"
-          data-error="${model.errorMessage}">
-        <div class="cmp-contact-form__field">
-            <input type="text" name="name" id="cf-name" placeholder=" " required/>
-            <label for="cf-name">Name</label>
+    <div class="cmp-contact-form__grid">
+        <aside class="cmp-contact-form__info">
+            <svg class="cmp-contact-form__art" viewBox="0 0 120 120" aria-hidden="true">
+                <circle cx="60" cy="60" r="56" fill="rgba(255,255,255,0.08)"/>
+                <g fill="#ffb347">
+                    <path d="M60 24 c 9 17 11 28 3 41 c 8 -4 11 -14 9 -23 c 10 13 11 30 -2 41 c 4 -7 3 -15 -2 -20 c 1 11 -6 17 -8 17 c -2 0 -9 -6 -8 -17 c -5 5 -6 13 -2 20 c -13 -11 -12 -28 -2 -41 c -2 9 1 19 9 23 c -8 -13 -6 -24 3 -41 z"/>
+                </g>
+                <rect x="30" y="82" width="60" height="26" rx="8" fill="#ffffff" opacity="0.9"/>
+                <path d="M30 90 l30 14 l30 -14" fill="none" stroke="#0e7490" stroke-width="3"/>
+            </svg>
+            <h3 class="cmp-contact-form__info-title">Let's build your plan</h3>
+            <p class="cmp-contact-form__info-text">Tell us your goals and our certified coaches will design a program around you.</p>
+            <ul class="cmp-contact-form__info-list">
+                <li><span>✉</span> support@forgefitness.com</li>
+                <li><span>☎</span> +1 (800) 555-1234</li>
+                <li><span>📍</span> 123 Strength Ave, Your City</li>
+                <li><span>⏰</span> Mon–Sat · 6:00am – 9:00pm</li>
+            </ul>
+        </aside>
+        <div class="cmp-contact-form__main">
+            <h2 class="cmp-contact-form__title" data-sly-test="${model.title}">${model.title}</h2>
+            <form class="cmp-contact-form__form"
+                  method="post"
+                  action="${model.actionPath}"
+                  data-success="${model.successMessage}"
+                  data-error="${model.errorMessage}">
+                <div class="cmp-contact-form__field">
+                    <input type="text" name="name" id="cf-name" placeholder=" " required/>
+                    <label for="cf-name">Name</label>
+                </div>
+                <div class="cmp-contact-form__field">
+                    <input type="email" name="email" id="cf-email" placeholder=" " required/>
+                    <label for="cf-email">Email</label>
+                </div>
+                <div class="cmp-contact-form__field">
+                    <input type="text" name="subject" id="cf-subject" placeholder=" "/>
+                    <label for="cf-subject">Subject</label>
+                </div>
+                <div class="cmp-contact-form__field">
+                    <textarea name="message" id="cf-message" rows="4" placeholder=" " required></textarea>
+                    <label for="cf-message">Message</label>
+                </div>
+                <button type="submit" class="cmp-contact-form__submit">
+                    <span class="cmp-contact-form__submit-text">Submit</span>
+                    <span class="cmp-contact-form__spinner" aria-hidden="true"></span>
+                </button>
+            </form>
         </div>
-        <div class="cmp-contact-form__field">
-            <input type="email" name="email" id="cf-email" placeholder=" " required/>
-            <label for="cf-email">Email</label>
-        </div>
-        <div class="cmp-contact-form__field">
-            <input type="text" name="subject" id="cf-subject" placeholder=" "/>
-            <label for="cf-subject">Subject</label>
-        </div>
-        <div class="cmp-contact-form__field cmp-contact-form__field--full">
-            <textarea name="message" id="cf-message" rows="4" placeholder=" " required></textarea>
-            <label for="cf-message">Message</label>
-        </div>
-        <button type="submit" class="cmp-contact-form__submit">
-            <span class="cmp-contact-form__submit-text">Submit</span>
-            <span class="cmp-contact-form__spinner" aria-hidden="true"></span>
-        </button>
-    </form>
+    </div>
 </section>
