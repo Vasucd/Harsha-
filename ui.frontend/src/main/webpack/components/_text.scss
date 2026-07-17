@@ -1,101 +1,148 @@
 /* =============================================================
-   Text component — fitness theme
+   Text component — forge.fit (light theme)
    Renders on the core WCM text component (.cmp-text)
-   Uses the CSS vars defined in site/styles/fitness-theme.scss
+   Uses the CSS vars from site/styles/fitness-theme.scss
    ============================================================= */
 
 .cmp-text {
-  max-width: 760px;
+  max-width: 68ch;
   margin: 0 auto;
   padding: 1.25rem 0;
-  color: var(--fitness-text, #e7edf8);
+  color: var(--fitness-text, #17202e);
   font-family: $font-family;
-  line-height: 1.7;
+  font-size: 1.075rem;
+  line-height: 1.75;
 
-  h2,
-  h3,
-  h4 {
-    margin: 0 0 0.75rem;
-    color: #ffffff;
-    font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: -0.01em;
+  /* ---- Headings ---- */
+  h1, h2, h3, h4, h5, h6 {
+    margin: 2rem 0 0.75rem;
+    color: var(--fitness-text, #17202e);
+    font-weight: 800;
+    line-height: 1.18;
+    letter-spacing: -0.015em;
   }
+  > :first-child { margin-top: 0; }
 
-  h2 { font-size: clamp(1.6rem, 3vw, 2.25rem); }
-  h3 { font-size: clamp(1.3rem, 2.4vw, 1.6rem); }
+  h2 { font-size: clamp(1.7rem, 3vw, 2.35rem); }
+  h3 { font-size: clamp(1.35rem, 2.4vw, 1.7rem); }
+  h4 { font-size: clamp(1.15rem, 2vw, 1.35rem); }
 
-  /* orange accent bar under H2 */
+  /* accent bar under H2 */
   h2::after {
     content: "";
     display: block;
-    width: 56px;
+    width: 58px;
     height: 4px;
-    margin-top: 0.6rem;
+    margin-top: 0.7rem;
     border-radius: 2px;
-    background: linear-gradient(90deg, var(--fitness-accent, #f97316), #ffb347);
+    background: linear-gradient(90deg, var(--fitness-primary, #0e7490), var(--fitness-accent, #f97316));
   }
 
+  /* ---- Body ---- */
   p {
-    margin: 0 0 1rem;
-    color: var(--fitness-muted, #9daac3);
-    font-size: 1.05rem;
+    margin: 0 0 1.15rem;
+    color: var(--fitness-muted, #5a6a85);
   }
 
+  strong { color: var(--fitness-text, #17202e); font-weight: 700; }
+
+  /* ---- Links ---- */
   a {
-    color: var(--fitness-accent, #f97316);
+    color: var(--fitness-primary, #0e7490);
+    font-weight: 600;
     text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s ease;
-
-    &:hover { border-bottom-color: var(--fitness-accent, #f97316); }
+    background-image: linear-gradient(var(--fitness-accent, #f97316), var(--fitness-accent, #f97316));
+    background-size: 0% 2px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.25s ease, color 0.2s ease;
   }
+  a:hover { color: var(--fitness-accent, #f97316); background-size: 100% 2px; }
 
-  ul,
-  ol {
-    margin: 0 0 1rem;
-    padding-left: 1.25rem;
-    color: var(--fitness-muted, #9daac3);
+  /* ---- Lists with branded markers ---- */
+  ul, ol { margin: 0 0 1.15rem; padding-left: 1.4rem; color: var(--fitness-muted, #5a6a85); }
+  li { margin-bottom: 0.55rem; padding-left: 0.25rem; }
+  ul { list-style: none; padding-left: 0.25rem; }
+  ul > li {
+    position: relative;
+    padding-left: 1.6rem;
   }
+  ul > li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    transform: rotate(45deg);
+    background: linear-gradient(135deg, var(--fitness-primary, #0e7490), var(--fitness-accent, #f97316));
+  }
+  ol > li::marker { color: var(--fitness-primary, #0e7490); font-weight: 700; }
 
-  li { margin-bottom: 0.5rem; }
+  /* ---- Blockquote ---- */
+  blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.4rem;
+    border-left: 4px solid var(--fitness-accent, #f97316);
+    background: var(--fitness-bg-soft, #f4f6fb);
+    border-radius: 0 10px 10px 0;
+    color: var(--fitness-text, #17202e);
+    font-size: 1.15rem;
+    font-style: italic;
+  }
+  blockquote p:last-child { margin-bottom: 0; }
+
+  /* ---- Misc ---- */
+  hr {
+    border: 0;
+    height: 1px;
+    margin: 2rem 0;
+    background: var(--fitness-border, rgba(20,30,50,0.12));
+  }
+  code {
+    padding: 0.15em 0.4em;
+    border-radius: 5px;
+    background: var(--fitness-bg-soft, #f4f6fb);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.92em;
+    color: var(--fitness-primary, #0e7490);
+  }
 }
 
-.cmp-text__paragraph { margin: 0 0 1rem; }
+.cmp-text__paragraph { margin: 0 0 1.15rem; }
 
 /* =============================================================
-   Style System variants (author-selectable)
-   Register these classes in the Text component policy so authors
-   can toggle them per instance from the Styles menu.
+   Style System variants (registered in the Text policy)
    ============================================================= */
 
 /* Centered text + centered accent bar */
 .cmp-text--center {
   text-align: center;
-
-  h2::after {
-    margin-left: auto;
-    margin-right: auto;
-  }
+  h2::after { margin-left: auto; margin-right: auto; }
+  ul { display: inline-block; text-align: left; }
 }
 
-/* Card / panel look on the dark background */
+/* Card / panel look (light) */
 .cmp-text--card {
-  padding: 2rem;
-  background: var(--fitness-bg-soft, #101a2a);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  padding: 2rem 2.25rem;
+  background: #ffffff;
+  border: 1px solid var(--fitness-border, rgba(20,30,50,0.12));
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(20, 30, 50, 0.08);
 }
 
 /* Larger intro / lead paragraph */
-.cmp-text--lead p {
-  color: var(--fitness-text, #e7edf8);
-  font-size: 1.25rem;
+.cmp-text--lead {
+  p {
+    color: var(--fitness-text, #17202e);
+    font-size: 1.3rem;
+    line-height: 1.6;
+  }
 }
 
-/* Left accent rule (good for quotes / callouts) */
+/* Left accent rule (callouts) */
 .cmp-text--accent {
-  padding-left: 1.25rem;
+  padding: 0.4rem 0 0.4rem 1.35rem;
   border-left: 4px solid var(--fitness-accent, #f97316);
 }
