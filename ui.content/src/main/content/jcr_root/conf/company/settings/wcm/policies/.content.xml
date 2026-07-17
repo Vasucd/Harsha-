@@ -165,10 +165,10 @@
                     <cq:styleGroups jcr:primaryType="nt:unstructured">
                         <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Text Styles">
                             <cq:styles jcr:primaryType="nt:unstructured">
-                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-text--lead" cq:styleId="1741700000001" cq:styleLabel="Lead paragraph"/>
-                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-text--card" cq:styleId="1741700000002" cq:styleLabel="Card panel"/>
-                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-text--accent" cq:styleId="1741700000003" cq:styleLabel="Accent rule"/>
-                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-text--center" cq:styleId="1741700000004" cq:styleLabel="Centered"/>
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-text--lead" cq:styleId="{Long}1741700000001" cq:styleLabel="Lead paragraph"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-text--card" cq:styleId="{Long}1741700000002" cq:styleLabel="Card panel"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-text--accent" cq:styleId="{Long}1741700000003" cq:styleLabel="Accent rule"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-text--center" cq:styleId="{Long}1741700000004" cq:styleLabel="Centered"/>
                             </cq:styles>
                         </item0>
                     </cq:styleGroups>
@@ -197,8 +197,8 @@
                     <cq:styleGroups jcr:primaryType="nt:unstructured">
                         <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Title Styles">
                             <cq:styles jcr:primaryType="nt:unstructured">
-                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-title--accent" cq:styleId="1741700000011" cq:styleLabel="Accent underline"/>
-                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-title--center" cq:styleId="1741700000012" cq:styleLabel="Centered"/>
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-title--accent" cq:styleId="{Long}1741700000011" cq:styleLabel="Accent underline"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-title--center" cq:styleId="{Long}1741700000012" cq:styleLabel="Centered"/>
                             </cq:styles>
                         </item0>
                     </cq:styleGroups>
