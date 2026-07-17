@@ -506,9 +506,9 @@ header.experiencefragment,
    Contact form — animated floating-label fields + submit
    ============================================================= */
 .cmp-contact-form__form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.6rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
 .cmp-contact-form__field {
@@ -522,7 +522,7 @@ header.experiencefragment,
 .cmp-contact-form__field input,
 .cmp-contact-form__field textarea {
   width: 100%;
-  padding: 1.55rem 1rem 0.6rem;
+  padding: 1.4rem 1rem 0.5rem;
   border: 1px solid var(--fitness-border);
   border-radius: 0.7rem;
   background: #ffffff;
@@ -531,8 +531,6 @@ header.experiencefragment,
   line-height: 1.3;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
-
-.cmp-contact-form__field input { min-height: 58px; }
 
 .cmp-contact-form__field textarea {
   resize: vertical;
@@ -550,7 +548,7 @@ header.experiencefragment,
 .cmp-contact-form__field label {
   position: absolute;
   left: 1rem;
-  top: 1.05rem;
+  top: 1.15rem;
   color: var(--fitness-muted);
   font-size: 1rem;
   pointer-events: none;
@@ -941,4 +939,10 @@ header.experiencefragment .cmp-logo,
 
 @media (max-width: 640px) {
   .cmp-contact-form { padding: 1.75rem 1.35rem 2rem; }
+}
+
+/* Hide language navigation (single-language site) */
+.cmp-languagenavigation,
+header.experiencefragment .cmp-languagenavigation {
+  display: none !important;
 }

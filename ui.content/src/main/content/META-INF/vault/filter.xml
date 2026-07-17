@@ -5,6 +5,8 @@
     <filter root="/content/company" mode="merge"/>
     <filter root="/content/dam/company" mode="merge"/>
     <filter root="/content/experience-fragments/company" mode="update"/>
+    <filter root="/content/experience-fragments/company/us/en/site/header"/>
+    <filter root="/content/experience-fragments/company/us/en/site/footer"/>
     <filter root="/content/experience-fragments" mode="merge"/>
     <filter root="/conf/global/settings/workflow/models/content-approval"/>
 </workspaceFilter>
