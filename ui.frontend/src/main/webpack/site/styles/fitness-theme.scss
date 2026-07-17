@@ -808,3 +808,38 @@ header.experiencefragment .cmp-image__link,
   display: inline-flex;
   align-items: center;
 }
+
+/* =============================================================
+   Header layout — logo left, navigation right
+   ============================================================= */
+header.experiencefragment .cmp-container,
+.experiencefragment--header .cmp-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem 1.75rem;
+  flex-wrap: wrap;
+}
+
+/* logo pinned left; everything after it pushed to the right */
+header.experiencefragment .cmp-image,
+.experiencefragment--header .cmp-image {
+  order: -1;
+  margin-right: auto;
+}
+
+/* keep the top-level nav items on one row, aligned right */
+header.experiencefragment .cmp-navigation__group--level-0,
+.experiencefragment--header .cmp-navigation__group--level-0 {
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  header.experiencefragment .cmp-container,
+  .experiencefragment--header .cmp-container {
+    justify-content: center;
+  }
+  header.experiencefragment .cmp-image,
+  .experiencefragment--header .cmp-image {
+    margin-right: 0;
+  }
+}
