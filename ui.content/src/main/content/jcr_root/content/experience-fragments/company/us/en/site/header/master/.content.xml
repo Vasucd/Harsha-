@@ -35,10 +35,7 @@
                 structureDepth="2"/>
             <logo
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="company/components/image"
-                fileReference="/content/dam/company/forge-logo.svg"
-                alt="forge.fit"
-                linkURL="/content/company/us/en/home"/>
+                sling:resourceType="company/components/logo"/>
         </root>
     </jcr:content>
 </jcr:root>

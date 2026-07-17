@@ -843,3 +843,27 @@ header.experiencefragment .cmp-navigation__group--level-0,
     margin-right: 0;
   }
 }
+
+/* =============================================================
+   forge.fit inline logo (company/components/logo)
+   ============================================================= */
+header.experiencefragment .cmp-logo,
+.experiencefragment--header .cmp-logo {
+  order: -1;
+  margin-right: auto;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.cmp-logo__svg {
+  height: 52px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  header.experiencefragment .cmp-logo,
+  .experiencefragment--header .cmp-logo { margin-right: 0; }
+  .cmp-logo__svg { height: 44px; }
+}
