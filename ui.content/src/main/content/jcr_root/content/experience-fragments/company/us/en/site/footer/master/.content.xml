@@ -19,7 +19,7 @@
             <text
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="company/components/text"
-                text="&lt;p>&lt;strong>Company Fitness Studio&lt;/strong> - Train hard. Recover smart. Stay consistent.&lt;/p>&#xa;&lt;p>support@companyfitness.com | +1 (800) 555-1234&lt;/p>"
+                text="&lt;p>&lt;strong>FORGE FITNESS&lt;/strong> — Build strength that lasts.&lt;/p>&#xa;&lt;p>Certified coaching · Strength · Nutrition · Mobility&lt;/p>&#xa;&lt;p>support@forgefitness.com | +1 (800) 555-1234&lt;/p>"
                 textIsRich="true"/>
         </root>
     </jcr:content>

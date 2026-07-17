@@ -707,3 +707,85 @@ header.experiencefragment,
   from { transform: scale(0.4); opacity: 0; }
   to   { transform: scale(1); opacity: 1; }
 }
+
+/* =============================================================
+   Brand polish — Forge Fitness
+   ============================================================= */
+
+/* generous section rhythm */
+.cmp-services-card,
+.cmp-blog-listing {
+  margin: 2.5rem 0;
+  padding: 2rem 1.75rem;
+}
+
+/* section titles: centered with accent underline */
+.cmp-services-card__title,
+.cmp-blog-listing__title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+.cmp-services-card__title::after,
+.cmp-blog-listing__title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--fitness-primary), var(--fitness-accent));
+}
+
+/* services cards: lift + top accent line on hover */
+.cmp-services-card__item {
+  position: relative;
+  overflow: hidden;
+}
+.cmp-services-card__item::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--fitness-primary), var(--fitness-accent));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.cmp-services-card__item:hover::before { transform: scaleX(1); }
+
+/* footer: premium dark bar */
+.cmp-footer-config,
+header.experiencefragment + * .cmp-footer-config { }
+
+.experiencefragment--footer .cmp-container,
+footer .root,
+footer .cmp-container {
+  text-align: center;
+}
+
+/* footer text block styling (footer XF text component) */
+footer .cmp-text p:first-child,
+.experiencefragment--footer .cmp-text p:first-child {
+  font-size: 1.15rem;
+  color: var(--fitness-text);
+}
+footer .cmp-text,
+.experiencefragment--footer .cmp-text {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 3px solid;
+  border-image: linear-gradient(90deg, var(--fitness-primary), var(--fitness-accent)) 1;
+  color: var(--fitness-muted);
+}
+
+/* nicer default link accent site-wide */
+.cmp-blog-listing__link:hover,
+.cmp-services-card__item-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
