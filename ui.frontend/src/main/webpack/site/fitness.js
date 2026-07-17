@@ -70,10 +70,10 @@
         '  <button type="button" class="cmp-modal__close">Close</button>' +
         "</div>";
       document.body.appendChild(modal);
-      const close = function () { modal.classList.remove("is-open"); };
+      const close = () => { modal.classList.remove("is-open"); };
       modal.querySelector(".cmp-modal__backdrop").addEventListener("click", close);
       modal.querySelector(".cmp-modal__close").addEventListener("click", close);
-      document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape") { close(); } });
     }
     modal.classList.toggle("cmp-modal--success", !!success);
     modal.classList.toggle("cmp-modal--error", !success);
