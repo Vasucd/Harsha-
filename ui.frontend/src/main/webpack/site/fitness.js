@@ -66,6 +66,7 @@
         '<div class="cmp-modal__backdrop"></div>' +
         '<div class="cmp-modal__dialog" role="dialog" aria-modal="true" aria-live="polite">' +
         '  <div class="cmp-modal__icon"></div>' +
+        '  <h3 class="cmp-modal__heading"></h3>' +
         '  <p class="cmp-modal__message"></p>' +
         '  <button type="button" class="cmp-modal__close">Close</button>' +
         "</div>";
@@ -75,9 +76,21 @@
       modal.querySelector(".cmp-modal__close").addEventListener("click", close);
       document.addEventListener("keydown", (e) => { if (e.key === "Escape") { close(); } });
     }
+    const successIcon =
+      '<svg class="cmp-modal__mark" viewBox="0 0 52 52" aria-hidden="true">' +
+      '<circle class="cmp-modal__mark-circle" cx="26" cy="26" r="24"/>' +
+      '<path class="cmp-modal__mark-path" d="M15 27 l7 7 l15 -16"/></svg>';
+    const errorIcon =
+      '<svg class="cmp-modal__mark" viewBox="0 0 52 52" aria-hidden="true">' +
+      '<circle class="cmp-modal__mark-circle" cx="26" cy="26" r="24"/>' +
+      '<path class="cmp-modal__mark-path" d="M18 18 L34 34 M34 18 L18 34"/></svg>';
     modal.classList.toggle("cmp-modal--success", !!success);
     modal.classList.toggle("cmp-modal--error", !success);
+    modal.querySelector(".cmp-modal__icon").innerHTML = success ? successIcon : errorIcon;
+    modal.querySelector(".cmp-modal__heading").textContent = success ? "Message sent!" : "Something went wrong";
     modal.querySelector(".cmp-modal__message").textContent = message;
+    modal.classList.remove("is-open");
+    void modal.offsetWidth;
     modal.classList.add("is-open");
   }
 
