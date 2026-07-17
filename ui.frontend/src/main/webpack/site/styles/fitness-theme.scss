@@ -1223,45 +1223,39 @@ footer.experiencefragment .cmp-text a,
 }
 
 /* =============================================================
-   Site footer (custom multi-column, dark)
+   Site footer — slim single bar
    ============================================================= */
 .cmp-site-footer {
   background: #0b1a24;
   color: #cfe0e6;
   margin-top: 1.75rem;
 }
-.cmp-site-footer__inner {
+.cmp-site-footer__bar {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 1.75rem clamp(1.25rem, 4vw, 3rem) 1.25rem;
-  display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1.3fr;
+  padding: 0.7rem clamp(1rem, 4vw, 3rem);
+  display: flex;
+  align-items: center;
   gap: 1.25rem 2rem;
+  flex-wrap: wrap;
 }
-.cmp-site-footer__logo { height: 32px; width: auto; display: block; margin-bottom: 0.6rem; }
-.cmp-site-footer__tagline { color: #9fbcc6; line-height: 1.5; max-width: 280px; margin: 0; font-size: 0.9rem; }
-.cmp-site-footer__col { display: flex; flex-direction: column; gap: 0.45rem; }
-.cmp-site-footer__col h4 {
-  margin: 0 0 0.2rem; color: #ffffff; font-size: 0.82rem;
-  text-transform: uppercase; letter-spacing: 0.05em;
+.cmp-site-footer__logo { height: 26px; width: auto; display: block; }
+.cmp-site-footer__links {
+  display: flex;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
-.cmp-site-footer__col a,
-.cmp-site-footer__col span {
-  color: #9fbcc6; text-decoration: none; font-size: 0.88rem; transition: color 0.2s ease;
+.cmp-site-footer__links a {
+  color: #9fbcc6;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
 }
-.cmp-site-footer__col a:hover { color: #ffb347; }
-.cmp-site-footer__bottom {
-  max-width: 1180px; margin: 0 auto;
-  padding: 0.85rem clamp(1.25rem, 4vw, 3rem);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex; justify-content: space-between; align-items: center;
-  flex-wrap: wrap; gap: 0.4rem;
-  color: #7f9aa4; font-size: 0.82rem;
-}
-@media (max-width: 860px) {
-  .cmp-site-footer__inner { grid-template-columns: 1fr 1fr; gap: 1.75rem; }
-}
-@media (max-width: 520px) {
-  .cmp-site-footer__inner { grid-template-columns: 1fr; }
-  .cmp-site-footer__bottom { flex-direction: column; text-align: center; }
+.cmp-site-footer__links a:hover { color: #ffb347; }
+.cmp-site-footer__copy { color: #7f9aa4; font-size: 0.82rem; white-space: nowrap; }
+@media (max-width: 640px) {
+  .cmp-site-footer__bar { justify-content: center; text-align: center; gap: 0.75rem 1.25rem; }
+  .cmp-site-footer__links { margin: 0; }
 }
