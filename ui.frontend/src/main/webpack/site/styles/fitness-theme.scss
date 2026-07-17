@@ -1116,3 +1116,80 @@ footer.experiencefragment .cmp-text p:first-child,
 }
 footer.experiencefragment .cmp-text a,
 .experiencefragment--footer .cmp-text a { color: var(--fitness-primary); }
+
+/* =============================================================
+   Stats band
+   ============================================================= */
+.cmp-stats {
+  margin: 1.6rem 0;
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #0e7490, #0a4c60);
+  color: #fff;
+}
+.cmp-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+.cmp-stats__item { display: flex; flex-direction: column; gap: 0.25rem; }
+.cmp-stats__num { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; color: #ffb347; }
+.cmp-stats__label { color: #cfeaef; font-size: 0.95rem; }
+@media (max-width: 640px) { .cmp-stats__grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; } }
+
+/* =============================================================
+   Pricing
+   ============================================================= */
+.cmp-pricing { margin: 2.5rem 0; text-align: center; }
+.cmp-pricing__title { font-size: clamp(1.7rem, 3vw, 2.3rem); font-weight: 800; color: var(--fitness-text); margin: 0 0 0.4rem; }
+.cmp-pricing__sub { color: var(--fitness-muted); margin: 0 0 2rem; }
+.cmp-pricing__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; align-items: stretch; }
+.cmp-pricing__card {
+  position: relative;
+  display: flex; flex-direction: column;
+  padding: 2rem 1.75rem;
+  background: #fff;
+  border: 1px solid var(--fitness-border);
+  border-radius: 16px;
+  box-shadow: 0 8px 26px rgba(20,30,50,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.cmp-pricing__card:hover { transform: translateY(-6px); box-shadow: 0 16px 38px rgba(20,30,50,0.12); }
+.cmp-pricing__card--featured { border-color: var(--fitness-accent); box-shadow: 0 16px 40px rgba(249,115,22,0.18); }
+.cmp-pricing__badge {
+  position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+  background: linear-gradient(120deg, var(--fitness-primary), var(--fitness-accent));
+  color: #fff; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.03em;
+  padding: 0.3rem 0.9rem; border-radius: 999px;
+}
+.cmp-pricing__name { margin: 0.3rem 0 0.5rem; font-size: 1.25rem; font-weight: 700; color: var(--fitness-text); }
+.cmp-pricing__price { font-size: 2.4rem; font-weight: 800; color: var(--fitness-primary); margin-bottom: 1rem; }
+.cmp-pricing__price span { font-size: 1rem; font-weight: 600; color: var(--fitness-muted); }
+.cmp-pricing__features { list-style: none; margin: 0 0 1.5rem; padding: 0; text-align: left; display: grid; gap: 0.6rem; flex: 1; }
+.cmp-pricing__features li { position: relative; padding-left: 1.6rem; color: var(--fitness-muted); }
+.cmp-pricing__features li::before { content: "✓"; position: absolute; left: 0; color: var(--fitness-primary); font-weight: 800; }
+.cmp-pricing__cta {
+  display: inline-block; padding: 0.8rem 1.5rem; border-radius: 999px; font-weight: 700; text-decoration: none;
+  background: var(--fitness-bg-soft); color: var(--fitness-text); transition: all 0.2s ease;
+}
+.cmp-pricing__card--featured .cmp-pricing__cta { background: linear-gradient(120deg, var(--fitness-primary), var(--fitness-accent)); color: #fff; }
+.cmp-pricing__cta:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(14,116,144,0.22); }
+@media (max-width: 800px) { .cmp-pricing__grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; } }
+
+/* =============================================================
+   Testimonials
+   ============================================================= */
+.cmp-testimonials { margin: 2.5rem 0; text-align: center; }
+.cmp-testimonials__title { font-size: clamp(1.7rem, 3vw, 2.3rem); font-weight: 800; color: var(--fitness-text); margin: 0 0 2rem; }
+.cmp-testimonials__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.cmp-testimonials__card {
+  margin: 0; padding: 1.75rem;
+  background: #fff; border: 1px solid var(--fitness-border); border-radius: 16px;
+  box-shadow: 0 8px 26px rgba(20,30,50,0.06); text-align: left;
+}
+.cmp-testimonials__stars { color: #f5a623; margin-bottom: 0.6rem; letter-spacing: 2px; }
+.cmp-testimonials__card blockquote { margin: 0 0 1rem; color: var(--fitness-text); font-size: 1.05rem; line-height: 1.6; }
+.cmp-testimonials__card figcaption { color: var(--fitness-muted); }
+.cmp-testimonials__card figcaption strong { color: var(--fitness-primary); }
+@media (max-width: 800px) { .cmp-testimonials__grid { grid-template-columns: 1fr; } }
