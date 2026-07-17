@@ -508,7 +508,7 @@ header.experiencefragment,
 .cmp-contact-form__form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem 1.1rem;
+  gap: 1.6rem 1.5rem;
 }
 
 .cmp-contact-form__field {
@@ -522,14 +522,17 @@ header.experiencefragment,
 .cmp-contact-form__field input,
 .cmp-contact-form__field textarea {
   width: 100%;
-  padding: 1.25rem 0.9rem 0.55rem;
+  padding: 1.55rem 1rem 0.6rem;
   border: 1px solid var(--fitness-border);
-  border-radius: 0.6rem;
+  border-radius: 0.7rem;
   background: #ffffff;
   color: var(--fitness-text);
   font: inherit;
+  line-height: 1.3;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
+
+.cmp-contact-form__field input { min-height: 58px; }
 
 .cmp-contact-form__field textarea {
   resize: vertical;
@@ -546,11 +549,12 @@ header.experiencefragment,
 /* floating label */
 .cmp-contact-form__field label {
   position: absolute;
-  left: 0.95rem;
-  top: 0.9rem;
+  left: 1rem;
+  top: 1.05rem;
   color: var(--fitness-muted);
+  font-size: 1rem;
   pointer-events: none;
-  transition: transform 0.18s ease, color 0.18s ease, font-size 0.18s ease;
+  transition: transform 0.18s ease, color 0.18s ease;
   transform-origin: left top;
 }
 
@@ -558,9 +562,9 @@ header.experiencefragment,
 .cmp-contact-form__field input:not(:placeholder-shown) + label,
 .cmp-contact-form__field textarea:focus + label,
 .cmp-contact-form__field textarea:not(:placeholder-shown) + label {
-  transform: translateY(-0.6rem) scale(0.78);
+  transform: translateY(-0.75rem) scale(0.72);
   color: var(--fitness-primary);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* submit button with spinner */
