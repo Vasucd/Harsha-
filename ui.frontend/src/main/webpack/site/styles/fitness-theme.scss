@@ -1051,3 +1051,68 @@ footer.experiencefragment::before,
   .cmp-contact-form__info { padding: 2rem 1.5rem; }
   .cmp-contact-form__main { padding: 2rem 1.5rem; }
 }
+
+/* =============================================================
+   Contact fields — STATIC labels (no overlap) + tighter spacing
+   ============================================================= */
+.cmp-contact-form__field {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.cmp-contact-form__field label {
+  position: static;
+  transform: none !important;
+  left: auto;
+  top: auto;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--fitness-text);
+}
+.cmp-contact-form__field input,
+.cmp-contact-form__field textarea {
+  padding: 0.85rem 1rem;
+  min-height: auto;
+  border-radius: 0.6rem;
+}
+.cmp-contact-form__field textarea { min-height: 130px; }
+
+/* =============================================================
+   Tighter vertical rhythm (less white space between sections)
+   ============================================================= */
+.cmp-services-card,
+.cmp-blog-listing {
+  margin: 1.6rem 0;
+}
+.root.container {
+  padding-bottom: 1.25rem;
+}
+
+/* =============================================================
+   Footer — cleaner, branded
+   ============================================================= */
+footer.experiencefragment,
+.experiencefragment--footer {
+  margin-top: 2rem;
+  padding-bottom: 2.25rem !important;
+  background: var(--fitness-bg-soft);
+  border-top: 1px solid var(--fitness-border);
+}
+footer.experiencefragment .cmp-text,
+.experiencefragment--footer .cmp-text {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--fitness-muted);
+  border: 0;
+  padding: 0 1rem;
+}
+footer.experiencefragment .cmp-text p:first-child,
+.experiencefragment--footer .cmp-text p:first-child {
+  color: var(--fitness-text);
+  font-size: 1.1rem;
+  margin-bottom: 0.35rem;
+}
+footer.experiencefragment .cmp-text a,
+.experiencefragment--footer .cmp-text a { color: var(--fitness-primary); }
