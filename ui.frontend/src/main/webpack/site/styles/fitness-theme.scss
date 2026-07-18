@@ -1259,3 +1259,33 @@ footer.experiencefragment .cmp-text a,
   .cmp-site-footer__bar { justify-content: center; text-align: center; gap: 0.75rem 1.25rem; }
   .cmp-site-footer__links { margin: 0; }
 }
+
+
+/* =============================================================
+   FINAL header logo (CSS on nav container) + single footer guard
+   ============================================================= */
+/* the inline logo component is not reliable in the XF; render via CSS */
+.cmp-logo { display: none !important; }
+
+.cmp-container:has(> .cmp-navigation) {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem 1.75rem;
+  flex-wrap: wrap;
+  padding: 0.5rem clamp(1rem, 4vw, 3rem);
+}
+.cmp-container:has(> .cmp-navigation)::before {
+  content: "";
+  order: -1;
+  margin-right: auto;
+  flex: 0 0 auto;
+  width: 150px;
+  height: 38px;
+  background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20340%2092%22%3E%3Cg%20fill%3D%22%23f2681c%22%20transform%3D%22translate%28-70%2C-4%29%20scale%280.46%29%22%3E%3Cpath%20d%3D%22M260%2040%20c%2018%2034%2022%2056%206%2082%20c%2016%20-8%2022%20-28%2018%20-46%20c%2020%2026%2022%2060%20-4%2082%20c%208%20-14%206%20-30%20-4%20-40%20c%202%2022%20-12%2034%20-16%2034%20c%20-4%200%20-18%20-12%20-16%20-34%20c%20-10%2010%20-12%2026%20-4%2040%20c%20-26%20-22%20-24%20-56%20-4%20-82%20c%20-4%2018%202%2038%2018%2046%20c%20-16%20-26%20-12%20-48%206%20-82%20z%22/%3E%3Cpath%20d%3D%22M214%2096%20c%2010%2020%208%2040%20-6%2056%20c%2020%20-6%2030%20-26%2026%20-48%20c%20-4%2026%20-20%2040%20-34%2042%20c%20-16%20-18%20-12%20-40%2014%20-50%20z%22/%3E%3Cpath%20d%3D%22M306%2096%20c%20-10%2020%20-8%2040%206%2056%20c%20-20%20-6%20-30%20-26%20-26%20-48%20c%204%2026%2020%2040%2034%2042%20c%2016%20-18%2012%20-40%20-14%20-50%20z%22/%3E%3C/g%3E%3Ctext%20x%3D%2286%22%20y%3D%2262%22%20font-family%3D%22Trebuchet%20MS%2C%20Arial%2C%20sans-serif%22%20font-size%3D%2254%22%20font-weight%3D%22800%22%20letter-spacing%3D%22-1.5%22%20fill%3D%22%23146c6b%22%3Eforge%3Ctspan%20font-weight%3D%22400%22%20fill%3D%22%231a7f7d%22%3Efit%3C/tspan%3E%3C/text%3E%3C/svg%3E") no-repeat left center;
+  background-size: contain;
+}
+
+/* guarantee ONE footer: hide any stale text/separator left in the footer XF */
+.cmp-experiencefragment:has(.cmp-site-footer) .cmp-text,
+.cmp-experiencefragment:has(.cmp-site-footer) .cmp-separator,
+.cmp-experiencefragment:has(.cmp-site-footer) .cmp-title { display: none !important; }
