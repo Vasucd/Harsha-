@@ -1635,25 +1635,12 @@ h1, h2, h3, h4 { color: var(--ink-900); letter-spacing: -0.021em; }
 .cmp-site-footer__inner {
   max-width: 1180px; margin: 0 auto;
   padding: 2.25rem clamp(1.25rem, 4vw, 3rem) 1.5rem;
-  display: grid; grid-template-columns: 1.7fr 1fr 1fr 1.3fr; gap: 1.5rem 2rem;
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.25fr; gap: 1.5rem 2.25rem;
 }
 .cmp-site-footer__logo { height: 30px; width: auto; display: block; margin-bottom: .7rem; }
 .cmp-site-footer__tagline {
-  margin: 0 0 1rem; color: #8fa8b3; line-height: 1.55; font-size: .9rem; max-width: 290px;
+  margin: 0; color: #8fa8b3; line-height: 1.6; font-size: .9rem; max-width: 300px;
 }
-.cmp-site-footer__social { display: flex; gap: .55rem; }
-.cmp-site-footer__social a {
-  width: 34px; height: 34px; border-radius: 10px;
-  display: inline-flex; align-items: center; justify-content: center;
-  background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.09);
-  transition: background .25s var(--ease-premium), transform .25s var(--ease-premium), border-color .25s ease;
-}
-.cmp-site-footer__social a:hover {
-  background: var(--accent-500); border-color: var(--accent-500); transform: translateY(-2px);
-}
-.cmp-site-footer__social svg { width: 17px; height: 17px; fill: #cfe0e6; }
-.cmp-site-footer__social a:hover svg { fill: #16240f; }
-
 .cmp-site-footer__col { display: flex; flex-direction: column; gap: .5rem; }
 .cmp-site-footer__col h4 {
   margin: 0 0 .35rem; color: #fff; font-size: .78rem; font-weight: 800;
