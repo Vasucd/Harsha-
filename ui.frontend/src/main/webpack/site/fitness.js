@@ -114,4 +114,25 @@
     });
   });
 
+
+  /* ---- Header: scroll state + scroll progress (Apple-style) ---- */
+  const siteHeader = document.querySelector(".cmp-experiencefragment--header");
+  if (siteHeader) {
+    const onHeaderScroll = () => {
+      const y = window.scrollY || document.documentElement.scrollTop;
+      if (y > 16) {
+        siteHeader.classList.add("is-scrolled");
+      } else {
+        siteHeader.classList.remove("is-scrolled");
+      }
+      const doc = document.documentElement;
+      const max = (doc.scrollHeight - doc.clientHeight) || 1;
+      const pct = Math.min(100, Math.max(0, (y / max) * 100));
+      siteHeader.style.setProperty("--scroll-progress", pct + "%");
+    };
+    window.addEventListener("scroll", onHeaderScroll, { passive: true });
+    window.addEventListener("resize", onHeaderScroll, { passive: true });
+    onHeaderScroll();
+  }
+
 })();

@@ -1869,3 +1869,98 @@ body > .root:last-child { margin-bottom: 0 !important; }
 .cmp-site-footer__inner,
 .cmp-site-footer__cta-inner,
 .cmp-site-footer__bottom { max-width: 1240px; }
+
+/* =============================================================
+   HEADER — premium sticky bar (Gold's-Gym boldness, Apple motion)
+   ============================================================= */
+.cmp-experiencefragment--header {
+  position: sticky !important;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.72);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid transparent;
+  transition: background .45s var(--ease-premium),
+              box-shadow .45s var(--ease-premium),
+              border-color .45s var(--ease-premium);
+}
+
+/* condensed + lifted once you scroll */
+.cmp-experiencefragment--header.is-scrolled {
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom-color: var(--ink-200);
+  box-shadow: 0 6px 24px rgba(15, 23, 32, .07);
+}
+
+/* scroll progress bar across the very bottom of the header */
+.cmp-experiencefragment--header::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -1px;
+  height: 2px;
+  width: var(--scroll-progress, 0%);
+  background: linear-gradient(90deg, var(--brand-500), var(--accent-500), var(--accent-300));
+  transition: width .1s linear;
+  border-radius: 0 2px 2px 0;
+}
+
+/* the bar itself condenses smoothly */
+.cmp-experiencefragment--header .cmp-container {
+  padding-top: .75rem !important;
+  padding-bottom: .75rem !important;
+  transition: padding .45s var(--ease-premium);
+}
+.cmp-experiencefragment--header.is-scrolled .cmp-container {
+  padding-top: .35rem !important;
+  padding-bottom: .35rem !important;
+}
+
+/* logo scales down on scroll */
+.cmp-experiencefragment--header .cmp-container::before {
+  transition: width .45s var(--ease-premium), height .45s var(--ease-premium);
+}
+.cmp-experiencefragment--header.is-scrolled .cmp-container::before {
+  width: 118px !important;
+  height: 30px !important;
+}
+
+/* ---- nav: bold, uppercase, animated underline ---- */
+.cmp-experiencefragment--header .cmp-navigation__item-link {
+  position: relative;
+  color: var(--ink-900);
+  font-weight: 700;
+  font-size: .93rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: .45rem 0;
+  text-decoration: none;
+  transition: color .3s var(--ease-premium);
+}
+.cmp-experiencefragment--header .cmp-navigation__item-link::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  height: 2px; width: 100%;
+  background: linear-gradient(90deg, var(--brand-500), var(--accent-500));
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .4s var(--ease-premium);
+}
+.cmp-experiencefragment--header .cmp-navigation__item-link:hover { color: var(--accent-500); }
+.cmp-experiencefragment--header .cmp-navigation__item-link:hover::after,
+.cmp-experiencefragment--header .cmp-navigation__item--active > .cmp-navigation__item-link::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.cmp-experiencefragment--header .cmp-navigation__item--active > .cmp-navigation__item-link { color: var(--brand-500); }
+
+/* =============================================================
+   FOOTER — kill remaining blank space after it
+   ============================================================= */
+.aem-Grid::after,
+.aem-Grid::before { content: none !important; display: none !important; }
+.root.container > .aem-Grid { margin-bottom: 0 !important; padding-bottom: 0 !important; }
+main.container { padding-bottom: 0 !important; }
+.cmp-site-footer { display: block; }
+.cmp-site-footer__bottom { margin-bottom: 0 !important; padding-bottom: .7rem !important; }
