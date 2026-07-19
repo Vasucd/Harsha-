@@ -1444,8 +1444,20 @@ a, button { transition: color 0.25s var(--ease-premium), background 0.25s var(--
 
 .cmp-experiencefragment:has(.cmp-site-footer) {
   margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
-.last-grid-column {
+.cmp-site-footer,
+.cmp-site-footer__bar {
+  margin-bottom: 0;
+}
+
+/* AEM's responsive grid leaves a trailing gap on the last column */
+.aem-Grid > .aem-GridColumn:last-child {
   margin-bottom: 0 !important;
+}
+
+/* the footer XF is the last thing on the page — nothing after it */
+body {
+  margin-bottom: 0;
 }
