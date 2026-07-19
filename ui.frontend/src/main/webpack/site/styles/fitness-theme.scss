@@ -1799,3 +1799,34 @@ h1, h2, h3, h4 { color: var(--ink-900); letter-spacing: -0.021em; }
 @media (prefers-reduced-motion: reduce) {
   .cmp-about__art, .cmp-about__ring { animation: none !important; }
 }
+
+/* =============================================================
+   SINGLE LOGO — definitive
+   Two logos were rendering: the CSS pseudo-element logo AND the
+   real <a class="cmp-logo"> component. Keep the component (it is
+   a proper link to Home); remove every CSS pseudo logo.
+   ============================================================= */
+.cmp-container:has(.cmp-navigation)::before,
+.cmp-container:has(> .cmp-navigation)::before,
+.cmp-container:has(.cmp-container:has(.cmp-navigation))::before,
+header.experiencefragment::before,
+.experiencefragment--header::before,
+.cmp-experiencefragment:has(.cmp-navigation)::before {
+  content: none !important;
+  background: none !important;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+}
+
+/* the one real logo */
+.cmp-logo {
+  display: inline-flex !important;
+  align-items: center;
+  order: -1;
+  margin-right: auto;
+  text-decoration: none;
+}
+.cmp-logo__svg { height: 38px; width: auto; display: block; }
+@media (max-width: 640px) { .cmp-logo__svg { height: 32px; } }
