@@ -2072,3 +2072,45 @@ body { min-height: 0 !important; }
    ============================================================= */
 .cmp-contact-form__logo { width: 140px; margin-bottom: 1.15rem; }
 .cmp-contact-form__info { padding-top: 2.25rem; }
+
+/* =============================================================
+   FOOTER — eliminate the white strip below it
+   Cause: the page container's trailing drop-zone / empty grid
+   column renders after the footer and leaves white space.
+   ============================================================= */
+/* hide any empty trailing placeholder after the footer */
+.root.container > .aem-Grid > .new,
+.root.container > .aem-Grid > .newpar,
+.root.container > .aem-Grid > .section.new,
+.aem-Grid > .aem-GridColumn:empty {
+  display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* absolutely nothing may add height after the footer */
+.cmp-experiencefragment--footer,
+.cmp-experiencefragment--footer > *,
+.cmp-site-footer {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+.cmp-site-footer__bottom { padding-bottom: .75rem !important; margin-bottom: 0 !important; }
+
+/* page + document must not reserve extra height */
+html, body {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  min-height: 0 !important;
+}
+.root, .root.container, main, main.container, .aem-Grid {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* safety net: paint the page background dark from the footer down,
+   so any residual sliver blends instead of showing white */
+body { background-color: #0b1a24; }
+.root.container { background: var(--surface); }
