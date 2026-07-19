@@ -1442,9 +1442,12 @@ a, button { transition: color 0.25s var(--ease-premium), background 0.25s var(--
   padding-bottom: 0 !important;
 }
 
+/* the XF wrapper that holds the dark footer bar: no spacing, and paint it
+   the same dark colour so no light strip can show below/around the bar */
 .cmp-experiencefragment:has(.cmp-site-footer) {
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
+  background: #0b1a24;
 }
 
 .cmp-site-footer,
