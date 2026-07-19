@@ -1964,3 +1964,64 @@ body > .root:last-child { margin-bottom: 0 !important; }
 main.container { padding-bottom: 0 !important; }
 .cmp-site-footer { display: block; }
 .cmp-site-footer__bottom { margin-bottom: 0 !important; padding-bottom: .7rem !important; }
+
+/* =============================================================
+   STICKY FIX + TRANSPARENT HEADER + tighter gutters
+   position:sticky fails if ANY ancestor has overflow hidden/auto.
+   Your DOM showed `overflow` on <body> and .aem-Grid — that was
+   silently breaking the sticky header.
+   ============================================================= */
+html { overflow-x: clip; }           /* clip does NOT break sticky (hidden does) */
+body {
+  overflow: visible !important;
+  overflow-x: clip !important;
+}
+.root,
+.root.container,
+main,
+main.container,
+.aem-Grid,
+.aem-GridColumn,
+.cmp-container {
+  overflow: visible !important;
+}
+
+/* --- transparent at top, frosted + solid once scrolled --- */
+.cmp-experiencefragment--header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+  background: transparent !important;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+.cmp-experiencefragment--header.is-scrolled {
+  background: rgba(255, 255, 255, 0.78) !important;
+  -webkit-backdrop-filter: saturate(180%) blur(22px);
+  backdrop-filter: saturate(180%) blur(22px);
+  border-bottom-color: rgba(20, 30, 50, .10) !important;
+  box-shadow: 0 6px 26px rgba(15, 23, 32, .08) !important;
+}
+
+/* the XF column must not clip the sticky header */
+main.experiencefragment,
+.experiencefragment.aem-GridColumn { overflow: visible !important; }
+
+/* --- tighter page side gutters --- */
+.root.container {
+  padding-left: clamp(.5rem, 1.5vw, 1.25rem) !important;
+  padding-right: clamp(.5rem, 1.5vw, 1.25rem) !important;
+}
+
+/* =============================================================
+   Contact form — brand logo in the info panel
+   ============================================================= */
+.cmp-contact-form__logo {
+  width: 132px;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+.cmp-contact-form__art { width: 76px; height: 76px; margin-bottom: .4rem; }
