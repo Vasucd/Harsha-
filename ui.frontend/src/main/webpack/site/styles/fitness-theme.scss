@@ -1264,17 +1264,20 @@ footer.experiencefragment .cmp-text a,
 /* =============================================================
    FINAL header logo (CSS on nav container) + single footer guard
    ============================================================= */
-/* the inline logo component is not reliable in the XF; render via CSS */
+/* the inline logo component is not reliable in the XF; render via CSS.
+   NB: use a descendant :has() — the core container wraps each child in a
+   Sling decoration <div>, so .cmp-navigation is NOT a direct child and a
+   `> .cmp-navigation` combinator would never match (logo would vanish). */
 .cmp-logo { display: none !important; }
 
-.cmp-container:has(> .cmp-navigation) {
+.cmp-container:has(.cmp-navigation) {
   display: flex;
   align-items: center;
   gap: 0.75rem 1.75rem;
   flex-wrap: wrap;
   padding: 0.5rem clamp(1rem, 4vw, 3rem);
 }
-.cmp-container:has(> .cmp-navigation)::before {
+.cmp-container:has(.cmp-navigation)::before {
   content: "";
   order: -1;
   margin-right: auto;
