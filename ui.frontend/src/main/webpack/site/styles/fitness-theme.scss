@@ -1434,3 +1434,18 @@ a, button { transition: color 0.25s var(--ease-premium), background 0.25s var(--
   .is-visible .cmp-pricing__card,
   .is-visible .cmp-testimonials__card { animation: none !important; opacity: 1 !important; }
 }
+
+/* =============================================================
+   Remove gap under the footer
+   ============================================================= */
+.root.container {
+  padding-bottom: 0 !important;
+}
+
+.cmp-experiencefragment:has(.cmp-site-footer) {
+  margin-bottom: 0 !important;
+}
+
+.last-grid-column {
+  margin-bottom: 0 !important;
+}
