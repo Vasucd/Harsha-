@@ -50,6 +50,9 @@
                             title="Mobility and Recovery"/>
                     </services>
                 </programCards>
+                <classSchedule
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="company/components/class-schedule"/>
             </container>
         </root>
     </jcr:content>

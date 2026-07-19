@@ -1,6 +1,6 @@
 (() => {
   const animateTargets = document.querySelectorAll(
-    ".cmp-services-card, .cmp-blog-listing, .cmp-contact-form, .cmp-author-info"
+    "[data-animate-on-scroll], .cmp-services-card, .cmp-blog-listing, .cmp-contact-form, .cmp-author-info"
   );
 
   animateTargets.forEach((node) => node.setAttribute("data-animate-on-scroll", "true"));
