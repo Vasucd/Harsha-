@@ -1675,3 +1675,127 @@ h1, h2, h3, h4 { color: var(--ink-900); letter-spacing: -0.021em; }
   .cmp-site-footer__cta-inner { flex-direction: column; align-items: flex-start; }
   .cmp-site-footer__bottom { flex-direction: column; text-align: center; }
 }
+
+/* =============================================================
+   FIX: double logo — only the INNERMOST nav container shows it
+   (outer wrappers also matched :has(.cmp-navigation) → 2 logos)
+   ============================================================= */
+.cmp-container:has(.cmp-container:has(.cmp-navigation))::before {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+}
+
+/* =============================================================
+   FIX: footer height — columns were stretching, and kill any
+   stray image/emoji artifacts in the footer
+   ============================================================= */
+.cmp-site-footer__inner {
+  align-items: start;
+  padding: 1.75rem clamp(1.25rem, 4vw, 3rem) 1.15rem !important;
+  gap: 1rem 2.25rem !important;
+}
+.cmp-site-footer__cta-inner { padding: 1.15rem clamp(1.25rem, 4vw, 3rem) !important; }
+.cmp-site-footer__bottom { padding: .7rem clamp(1.25rem, 4vw, 3rem) !important; }
+.cmp-site-footer__col { gap: .4rem; }
+.cmp-site-footer__col a, .cmp-site-footer__col span { font-size: .875rem; }
+/* no images belong in the footer — prevents broken/red placeholders */
+.cmp-site-footer img,
+.cmp-site-footer .cmp-image { display: none !important; }
+.cmp-site-footer { min-height: 0 !important; }
+
+/* =============================================================
+   ABOUT — story + values (designed layout with motion)
+   ============================================================= */
+.cmp-about { margin: var(--sp-5) 0; }
+
+/* ---- story: asymmetric two-column ---- */
+.cmp-about__story {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: center;
+  padding: var(--sp-5) 0;
+}
+.cmp-about__eyebrow {
+  display: inline-block; margin-bottom: .7rem;
+  color: var(--accent-500); font-size: var(--fs-xs); font-weight: 800;
+  text-transform: uppercase; letter-spacing: .14em;
+}
+.cmp-about__title {
+  margin: 0 0 1rem;
+  font-size: var(--fs-h2); font-weight: 800; line-height: 1.12;
+  letter-spacing: -.025em; color: var(--ink-900);
+  max-width: 22ch;
+}
+.cmp-about__story-copy p { margin: 0 0 .9rem; color: var(--ink-500); line-height: 1.7; max-width: 52ch; }
+.cmp-about__link {
+  display: inline-block; margin-top: .4rem;
+  color: var(--brand-500); font-weight: 700; text-decoration: none;
+  transition: color .25s var(--ease-premium), transform .25s var(--ease-premium);
+}
+.cmp-about__link:hover { color: var(--accent-500); transform: translateX(4px); }
+
+/* ---- story visual: floating art + rotating ring ---- */
+.cmp-about__story-visual { position: relative; display: grid; place-items: center; min-height: 260px; }
+.cmp-about__art { width: min(300px, 80%); height: auto; animation: aboutFloat 6s ease-in-out infinite; }
+.cmp-about__ring {
+  position: absolute; width: min(300px, 78%); aspect-ratio: 1; border-radius: 50%;
+  border: 2px dashed rgba(14,116,144,.28);
+  animation: aboutSpin 26s linear infinite;
+}
+@keyframes aboutFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+@keyframes aboutSpin { to { transform: rotate(360deg); } }
+
+/* ---- values ---- */
+.cmp-about__values { padding: var(--sp-5) 0 var(--sp-3); }
+.cmp-about__values-title {
+  margin: 0 0 var(--sp-4); text-align: center;
+  font-size: var(--fs-h2); font-weight: 800; letter-spacing: -.02em; color: var(--ink-900);
+}
+.cmp-about__values-title::after {
+  content: ""; display: block; width: 54px; height: 4px; margin: .8rem auto 0;
+  border-radius: 2px; background: linear-gradient(90deg, var(--brand-500), var(--accent-500));
+}
+.cmp-about__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: var(--sp-4); }
+.cmp-about__card {
+  position: relative; overflow: hidden;
+  background: var(--surface); border: 1px solid var(--ink-200);
+  border-radius: var(--r-md); padding: 1.75rem 1.5rem;
+  box-shadow: var(--el-1);
+  transition: transform .45s var(--ease-premium), box-shadow .45s var(--ease-premium), border-color .3s ease;
+}
+.cmp-about__card::before {
+  content: ""; position: absolute; inset: 0 0 auto 0; height: 3px;
+  background: linear-gradient(90deg, var(--brand-500), var(--accent-500));
+  transform: scaleX(0); transform-origin: left; transition: transform .45s var(--ease-premium);
+}
+.cmp-about__card:hover { transform: translateY(-6px); box-shadow: var(--el-2); border-color: rgba(14,116,144,.3); }
+.cmp-about__card:hover::before { transform: scaleX(1); }
+.cmp-about__icon {
+  width: 50px; height: 50px; border-radius: 14px; margin-bottom: 1rem;
+  display: grid; place-items: center;
+  background: linear-gradient(135deg, rgba(14,116,144,.12), rgba(249,115,22,.14));
+  color: var(--brand-500);
+  transition: transform .45s var(--ease-premium);
+}
+.cmp-about__card:hover .cmp-about__icon { transform: rotate(-6deg) scale(1.06); }
+.cmp-about__icon svg { width: 24px; height: 24px; }
+.cmp-about__card h4 { margin: 0 0 .45rem; font-size: 1.12rem; font-weight: 800; color: var(--ink-900); }
+.cmp-about__card p { margin: 0; color: var(--ink-500); line-height: 1.65; font-size: .95rem; }
+
+/* stagger the value cards */
+.is-visible .cmp-about__card:nth-child(1) { animation: premiumRise .7s var(--ease-premium) .05s both; }
+.is-visible .cmp-about__card:nth-child(2) { animation: premiumRise .7s var(--ease-premium) .16s both; }
+.is-visible .cmp-about__card:nth-child(3) { animation: premiumRise .7s var(--ease-premium) .27s both; }
+
+@media (max-width: 820px) {
+  .cmp-about__story { grid-template-columns: 1fr; }
+  .cmp-about__story-visual { order: -1; min-height: 200px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cmp-about__art, .cmp-about__ring { animation: none !important; }
+}
