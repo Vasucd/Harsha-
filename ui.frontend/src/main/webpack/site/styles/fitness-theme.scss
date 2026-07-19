@@ -1835,3 +1835,37 @@ header.experiencefragment::before,
 @media (max-width: 640px) {
   .cmp-experiencefragment--header .cmp-container::before { width: 120px !important; height: 30px !important; }
 }
+
+/* =============================================================
+   FULL-BLEED FOOTER + no blank space around/below the page
+   The footer sits inside .root.container (which has side padding),
+   so its dark band was inset. Break it out to full viewport width.
+   ============================================================= */
+.cmp-site-footer {
+  width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  margin-bottom: 0 !important;
+}
+
+/* the XF wrapper around the footer must not add its own inset/space */
+.cmp-experiencefragment--footer,
+.cmp-experiencefragment:has(.cmp-site-footer) {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+/* nothing after the footer */
+.root.container { padding-bottom: 0 !important; margin-bottom: 0 !important; }
+.aem-Grid > .aem-GridColumn:last-child { margin-bottom: 0 !important; }
+html, body { margin: 0 !important; padding-bottom: 0 !important; }
+body > .root:last-child { margin-bottom: 0 !important; }
+
+/* tighter page side gutters (content was inset too far) */
+.root.container { padding-left: clamp(.75rem, 2.5vw, 2rem) !important; padding-right: clamp(.75rem, 2.5vw, 2rem) !important; }
+
+/* keep the footer's inner content aligned with the page content */
+.cmp-site-footer__inner,
+.cmp-site-footer__cta-inner,
+.cmp-site-footer__bottom { max-width: 1240px; }
