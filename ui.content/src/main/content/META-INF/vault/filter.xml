@@ -2,6 +2,9 @@
 <workspaceFilter version="1.0">
     <filter root="/conf/company" mode="merge"/>
     <filter root="/conf/company/settings/wcm/policies"/>
+    <filter root="/conf/company/settings/wcm/templates/home"/>
+    <filter root="/conf/company/settings/wcm/templates/page-content"/>
+    <filter root="/conf/company/settings/wcm/templates/blog"/>
     <filter root="/content/company" mode="merge"/>
     <filter root="/content/company/us/en/home"/>
     <filter root="/content/company/us/en/our-services"/>
