@@ -73,6 +73,15 @@
                             jcr:primaryType="nt:unstructured"
                             features="-"/>
                     </plugins>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Image Styles">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-image--rounded" cq:styleId="{Long}1741700000031" cq:styleLabel="Rounded"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-image--shadow" cq:styleId="{Long}1741700000032" cq:styleLabel="Elevated"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-image--full" cq:styleId="{Long}1741700000033" cq:styleLabel="Full width"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
                 </policy_651483963895698>
             </image>
             <text jcr:primaryType="nt:unstructured">
@@ -252,6 +261,15 @@
                                 resourceType="company/components/contentfragment"/>
                         </assetToComponentMapping>
                     </cq:authoring>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Styles">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-container--soft" cq:styleId="{Long}1741700000041" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-container--dark" cq:styleId="{Long}1741700000042" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-container--narrow" cq:styleId="{Long}1741700000043" cq:styleLabel="Narrow width"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
                 </policy_1574694950110>
                 <policy_1574695586800
                     jcr:description="Allows the page components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
@@ -330,6 +348,15 @@
                     sling:resourceType="wcm/core/components/policy/policy"
                     titleType="h3">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Teaser Styles">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-teaser--overlay" cq:styleId="{Long}1741700000021" cq:styleLabel="Text overlay"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-teaser--card" cq:styleId="{Long}1741700000022" cq:styleLabel="Card"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-teaser--center" cq:styleId="{Long}1741700000023" cq:styleLabel="Centered"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
                 </policy_1575031387650>
             </teaser>
             <download jcr:primaryType="nt:unstructured">
