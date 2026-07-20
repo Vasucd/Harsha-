@@ -2216,3 +2216,46 @@ body { background-color: #0b1a24; }
   background: linear-gradient(100deg, rgba(240,250,246,.94) 0%, rgba(240,250,246,.72) 42%, rgba(240,250,246,0) 72%) !important;
 }
 .cmp-hero-banner__title { color: #0e2620 !important; }
+
+/* =============================================================
+   DROPDOWN: make child links actually clickable
+   The 10px gap between the nav item and the menu broke :hover
+   while moving the cursor down. Bridge the gap + add a grace delay.
+   ============================================================= */
+/* extend the parent item's hover area downward */
+.cmp-experiencefragment--header .cmp-navigation__item--level-0 {
+  padding-bottom: 12px;
+}
+
+/* invisible bridge across the gap so hover never drops */
+.cmp-experiencefragment--header .cmp-navigation__item .cmp-navigation__group::after {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  height: 16px;
+  background: transparent;
+}
+
+/* grace period: menu waits before closing, opens instantly */
+.cmp-experiencefragment--header .cmp-navigation__item > .cmp-navigation__group {
+  transition-delay: .18s;
+  pointer-events: none;
+}
+.cmp-experiencefragment--header .cmp-navigation__item:hover > .cmp-navigation__group,
+.cmp-experiencefragment--header .cmp-navigation__item:focus-within > .cmp-navigation__group {
+  transition-delay: 0s;
+  pointer-events: auto;
+}
+
+/* make sure the menu sits above everything and links are hit-testable */
+.cmp-experiencefragment--header .cmp-navigation__group { z-index: 1300; }
+.cmp-experiencefragment--header .cmp-navigation__item--level-1,
+.cmp-experiencefragment--header .cmp-navigation__item--level-2 { position: relative; }
+.cmp-experiencefragment--header .cmp-navigation__item--level-1 .cmp-navigation__item-link,
+.cmp-experiencefragment--header .cmp-navigation__item--level-2 .cmp-navigation__item-link {
+  pointer-events: auto;
+  position: relative;
+  z-index: 1;
+}
