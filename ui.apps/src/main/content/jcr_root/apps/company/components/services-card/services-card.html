@@ -1,6 +1,7 @@
 <sly data-sly-use.model="com.company.core.core.models.ServicesCardModel"/>
+<sly data-sly-use.style="com.adobe.cq.wcm.style.ComponentStyleInfo"/>
 
-<section data-sly-test="${!model.empty}" class="cmp-services-card">
+<section data-sly-test="${!model.empty}" class="cmp-services-card ${style.cssClasses}">
     <h2 data-sly-test="${model.sectionTitle}" class="cmp-services-card__title">${model.sectionTitle}</h2>
 
     <div class="cmp-services-card__grid">

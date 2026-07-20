@@ -359,6 +359,31 @@
                     </cq:styleGroups>
                 </policy_1575031387650>
             </teaser>
+            <services-card jcr:primaryType="nt:unstructured">
+                <policy_services_card
+                    jcr:description="Layout and emphasis variants for the Services Card component."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Services Card"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Card Layout">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-services-card--two-up" cq:styleId="{Long}1741700000051" cq:styleLabel="Two per row"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-services-card--three-up" cq:styleId="{Long}1741700000052" cq:styleLabel="Three per row"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-services-card--compact" cq:styleId="{Long}1741700000053" cq:styleLabel="Compact"/>
+                            </cq:styles>
+                        </item0>
+                        <item1 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Card Appearance">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-services-card--dark" cq:styleId="{Long}1741700000054" cq:styleLabel="Dark band"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-services-card--bare" cq:styleId="{Long}1741700000055" cq:styleLabel="No panel (bare)"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-services-card--numbered" cq:styleId="{Long}1741700000056" cq:styleLabel="Numbered steps"/>
+                            </cq:styles>
+                        </item1>
+                    </cq:styleGroups>
+                </policy_services_card>
+            </services-card>
             <download jcr:primaryType="nt:unstructured">
                 <policy_1575032193319
                     jcr:description="Sets the title size to H3."

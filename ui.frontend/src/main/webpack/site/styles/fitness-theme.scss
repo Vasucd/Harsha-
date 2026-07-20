@@ -2315,3 +2315,234 @@ body > .root.container {
 .cmp-container--dark { background: #0b1a24; color: #cfe0e6; border-radius: var(--r-lg); padding: clamp(1.5rem,4vw,3rem); }
 .cmp-container--dark h1, .cmp-container--dark h2, .cmp-container--dark h3 { color: #fff; }
 .cmp-container--narrow { max-width: 820px; margin-left: auto; margin-right: auto; }
+
+/* =============================================================
+   SERVICES CARD — consolidated redesign (authoritative)
+   Supersedes the earlier scattered .cmp-services-card rules
+   (~L197, L759, L1055, L1378, L1498). Keep new card work HERE.
+   ============================================================= */
+.cmp-services-card {
+  background: var(--surface);
+  border: 1px solid var(--ink-200);
+  border-radius: var(--r-lg);
+  box-shadow: var(--el-1);
+  padding: clamp(2rem, 4vw, 3.25rem) clamp(1.25rem, 3vw, 2.5rem);
+  margin-block: var(--sp-5);
+}
+
+.cmp-services-card__title {
+  text-align: center;
+  font-size: var(--fs-h2);
+  color: var(--ink-900);
+  margin: 0 0 var(--sp-5);
+  padding-bottom: var(--sp-2);
+  position: relative;
+}
+.cmp-services-card__title::after {
+  content: "";
+  position: absolute;
+  left: 50%; bottom: 0;
+  transform: translateX(-50%);
+  width: 64px; height: 4px;
+  border-radius: var(--r-pill);
+  background: linear-gradient(90deg, var(--fitness-primary), var(--fitness-accent));
+}
+
+.cmp-services-card__grid {
+  display: grid;
+  gap: clamp(1rem, 2.2vw, 1.75rem);
+  grid-template-columns: repeat(auto-fit, minmax(clamp(240px, 26vw, 300px), 1fr));
+  align-items: stretch;
+}
+
+/* card: flat surface, layered elevation on hover, accent rail on top */
+.cmp-services-card__item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--surface);
+  border: 1px solid var(--ink-200);
+  border-radius: var(--r-md);
+  box-shadow: var(--el-1);
+  padding: clamp(1.35rem, 2.4vw, 1.9rem);
+  transition: transform .45s var(--ease-premium),
+              box-shadow .45s var(--ease-premium),
+              border-color .3s ease;
+}
+.cmp-services-card__item::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--fitness-primary), var(--fitness-accent));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .45s var(--ease-premium);
+}
+.cmp-services-card__item:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--el-3);
+  border-color: rgba(14, 116, 144, .28);
+}
+.cmp-services-card__item:hover::before { transform: scaleX(1); }
+
+.cmp-services-card__item-title {
+  font-size: var(--fs-h3);
+  color: var(--ink-900);
+  line-height: 1.25;
+  margin: 0 0 var(--sp-2);
+}
+.cmp-services-card__item-description {
+  color: var(--ink-500);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  margin: 0 0 var(--sp-3);
+  flex: 1 1 auto;              /* pins the CTA to the bottom of every card */
+}
+
+/* CTA: arrow slides on hover */
+.cmp-services-card__item-link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  letter-spacing: .01em;
+  color: var(--fitness-primary);
+  text-decoration: none;
+}
+.cmp-services-card__item-link::after {
+  content: "\2192";
+  transition: transform .3s var(--ease-premium);
+}
+.cmp-services-card__item-link:hover {
+  color: var(--fitness-accent);
+  text-decoration: none;
+}
+.cmp-services-card__item-link:hover::after { transform: translateX(4px); }
+.cmp-services-card__item-link:focus-visible {
+  outline: 3px solid rgba(14, 116, 144, .55);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* =============================================================
+   SERVICES CARD — Style System variants
+   (registered in policies as "Card Layout" / "Card Appearance")
+   ============================================================= */
+.cmp-services-card--two-up   .cmp-services-card__grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); }
+.cmp-services-card--three-up .cmp-services-card__grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+
+.cmp-services-card--compact { padding: clamp(1.25rem, 2.5vw, 1.9rem) clamp(1rem, 2vw, 1.5rem); }
+.cmp-services-card--compact .cmp-services-card__grid { gap: .85rem; }
+.cmp-services-card--compact .cmp-services-card__item { padding: 1.1rem 1.2rem; }
+.cmp-services-card--compact .cmp-services-card__item-title { font-size: 1.05rem; }
+.cmp-services-card--compact .cmp-services-card__item-description { font-size: var(--fs-sm); }
+
+/* bare: drop the outer panel, let cards float on the page */
+.cmp-services-card--bare {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding-inline: 0;
+}
+
+/* dark band */
+.cmp-services-card--dark {
+  background: linear-gradient(180deg, #0d2029 0%, #081016 100%);
+  border-color: rgba(255, 255, 255, .08);
+}
+.cmp-services-card--dark .cmp-services-card__title { color: #fff; }
+.cmp-services-card--dark .cmp-services-card__item {
+  background: rgba(255, 255, 255, .04);
+  border-color: rgba(255, 255, 255, .1);
+  box-shadow: none;
+}
+.cmp-services-card--dark .cmp-services-card__item:hover {
+  background: rgba(255, 255, 255, .07);
+  border-color: rgba(249, 115, 22, .45);
+}
+.cmp-services-card--dark .cmp-services-card__item-title { color: #fff; }
+.cmp-services-card--dark .cmp-services-card__item-description { color: #b9cbd4; }
+.cmp-services-card--dark .cmp-services-card__item-link { color: #7dd3fc; }
+.cmp-services-card--dark .cmp-services-card__item-link:hover { color: var(--fitness-accent); }
+
+/* numbered steps */
+.cmp-services-card--numbered .cmp-services-card__grid { counter-reset: svc; }
+.cmp-services-card--numbered .cmp-services-card__item { counter-increment: svc; padding-top: 3.4rem; }
+.cmp-services-card--numbered .cmp-services-card__item::after {
+  content: counter(svc, decimal-leading-zero);
+  position: absolute;
+  top: 1.15rem; left: clamp(1.35rem, 2.4vw, 1.9rem);
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  color: var(--fitness-accent);
+  opacity: .85;
+}
+.cmp-services-card--numbered.cmp-services-card--dark .cmp-services-card__item::after { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cmp-services-card__item,
+  .cmp-services-card__item::before,
+  .cmp-services-card__item-link::after { transition: none; }
+  .cmp-services-card__item:hover { transform: none; }
+}
+
+/* =============================================================
+   FOOTER — blank space, fixed at the right level (authoritative)
+   The footer XF is NOT a child of <body>; it is the last grid
+   cell inside body > .root.container > .aem-Grid. So the earlier
+   "body { flex } + footer { margin-top:auto }" never applied.
+   Pin the sticky-footer chain through .root -> .aem-Grid instead,
+   and drop the grid clearfix pseudo-elements, which become
+   zero-width flex items and leave a visible strip.
+   ============================================================= */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff !important;
+}
+body > .root,
+body > .root.container {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+body > .root > .aem-Grid,
+body > .root.container > .aem-Grid {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  margin-bottom: 0 !important;
+}
+/* clearfix pseudo-elements would render as flex items -> stray gap */
+body > .root > .aem-Grid::before,
+body > .root > .aem-Grid::after,
+body > .root.container > .aem-Grid::before,
+body > .root.container > .aem-Grid::after { display: none !important; }
+
+/* root cells are all full-bleed rows once the grid is a flex column */
+body > .root > .aem-Grid > .aem-GridColumn,
+body > .root.container > .aem-Grid > .aem-GridColumn {
+  width: 100%;
+  float: none;
+  clear: none;
+}
+/* push the footer cell to the bottom on short pages */
+body > .root > .aem-Grid > .aem-GridColumn:last-child,
+body > .root.container > .aem-Grid > .aem-GridColumn:last-child {
+  margin-top: auto;
+  margin-bottom: 0 !important;
+}
+.cmp-experiencefragment--footer,
+.cmp-site-footer { margin-bottom: 0 !important; }
+.cmp-site-footer__bottom { margin-bottom: 0 !important; }
