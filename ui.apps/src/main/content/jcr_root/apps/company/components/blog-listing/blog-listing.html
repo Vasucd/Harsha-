@@ -9,8 +9,13 @@
     <h2 data-sly-test="${model.sectionTitle}" class="cmp-blog-listing__title">${model.sectionTitle}</h2>
     <ul class="cmp-blog-listing__items">
         <li data-sly-list.item="${model.blogItems}" class="cmp-blog-listing__item">
-            <a href="${item.path @ context='uri'}" class="cmp-blog-listing__link">${item.title}</a>
+            <h3 class="cmp-blog-listing__item-title">
+                <a href="${item.path @ context='uri'}" class="cmp-blog-listing__link">${item.title}</a>
+            </h3>
             <p data-sly-test="${item.description}" class="cmp-blog-listing__description">${item.description}</p>
+            <a href="${item.path @ context='uri'}" class="cmp-blog-listing__more" tabindex="-1" aria-hidden="true">
+                <span class="cmp-blog-listing__more-label">Read article</span>
+            </a>
         </li>
     </ul>
 </section>

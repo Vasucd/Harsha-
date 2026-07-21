@@ -43,11 +43,21 @@
           .map(
             (item) => `
               <li class="cmp-blog-listing__item">
-                <a class="cmp-blog-listing__link" href="${item.path}">${item.title}</a>
+                <h3 class="cmp-blog-listing__item-title">
+                  <a class="cmp-blog-listing__link" href="${item.path}">${item.title}</a>
+                </h3>
                 <p class="cmp-blog-listing__description">${item.description || ""}</p>
+                <a class="cmp-blog-listing__more" href="${item.path}" tabindex="-1" aria-hidden="true">
+                  <span class="cmp-blog-listing__more-label">Read article</span>
+                </a>
               </li>`
           )
           .join("");
+
+        // Re-trigger the staggered reveal now that cards have been injected.
+        listing.classList.remove("is-visible");
+        void listing.offsetWidth;
+        listing.classList.add("is-visible");
       })
       .catch(() => {
         // Keep authored fallback list when search endpoint is unavailable.

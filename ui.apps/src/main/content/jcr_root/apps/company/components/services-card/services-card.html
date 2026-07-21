@@ -6,12 +6,15 @@
 
     <div class="cmp-services-card__grid">
         <article data-sly-list.service="${model.services}" class="cmp-services-card__item">
+            <span data-sly-test="${service.icon}" class="cmp-services-card__item-icon" aria-hidden="true">${service.icon}</span>
             <h3 data-sly-test="${service.title}" class="cmp-services-card__item-title">${service.title}</h3>
             <p data-sly-test="${service.description}" class="cmp-services-card__item-description">${service.description}</p>
             <a
                     data-sly-test="${service.ctaLabel && service.ctaLink}"
                     class="cmp-services-card__item-link"
-                    href="${service.ctaLink @ context='uri'}">${service.ctaLabel}</a>
+                    href="${service.ctaLink @ context='uri'}">
+                <span class="cmp-services-card__item-link-label">${service.ctaLabel}</span>
+            </a>
         </article>
     </div>
 </section>

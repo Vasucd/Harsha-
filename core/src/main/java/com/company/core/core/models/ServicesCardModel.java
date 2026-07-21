@@ -42,6 +42,9 @@ public class ServicesCardModel {
     public static class ServiceItem {
 
         @ValueMapValue
+        private String icon;
+
+        @ValueMapValue
         private String title;
 
         @ValueMapValue
@@ -52,6 +55,10 @@ public class ServicesCardModel {
 
         @ValueMapValue
         private String ctaLink;
+
+        public String getIcon() {
+            return StringUtils.isBlank(icon) ? StringUtils.EMPTY : icon;
+        }
 
         public String getTitle() {
             return title;

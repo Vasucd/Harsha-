@@ -2760,3 +2760,262 @@ body > .root.container > .aem-Grid > .aem-GridColumn:last-child {
 }
 
 .u-style--flush { margin-block: 0 !important; }
+
+/* =============================================================
+   SERVICES CARD — icon + proper CTA button (authoritative)
+   Refines the earlier consolidated block: adds the optional icon
+   badge and turns the plain text link into an intentional button.
+   ============================================================= */
+.cmp-services-card__item-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: var(--sp-2);
+  font-size: 1.5rem;
+  line-height: 1;
+  border-radius: var(--r-md);
+  background: linear-gradient(135deg, rgba(14, 116, 144, .12), rgba(249, 115, 22, .12));
+  color: var(--fitness-primary);
+}
+
+/* CTA becomes an outline pill button that fills with the accent on hover */
+.cmp-services-card__item-link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin-top: var(--sp-1);
+  padding: .6rem 1.2rem;
+  border: 1.5px solid var(--ink-200);
+  border-radius: var(--r-pill);
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  letter-spacing: .01em;
+  color: var(--fitness-primary);
+  background: transparent;
+  text-decoration: none;
+  transition: color .3s var(--ease-premium),
+              background .3s var(--ease-premium),
+              border-color .3s var(--ease-premium),
+              transform .3s var(--ease-premium),
+              box-shadow .3s var(--ease-premium);
+}
+.cmp-services-card__item-link::after {
+  content: "\2192";
+  transition: transform .3s var(--ease-premium);
+}
+.cmp-services-card__item-link:hover {
+  color: #fff;
+  background: linear-gradient(120deg, var(--fitness-primary), var(--fitness-accent));
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(14, 116, 144, .28);
+  text-decoration: none;
+}
+.cmp-services-card__item-link:hover::after { transform: translateX(4px); }
+.cmp-services-card__item-link:focus-visible {
+  outline: 3px solid rgba(14, 116, 144, .55);
+  outline-offset: 3px;
+}
+
+/* icon treatment inside the dark variant */
+.cmp-services-card--dark .cmp-services-card__item-icon {
+  background: rgba(255, 255, 255, .08);
+  color: #7dd3fc;
+}
+.cmp-services-card--dark .cmp-services-card__item-link {
+  color: #eaf2f6;
+  border-color: rgba(255, 255, 255, .25);
+}
+.cmp-services-card--dark .cmp-services-card__item-link:hover {
+  color: #10202a;
+  background: linear-gradient(120deg, #fb923c, var(--fitness-accent));
+}
+
+/* =============================================================
+   BLOG LISTING — card grid redesign (authoritative)
+   ============================================================= */
+.cmp-blog-listing {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: clamp(1.5rem, 3vw, 2.5rem) 0;
+  margin-block: var(--sp-5);
+}
+.cmp-blog-listing__title {
+  text-align: center;
+  font-size: var(--fs-h2);
+  color: var(--ink-900);
+  margin: 0 0 var(--sp-5);
+  padding-bottom: var(--sp-2);
+  position: relative;
+}
+.cmp-blog-listing__title::after {
+  content: "";
+  position: absolute;
+  left: 50%; bottom: 0;
+  transform: translateX(-50%);
+  width: 64px; height: 4px;
+  border-radius: var(--r-pill);
+  background: linear-gradient(90deg, var(--fitness-primary), var(--fitness-accent));
+}
+.cmp-blog-listing__items {
+  display: grid;
+  gap: clamp(1rem, 2.2vw, 1.75rem);
+  grid-template-columns: repeat(auto-fill, minmax(clamp(260px, 30vw, 340px), 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.cmp-blog-listing__item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--surface);
+  border: 1px solid var(--ink-200);
+  border-radius: var(--r-lg);
+  box-shadow: var(--el-1);
+  padding: clamp(1.35rem, 2.4vw, 1.9rem);
+  transition: transform .45s var(--ease-premium),
+              box-shadow .45s var(--ease-premium),
+              border-color .3s ease;
+}
+.cmp-blog-listing__item::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--fitness-primary), var(--fitness-accent));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .45s var(--ease-premium);
+}
+.cmp-blog-listing__item:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--el-3);
+  border-color: rgba(14, 116, 144, .28);
+}
+.cmp-blog-listing__item:hover::before { transform: scaleX(1); }
+
+.cmp-blog-listing__item-title {
+  margin: 0 0 var(--sp-2);
+  font-size: var(--fs-h3);
+  line-height: 1.25;
+}
+.cmp-blog-listing__link {
+  color: var(--ink-900);
+  font-weight: 700;
+  text-decoration: none;
+  /* let the whole card be clickable via the title link */
+}
+.cmp-blog-listing__link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.cmp-blog-listing__link:hover { color: var(--fitness-primary); text-decoration: none; }
+.cmp-blog-listing__description {
+  color: var(--ink-500);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  margin: 0 0 var(--sp-3);
+  flex: 1 1 auto;
+}
+.cmp-blog-listing__more {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  align-self: flex-start;
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  color: var(--fitness-primary);
+  text-decoration: none;
+}
+.cmp-blog-listing__more::after {
+  content: "\2192";
+  transition: transform .3s var(--ease-premium);
+}
+.cmp-blog-listing__item:hover .cmp-blog-listing__more { color: var(--fitness-accent); }
+.cmp-blog-listing__item:hover .cmp-blog-listing__more::after { transform: translateX(4px); }
+
+/* staggered reveal — cards rise in sequence when the list scrolls in */
+.cmp-blog-listing .cmp-blog-listing__item {
+  opacity: 0;
+  transform: translateY(18px);
+}
+.cmp-blog-listing.is-visible .cmp-blog-listing__item {
+  animation: blogCardRise .6s var(--ease-premium) both;
+}
+.cmp-blog-listing.is-visible .cmp-blog-listing__item:nth-child(1) { animation-delay: .05s; }
+.cmp-blog-listing.is-visible .cmp-blog-listing__item:nth-child(2) { animation-delay: .15s; }
+.cmp-blog-listing.is-visible .cmp-blog-listing__item:nth-child(3) { animation-delay: .25s; }
+.cmp-blog-listing.is-visible .cmp-blog-listing__item:nth-child(4) { animation-delay: .35s; }
+.cmp-blog-listing.is-visible .cmp-blog-listing__item:nth-child(5) { animation-delay: .45s; }
+.cmp-blog-listing.is-visible .cmp-blog-listing__item:nth-child(n+6) { animation-delay: .55s; }
+
+@keyframes blogCardRise {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =============================================================
+   BLOG DETAIL PAGE — author card + comfortable reading column
+   (blog pages are title + text + author-info)
+   ============================================================= */
+.cmp-author-info {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  max-width: 760px;
+  margin: var(--sp-5) auto 0;
+  padding: clamp(1.25rem, 3vw, 1.75rem) clamp(1.35rem, 3vw, 2rem);
+  border: 1px solid var(--ink-200);
+  border-radius: var(--r-lg);
+  background: var(--surface-2);
+  position: relative;
+  padding-left: clamp(4.5rem, 8vw, 5.5rem);
+}
+.cmp-author-info::before {
+  content: "";
+  position: absolute;
+  left: clamp(1.25rem, 3vw, 1.6rem);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem; height: 3rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--fitness-primary), var(--fitness-accent));
+  box-shadow: 0 6px 16px rgba(14, 116, 144, .25);
+}
+.cmp-author-info__name { margin: 0; color: var(--ink-900); font-size: var(--fs-h3); }
+.cmp-author-info__role {
+  margin: 0;
+  color: var(--fitness-accent);
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.cmp-author-info__bio { margin: .35rem 0 0; color: var(--ink-500); line-height: 1.65; }
+
+/* reading column for blog body text (scoped to blog pages) */
+.page-blog .cmp-container .cmp-text,
+.blog-page .cmp-text {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cmp-blog-listing__item,
+  .cmp-blog-listing__item::before,
+  .cmp-blog-listing__more::after,
+  .cmp-services-card__item-link,
+  .cmp-services-card__item-link::after { transition: none; }
+  .cmp-blog-listing.is-visible .cmp-blog-listing__item { animation: none; opacity: 1; transform: none; }
+  .cmp-blog-listing .cmp-blog-listing__item { opacity: 1; transform: none; }
+  .cmp-services-card__item-link:hover { transform: none; }
+}
