@@ -18,6 +18,10 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="company/components/container"
                 layout="responsiveGrid">
+              <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="company/components/container"
+                layout="responsiveGrid">
                 <articleBody
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="company/components/text"
@@ -26,6 +30,7 @@
                 <authorInfo
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="company/components/author-info"/>
+              </container>
             </container>
         </root>
     </jcr:content>

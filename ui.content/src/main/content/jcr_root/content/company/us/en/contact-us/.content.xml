@@ -16,6 +16,10 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="company/components/container"
                 layout="responsiveGrid">
+              <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="company/components/container"
+                layout="responsiveGrid">
                 <contactHero
                     jcr:primaryType="nt:unstructured"
                     altText="Friendly fitness coach discussing goals"
@@ -36,6 +40,7 @@
                     sling:resourceType="company/components/text"
                     text="&lt;p>&lt;strong>Studio Hours:&lt;/strong> Mon-Sat, 6:00 AM - 10:00 PM&lt;/p>&#xa;&lt;p>&lt;strong>Email:&lt;/strong> support@forgefitness.com&lt;/p>&#xa;&lt;p>&lt;strong>Phone:&lt;/strong> +1 (800) 555-1234&lt;/p>"
                     textIsRich="true"/>
+              </container>
             </container>
         </root>
     </jcr:content>

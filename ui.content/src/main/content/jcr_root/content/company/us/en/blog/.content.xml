@@ -16,6 +16,10 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="company/components/container"
                 layout="responsiveGrid">
+              <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="company/components/container"
+                layout="responsiveGrid">
                 <blogHero
                     jcr:primaryType="nt:unstructured"
                     altText="Athlete stretching before a training session"
@@ -31,6 +35,7 @@
                     maxItems="{Long}6"
                     sectionTitle="Read the Latest Articles"
                     sling:resourceType="company/components/blog-listing"/>
+              </container>
             </container>
         </root>
     </jcr:content>

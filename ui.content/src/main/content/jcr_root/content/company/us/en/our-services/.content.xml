@@ -17,6 +17,10 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="company/components/container"
                 layout="responsiveGrid">
+              <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="company/components/container"
+                layout="responsiveGrid">
                 <servicesHero
                     jcr:primaryType="nt:unstructured"
                     altText="Athlete performing battle rope workout"
@@ -98,6 +102,7 @@
                     ctaLabel="Book a Free Consult"
                     ctaLink="/content/company/us/en/contact-us"
                     sling:resourceType="company/components/cta-band"/>
+              </container>
             </container>
         </root>
     </jcr:content>

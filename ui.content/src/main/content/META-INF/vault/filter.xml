@@ -9,6 +9,8 @@
     <filter root="/content/company/us/en/home"/>
     <filter root="/content/company/us/en/our-services"/>
     <filter root="/content/company/us/en/about-us"/>
+    <filter root="/content/company/us/en/contact-us"/>
+    <filter root="/content/company/us/en/blog"/>
     <filter root="/content/dam/company" mode="merge"/>
     <filter root="/content/experience-fragments/company" mode="update"/>
     <filter root="/content/experience-fragments/company/us/en/site/header"/>

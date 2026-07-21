@@ -16,6 +16,10 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="company/components/container"
                 layout="responsiveGrid">
+              <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="company/components/container"
+                layout="responsiveGrid">
                 <heroBanner
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="company/components/hero-banner"
@@ -65,6 +69,7 @@
                     maxItems="{Long}3"
                     sectionTitle="Latest Fitness Insights"
                     sling:resourceType="company/components/blog-listing"/>
+              </container>
             </container>
         </root>
     </jcr:content>
