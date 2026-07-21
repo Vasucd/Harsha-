@@ -3031,3 +3031,40 @@ body > .root.container > .aem-Grid > .aem-GridColumn:last-child {
   .cmp-blog-listing .cmp-blog-listing__item { opacity: 1; transform: none; }
   .cmp-services-card__item-link:hover { transform: none; }
 }
+
+/* =============================================================
+   HEADER — keep the whole nav on the bar (CONTACT was clipping)
+   The logo ::before uses margin-right:auto, pushing the nav flush
+   against a wide right padding; near 1200-1280px the nav no longer
+   fits beside the 150px logo, so the last item overflowed the
+   viewport edge. Reclaim horizontal room (smaller side padding,
+   tighter gap, slightly smaller logo) and let the nav shrink/wrap
+   instead of clipping. No overflow rules here — they would clip the
+   dropdown submenu and break the sticky header.
+   ============================================================= */
+.cmp-experiencefragment--header .cmp-container {
+  box-sizing: border-box;
+  max-width: 100%;
+  padding-left: clamp(.75rem, 2vw, 1.5rem) !important;
+  padding-right: clamp(.75rem, 2vw, 1.5rem) !important;
+  column-gap: 1rem !important;
+}
+/* a touch smaller logo frees room on the left */
+.cmp-experiencefragment--header .cmp-container::before {
+  width: clamp(112px, 12vw, 140px) !important;
+}
+/* the nav wrapper + level-0 list may shrink and wrap, right-aligned */
+.cmp-experiencefragment--header .cmp-navigation { min-width: 0; }
+.cmp-experiencefragment--header .cmp-navigation__group--level-0 {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: clamp(.55rem, 1.5vw, 1.2rem) !important;
+  row-gap: .15rem;
+  min-width: 0;
+}
+/* keep each top-level label on one line, tighter tracking */
+.cmp-experiencefragment--header .cmp-navigation__item--level-0 > .cmp-navigation__item-link {
+  white-space: nowrap;
+  letter-spacing: .01em;
+}
