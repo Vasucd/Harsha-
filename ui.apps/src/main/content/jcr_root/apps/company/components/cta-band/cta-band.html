@@ -1,0 +1,22 @@
+<sly data-sly-use.model="com.company.core.core.models.CtaBandModel"/>
+<sly data-sly-use.style="com.adobe.cq.wcm.style.ComponentStyleInfo"/>
+
+<section data-sly-test="${!model.empty}" class="cmp-cta-band ${style.cssClasses}">
+    <div class="cmp-cta-band__inner">
+        <div class="cmp-cta-band__copy">
+            <h2 data-sly-test="${model.heading}" class="cmp-cta-band__heading">${model.heading}</h2>
+            <p data-sly-test="${model.text}" class="cmp-cta-band__text">${model.text}</p>
+        </div>
+        <a
+                data-sly-test="${model.ctaLabel && model.ctaLink}"
+                class="cmp-cta-band__cta"
+                href="${model.ctaLink @ context='uri'}"
+                target="${model.openInNewTab ? '_blank' : ''}"
+                rel="${model.openInNewTab ? 'noopener noreferrer' : ''}">${model.ctaLabel}</a>
+    </div>
+</section>
+
+<sly
+        data-sly-test="${model.empty}"
+        data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+        data-sly-call="${template.placeholder @ isEmpty=true}"/>

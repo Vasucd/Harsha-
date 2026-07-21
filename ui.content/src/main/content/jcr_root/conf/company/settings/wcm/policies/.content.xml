@@ -384,6 +384,55 @@
                     </cq:styleGroups>
                 </policy_services_card>
             </services-card>
+            <cta-band jcr:primaryType="nt:unstructured">
+                <policy_cta_band
+                    jcr:description="Layout and appearance variants for the CTA Band component."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="CTA Band"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Layout">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-cta-band--split" cq:styleId="{Long}1741700000061" cq:styleLabel="Split (text + button)"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-cta-band--stacked" cq:styleId="{Long}1741700000062" cq:styleLabel="Stacked / centered"/>
+                            </cq:styles>
+                        </item0>
+                        <item1 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Appearance">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-cta-band--gradient" cq:styleId="{Long}1741700000063" cq:styleLabel="Accent gradient"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-cta-band--dark" cq:styleId="{Long}1741700000064" cq:styleLabel="Dark"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-cta-band--soft" cq:styleId="{Long}1741700000065" cq:styleLabel="Soft"/>
+                            </cq:styles>
+                        </item1>
+                    </cq:styleGroups>
+                </policy_cta_band>
+            </cta-band>
+            <feature-grid jcr:primaryType="nt:unstructured">
+                <policy_feature_grid
+                    jcr:description="Column count and appearance variants for the Feature Grid component."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Feature Grid"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Columns">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-feature-grid--two" cq:styleId="{Long}1741700000071" cq:styleLabel="Two columns"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-feature-grid--three" cq:styleId="{Long}1741700000072" cq:styleLabel="Three columns"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-feature-grid--four" cq:styleId="{Long}1741700000073" cq:styleLabel="Four columns"/>
+                            </cq:styles>
+                        </item0>
+                        <item1 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Appearance">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-feature-grid--cards" cq:styleId="{Long}1741700000074" cq:styleLabel="Cards"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-feature-grid--bordered" cq:styleId="{Long}1741700000075" cq:styleLabel="Bordered"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-feature-grid--center" cq:styleId="{Long}1741700000076" cq:styleLabel="Centered text"/>
+                            </cq:styles>
+                        </item1>
+                    </cq:styleGroups>
+                </policy_feature_grid>
+            </feature-grid>
             <download jcr:primaryType="nt:unstructured">
                 <policy_1575032193319
                     jcr:description="Sets the title size to H3."

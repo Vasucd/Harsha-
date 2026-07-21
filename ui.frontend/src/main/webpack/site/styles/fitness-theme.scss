@@ -2546,3 +2546,171 @@ body > .root.container > .aem-Grid > .aem-GridColumn:last-child {
 .cmp-experiencefragment--footer,
 .cmp-site-footer { margin-bottom: 0 !important; }
 .cmp-site-footer__bottom { margin-bottom: 0 !important; }
+
+/* =============================================================
+   CONTAINER — full-width sections + author empty-state
+   The nested content container rendered as a thin vertical strip
+   in the template editor because an empty responsive grid has no
+   intrinsic width/height. Make containers span their row, and
+   give empty grids a visible drop area in author mode so the
+   template no longer shows a collapsed sliver.
+   ============================================================= */
+.cmp-container,
+.company-container { width: 100%; }
+
+.cmp-container > .cmp-container__wrapper,
+.cmp-container > .aem-Grid { width: 100%; }
+
+/* author mode only: keep empty containers a usable, full-width band */
+.aem-AuthorLayer-Edit .aem-Grid--void,
+.cq-Editable-dom .aem-Grid--void {
+  min-height: 96px;
+  width: 100% !important;
+  display: block;
+}
+
+/* =============================================================
+   CTA BAND
+   ============================================================= */
+.cmp-cta-band {
+  margin-block: var(--sp-5);
+  padding: clamp(2rem, 4vw, 3.25rem) clamp(1.5rem, 4vw, 3rem);
+  border-radius: var(--r-lg);
+  background: linear-gradient(180deg, #0d2029 0%, #081016 100%);
+  color: #eaf2f6;
+  box-shadow: var(--el-2);
+}
+.cmp-cta-band__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  max-width: 1240px;
+  margin-inline: auto;
+  flex-wrap: wrap;
+}
+.cmp-cta-band__copy { flex: 1 1 320px; min-width: 0; }
+.cmp-cta-band__heading {
+  margin: 0 0 .5rem;
+  font-size: var(--fs-h2);
+  color: #fff;
+  line-height: 1.1;
+}
+.cmp-cta-band__text {
+  margin: 0;
+  font-size: var(--fs-body);
+  color: #b9cbd4;
+  line-height: 1.55;
+}
+.cmp-cta-band__cta {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .95rem 1.9rem;
+  border-radius: var(--r-pill);
+  font-weight: 800;
+  letter-spacing: .01em;
+  text-decoration: none;
+  color: #1a1206;
+  background: linear-gradient(180deg, #fb923c 0%, var(--fitness-accent) 100%);
+  box-shadow: 0 10px 24px rgba(249, 115, 22, .3);
+  transition: transform .3s var(--ease-premium), box-shadow .3s var(--ease-premium);
+}
+.cmp-cta-band__cta::after { content: "\2192"; transition: transform .3s var(--ease-premium); }
+.cmp-cta-band__cta:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(249, 115, 22, .4); }
+.cmp-cta-band__cta:hover::after { transform: translateX(4px); }
+.cmp-cta-band__cta:focus-visible { outline: 3px solid rgba(255, 255, 255, .7); outline-offset: 3px; }
+
+/* CTA Band — Style System variants */
+.cmp-cta-band--stacked .cmp-cta-band__inner { flex-direction: column; text-align: center; }
+.cmp-cta-band--stacked .cmp-cta-band__copy { flex-basis: auto; }
+
+.cmp-cta-band--gradient {
+  background: linear-gradient(120deg, var(--fitness-primary) 0%, #0b5566 55%, #0d2029 100%);
+}
+.cmp-cta-band--dark { background: linear-gradient(180deg, #0d2029 0%, #081016 100%); }
+.cmp-cta-band--soft {
+  background: var(--surface-2);
+  color: var(--ink-700);
+  box-shadow: var(--el-1);
+  border: 1px solid var(--ink-200);
+}
+.cmp-cta-band--soft .cmp-cta-band__heading { color: var(--ink-900); }
+.cmp-cta-band--soft .cmp-cta-band__text { color: var(--ink-500); }
+
+/* =============================================================
+   FEATURE GRID
+   ============================================================= */
+.cmp-feature-grid {
+  margin-block: var(--sp-5);
+  padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1rem, 2.5vw, 2rem);
+}
+.cmp-feature-grid__header { text-align: center; max-width: 720px; margin: 0 auto var(--sp-5); }
+.cmp-feature-grid__title {
+  margin: 0 0 var(--sp-2);
+  font-size: var(--fs-h2);
+  color: var(--ink-900);
+}
+.cmp-feature-grid__intro {
+  margin: 0;
+  font-size: var(--fs-body);
+  color: var(--ink-500);
+  line-height: 1.6;
+}
+.cmp-feature-grid__grid {
+  display: grid;
+  gap: clamp(1rem, 2.2vw, 1.75rem);
+  grid-template-columns: repeat(auto-fit, minmax(clamp(220px, 24vw, 280px), 1fr));
+}
+.cmp-feature-grid__item {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.1rem, 2vw, 1.6rem);
+  border-radius: var(--r-md);
+}
+.cmp-feature-grid__icon {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: var(--sp-2);
+}
+.cmp-feature-grid__item-title {
+  margin: 0 0 .5rem;
+  font-size: var(--fs-h3);
+  color: var(--ink-900);
+  line-height: 1.25;
+}
+.cmp-feature-grid__item-description {
+  margin: 0;
+  color: var(--ink-500);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+/* Feature Grid — Style System variants */
+.cmp-feature-grid--two   .cmp-feature-grid__grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); }
+.cmp-feature-grid--three .cmp-feature-grid__grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+.cmp-feature-grid--four  .cmp-feature-grid__grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); }
+
+.cmp-feature-grid--cards .cmp-feature-grid__item {
+  background: var(--surface);
+  border: 1px solid var(--ink-200);
+  box-shadow: var(--el-1);
+  transition: transform .4s var(--ease-premium), box-shadow .4s var(--ease-premium);
+}
+.cmp-feature-grid--cards .cmp-feature-grid__item:hover { transform: translateY(-5px); box-shadow: var(--el-2); }
+
+.cmp-feature-grid--bordered .cmp-feature-grid__item {
+  border: 1px solid var(--ink-200);
+  border-radius: var(--r-md);
+}
+
+.cmp-feature-grid--center .cmp-feature-grid__item { text-align: center; align-items: center; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cmp-cta-band__cta,
+  .cmp-cta-band__cta::after,
+  .cmp-feature-grid--cards .cmp-feature-grid__item { transition: none; }
+  .cmp-cta-band__cta:hover,
+  .cmp-feature-grid--cards .cmp-feature-grid__item:hover { transform: none; }
+}

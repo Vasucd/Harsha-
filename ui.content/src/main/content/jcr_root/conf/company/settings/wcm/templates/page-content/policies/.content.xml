@@ -59,6 +59,14 @@
                                 cq:policy="company/components/services-card/policy_services_card"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <cta-band
+                                cq:policy="company/components/cta-band/policy_cta_band"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <feature-grid
+                                cq:policy="company/components/feature-grid/policy_feature_grid"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
                         </components>
                     </company>
                 </container>

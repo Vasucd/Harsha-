@@ -1,0 +1,22 @@
+<sly data-sly-use.model="com.company.core.core.models.FeatureGridModel"/>
+<sly data-sly-use.style="com.adobe.cq.wcm.style.ComponentStyleInfo"/>
+
+<section data-sly-test="${!model.empty}" class="cmp-feature-grid ${style.cssClasses}">
+    <header data-sly-test="${model.sectionTitle || model.sectionIntro}" class="cmp-feature-grid__header">
+        <h2 data-sly-test="${model.sectionTitle}" class="cmp-feature-grid__title">${model.sectionTitle}</h2>
+        <p data-sly-test="${model.sectionIntro}" class="cmp-feature-grid__intro">${model.sectionIntro}</p>
+    </header>
+
+    <div class="cmp-feature-grid__grid">
+        <article data-sly-list.feature="${model.features}" class="cmp-feature-grid__item">
+            <span data-sly-test="${feature.icon}" class="cmp-feature-grid__icon" aria-hidden="true">${feature.icon}</span>
+            <h3 data-sly-test="${feature.title}" class="cmp-feature-grid__item-title">${feature.title}</h3>
+            <p data-sly-test="${feature.description}" class="cmp-feature-grid__item-description">${feature.description}</p>
+        </article>
+    </div>
+</section>
+
+<sly
+        data-sly-test="${model.empty}"
+        data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+        data-sly-call="${template.placeholder @ isEmpty=true}"/>
