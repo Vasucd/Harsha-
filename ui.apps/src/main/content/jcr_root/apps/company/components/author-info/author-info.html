@@ -1,6 +1,11 @@
 <sly data-sly-use.model="com.company.core.core.models.AuthorInfoModel"/>
 <section data-sly-test="${!model.empty}" class="cmp-author-info">
-    <h3 data-sly-test="${model.authorName}" class="cmp-author-info__name">${model.authorName}</h3>
-    <p data-sly-test="${model.authorRole}" class="cmp-author-info__role">${model.authorRole}</p>
+    <div class="cmp-author-info__header">
+        <span class="cmp-author-info__avatar" aria-hidden="true"></span>
+        <div class="cmp-author-info__meta">
+            <h3 data-sly-test="${model.authorName}" class="cmp-author-info__name">${model.authorName}</h3>
+            <p data-sly-test="${model.authorRole}" class="cmp-author-info__role">${model.authorRole}</p>
+        </div>
+    </div>
     <p data-sly-test="${model.authorBio}" class="cmp-author-info__bio">${model.authorBio}</p>
 </section>

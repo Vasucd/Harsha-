@@ -2967,40 +2967,52 @@ body > .root.container > .aem-Grid > .aem-GridColumn:last-child {
    BLOG DETAIL PAGE — author card + comfortable reading column
    (blog pages are title + text + author-info)
    ============================================================= */
+/* Robust flex layout — the avatar is a real flex item, so it can never
+   overlap the name/role regardless of other cascade rules. */
 .cmp-author-info {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
-  gap: .35rem;
+  gap: 1rem;
   max-width: 760px;
   margin: var(--sp-5) auto 0;
-  padding: clamp(1.25rem, 3vw, 1.75rem) clamp(1.35rem, 3vw, 2rem);
+  padding: clamp(1.35rem, 3vw, 1.9rem) clamp(1.35rem, 3vw, 2rem) !important;
   border: 1px solid var(--ink-200);
   border-radius: var(--r-lg);
   background: var(--surface-2);
-  position: relative;
-  padding-left: clamp(4.5rem, 8vw, 5.5rem);
+  box-shadow: var(--el-1);
 }
-.cmp-author-info::before {
-  content: "";
-  position: absolute;
-  left: clamp(1.25rem, 3vw, 1.6rem);
-  top: 50%;
-  transform: translateY(-50%);
-  width: 3rem; height: 3rem;
+.cmp-author-info__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.cmp-author-info__avatar {
+  flex: 0 0 auto;
+  width: 3.25rem;
+  height: 3.25rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--fitness-primary), var(--fitness-accent));
+  background:
+    center / 1.5rem 1.5rem no-repeat
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5Zm0 2c-4 0-8 2-8 5v1h16v-1c0-3-4-5-8-5Z'/%3E%3C/svg%3E"),
+    linear-gradient(135deg, var(--fitness-primary), var(--fitness-accent));
   box-shadow: 0 6px 16px rgba(14, 116, 144, .25);
 }
-.cmp-author-info__name { margin: 0; color: var(--ink-900); font-size: var(--fs-h3); }
+.cmp-author-info__meta {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  min-width: 0;
+}
+.cmp-author-info__name { margin: 0; color: var(--ink-900); font-size: var(--fs-h3); line-height: 1.2; }
 .cmp-author-info__role {
   margin: 0;
   color: var(--fitness-accent);
   font-weight: 700;
-  font-size: var(--fs-sm);
+  font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: .04em;
+  letter-spacing: .05em;
 }
-.cmp-author-info__bio { margin: .35rem 0 0; color: var(--ink-500); line-height: 1.65; }
+.cmp-author-info__bio { margin: 0; color: var(--ink-500); line-height: 1.65; }
 
 /* reading column for blog body text (scoped to blog pages) */
 .page-blog .cmp-container .cmp-text,
