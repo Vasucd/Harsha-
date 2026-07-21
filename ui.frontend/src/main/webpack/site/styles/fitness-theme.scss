@@ -2714,3 +2714,49 @@ body > .root.container > .aem-Grid > .aem-GridColumn:last-child {
   .cmp-cta-band__cta:hover,
   .cmp-feature-grid--cards .cmp-feature-grid__item:hover { transform: none; }
 }
+
+/* =============================================================
+   UNIVERSAL SECTION STYLES (Style System)
+   Reusable options exposed via the paintbrush on every custom
+   content component. The Style System adds the chosen class to
+   the component's root .cmp-* element, so these are scoped to
+   that element and its descendants.
+   ============================================================= */
+.u-style--soft {
+  background: var(--surface-2);
+  border-radius: var(--r-lg);
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+.u-style--dark {
+  background: linear-gradient(180deg, #0d2029 0%, #081016 100%);
+  color: #cfe0e6;
+  border-radius: var(--r-lg);
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+.u-style--dark :is(h1, h2, h3, h4, h5) { color: #fff; }
+.u-style--dark a:not([class*="cmp-"][class*="cta"]) { color: #7dd3fc; }
+
+.u-style--accent {
+  background: linear-gradient(120deg, var(--fitness-primary) 0%, #0b5566 55%, #0d2029 100%);
+  color: #eaf2f6;
+  border-radius: var(--r-lg);
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+.u-style--accent :is(h1, h2, h3, h4, h5) { color: #fff; }
+
+.u-style--center { text-align: center; }
+
+.u-style--narrow {
+  max-width: 820px;
+  margin-inline: auto;
+}
+
+.u-style--elevated {
+  background: var(--surface);
+  border: 1px solid var(--ink-200);
+  border-radius: var(--r-lg);
+  box-shadow: var(--el-2);
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+}
+
+.u-style--flush { margin-block: 0 !important; }

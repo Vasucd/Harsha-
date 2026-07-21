@@ -67,6 +67,46 @@
                                 cq:policy="company/components/feature-grid/policy_feature_grid"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <hero-banner
+                                cq:policy="company/components/hero-banner/policy_hero_banner"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <pricing
+                                cq:policy="company/components/pricing/policy_pricing"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <coaches
+                                cq:policy="company/components/coaches/policy_coaches"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <testimonials
+                                cq:policy="company/components/testimonials/policy_testimonials"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <stats
+                                cq:policy="company/components/stats/policy_stats"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <class-schedule
+                                cq:policy="company/components/class-schedule/policy_class_schedule"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <blog-listing
+                                cq:policy="company/components/blog-listing/policy_blog_listing"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <about-story
+                                cq:policy="company/components/about-story/policy_about_story"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <contact-form
+                                cq:policy="company/components/contact-form/policy_contact_form"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <author-info
+                                cq:policy="company/components/author-info/policy_author_info"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
                         </components>
                     </company>
                 </container>

@@ -433,6 +433,226 @@
                     </cq:styleGroups>
                 </policy_feature_grid>
             </feature-grid>
+            <hero-banner jcr:primaryType="nt:unstructured">
+                <policy_hero_banner
+                    jcr:description="Section style variants for the Hero Banner component."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Hero Banner"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700100101" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700100102" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700100103" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700100104" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700100105" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700100106" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700100107" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_hero_banner>
+            </hero-banner>
+            <pricing jcr:primaryType="nt:unstructured">
+                <policy_pricing
+                    jcr:description="Section style variants for the Pricing Plans component."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Pricing Plans"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700100201" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700100202" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700100203" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700100204" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700100205" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700100206" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700100207" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_pricing>
+            </pricing>
+            <coaches jcr:primaryType="nt:unstructured">
+                <policy_coaches
+                    jcr:description="Section style variants for the Coaches component."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Coaches"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700100301" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700100302" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700100303" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700100304" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700100305" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700100306" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700100307" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_coaches>
+            </coaches>
+            <testimonials jcr:primaryType="nt:unstructured">
+                <policy_testimonials
+                    jcr:description="Section style variants for the Testimonials component."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Testimonials"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700100401" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700100402" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700100403" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700100404" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700100405" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700100406" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700100407" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_testimonials>
+            </testimonials>
+            <stats jcr:primaryType="nt:unstructured">
+                <policy_stats
+                    jcr:description="Section style variants for the Stats Band component."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Stats Band"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700100501" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700100502" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700100503" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700100504" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700100505" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700100506" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700100507" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_stats>
+            </stats>
+            <class-schedule jcr:primaryType="nt:unstructured">
+                <policy_class_schedule
+                    jcr:description="Section style variants for the Class Schedule component."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Class Schedule"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700100601" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700100602" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700100603" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700100604" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700100605" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700100606" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700100607" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_class_schedule>
+            </class-schedule>
+            <blog-listing jcr:primaryType="nt:unstructured">
+                <policy_blog_listing
+                    jcr:description="Section style variants for the Blog Listing component."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Blog Listing"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700100701" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700100702" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700100703" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700100704" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700100705" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700100706" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700100707" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_blog_listing>
+            </blog-listing>
+            <about-story jcr:primaryType="nt:unstructured">
+                <policy_about_story
+                    jcr:description="Section style variants for the About Story component."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="About Story"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700100801" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700100802" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700100803" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700100804" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700100805" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700100806" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700100807" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_about_story>
+            </about-story>
+            <contact-form jcr:primaryType="nt:unstructured">
+                <policy_contact_form
+                    jcr:description="Section style variants for the Contact Form component."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Contact Form"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700100901" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700100902" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700100903" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700100904" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700100905" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700100906" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700100907" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_contact_form>
+            </contact-form>
+            <author-info jcr:primaryType="nt:unstructured">
+                <policy_author_info
+                    jcr:description="Section style variants for the Author Info component."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Author Info"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700101001" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700101002" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700101003" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700101004" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700101005" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700101006" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700101007" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_author_info>
+            </author-info>
             <download jcr:primaryType="nt:unstructured">
                 <policy_1575032193319
                     jcr:description="Sets the title size to H3."
