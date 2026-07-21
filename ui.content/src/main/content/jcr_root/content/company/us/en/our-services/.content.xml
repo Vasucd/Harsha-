@@ -2,11 +2,12 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2026-07-15T09:30:08.429+05:30"
+        cq:lastModified="{Date}2026-07-21T10:30:00.000+05:30"
         cq:lastModifiedBy="admin"
         cq:template="/conf/company/settings/wcm/templates/page-content"
         jcr:primaryType="cq:PageContent"
         jcr:title="Our Services"
+        jcr:description="Strength, fat-loss, mobility and endurance coaching programs at ForgeFit."
         sling:resourceType="company/components/page">
         <root
             jcr:primaryType="nt:unstructured"
@@ -19,12 +20,40 @@
                 <servicesHero
                     jcr:primaryType="nt:unstructured"
                     altText="Athlete performing battle rope workout"
-                    ctaLabel="Join Today"
+                    ctaLabel="Book a Free Consult"
                     ctaLink="/content/company/us/en/contact-us"
-                    description="&lt;p>Choose a coaching path that fits your current level and personal target goals.&lt;/p>"
+                    description="&lt;p>Choose a coaching path built around your level, your schedule and the results you actually want — strength, fat loss, endurance or moving pain-free.&lt;/p>"
                     image="/content/dam/company/fitness/services-hero.jpg"
                     sling:resourceType="company/components/hero-banner"
-                    title="Programs for Strength, Fat Loss, and Endurance"/>
+                    title="Programs for Strength, Fat Loss &amp; Endurance"/>
+                <whyForge
+                    jcr:primaryType="nt:unstructured"
+                    sectionTitle="Why train with ForgeFit"
+                    sectionIntro="Every program is coached, measurable and built to keep you progressing — not just sweating."
+                    sling:resourceType="company/components/feature-grid">
+                    <features jcr:primaryType="nt:unstructured">
+                        <item_0
+                            jcr:primaryType="nt:unstructured"
+                            icon="&#127947;"
+                            title="Coaching that adapts"
+                            description="Real coaches review your form and adjust your plan every week — never a generic template."/>
+                        <item_1
+                            jcr:primaryType="nt:unstructured"
+                            icon="&#128200;"
+                            title="Progress you can measure"
+                            description="Track strength, body composition and conditioning so you always know it's working."/>
+                        <item_2
+                            jcr:primaryType="nt:unstructured"
+                            icon="&#129382;"
+                            title="Nutrition that fits life"
+                            description="Sustainable nutrition guidance — no crash diets, no banned foods, just steady results."/>
+                        <item_3
+                            jcr:primaryType="nt:unstructured"
+                            icon="&#129309;"
+                            title="A community that shows up"
+                            description="Group classes and accountability that make training something you look forward to."/>
+                    </features>
+                </whyForge>
                 <programCards
                     jcr:primaryType="nt:unstructured"
                     sectionTitle="Fitness Services"
@@ -32,27 +61,43 @@
                     <services jcr:primaryType="nt:unstructured">
                         <item_0
                             jcr:primaryType="nt:unstructured"
-                            ctaLabel="Speak to Coach"
+                            icon="&#128170;"
+                            ctaLabel="Speak to a Coach"
                             ctaLink="/content/company/us/en/contact-us"
-                            description="Targeted sessions for muscle gain and power development with form correction."
+                            description="Targeted sessions for muscle gain and power development, with hands-on form correction and progressive overload programming."
                             title="Strength Coaching"/>
                         <item_1
                             jcr:primaryType="nt:unstructured"
+                            icon="&#128293;"
                             ctaLabel="Learn More"
                             ctaLink="/content/company/us/en/blog/fat-loss-guide"
-                            description="Cardio and conditioning protocols to improve stamina and burn fat efficiently."
+                            description="Cardio and conditioning protocols paired with nutrition coaching to burn fat efficiently and keep it off."
                             title="Fat Loss Transformation"/>
                         <item_2
                             jcr:primaryType="nt:unstructured"
+                            icon="&#129496;"
                             ctaLabel="See Tips"
                             ctaLink="/content/company/us/en/blog/mobility-basics"
-                            description="Mobility and recovery sessions to improve movement quality and prevent injury."
-                            title="Mobility and Recovery"/>
+                            description="Mobility and recovery sessions to improve movement quality, reduce stiffness and prevent injury."
+                            title="Mobility &amp; Recovery"/>
                     </services>
                 </programCards>
+                <coaches
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="company/components/coaches"/>
                 <classSchedule
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="company/components/class-schedule"/>
+                <membership
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="company/components/pricing"/>
+                <servicesCta
+                    jcr:primaryType="nt:unstructured"
+                    heading="Ready to start training?"
+                    text="Book a free consult and we'll build a plan around your goals, your schedule and your body."
+                    ctaLabel="Book a Free Consult"
+                    ctaLink="/content/company/us/en/contact-us"
+                    sling:resourceType="company/components/cta-band"/>
             </container>
         </root>
     </jcr:content>
