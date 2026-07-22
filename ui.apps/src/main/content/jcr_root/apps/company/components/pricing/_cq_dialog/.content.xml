@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+        xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+        xmlns:cq="http://www.day.com/jcr/cq/1.0"
+        xmlns:jcr="http://www.jcp.org/jcr/1.0"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Pricing Plans"
+        sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <sectionTitle
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                    fieldLabel="Section Title"
+                    name="./sectionTitle"/>
+            <subtitle
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                    fieldLabel="Subtitle"
+                    name="./subtitle"/>
+            <plans
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                    composite="{Boolean}true"
+                    fieldLabel="Plans">
+                <field
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        name="./plans">
+                    <items jcr:primaryType="nt:unstructured">
+                        <name
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Plan Name"
+                                name="./name"/>
+                        <price
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Price"
+                                fieldDescription="E.g. $79"
+                                name="./price"/>
+                        <period
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Period"
+                                fieldDescription="E.g. /mo"
+                                name="./period"/>
+                        <badge
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Badge"
+                                fieldDescription="Optional, e.g. Most popular"
+                                name="./badge"/>
+                        <featured
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                text="Highlight this plan (featured)"
+                                name="./featured"
+                                value="{Boolean}true"
+                                uncheckedValue="{Boolean}false"/>
+                        <features
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                fieldLabel="Features"
+                                fieldDescription="One feature per line"
+                                name="./features"/>
+                        <ctaLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Button Label"
+                                name="./ctaLabel"/>
+                        <ctaLink
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Button Link"
+                                name="./ctaLink"
+                                rootPath="/content/company"/>
+                    </items>
+                </field>
+            </plans>
+        </items>
+    </content>
+</jcr:root>

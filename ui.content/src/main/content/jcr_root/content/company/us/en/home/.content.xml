@@ -56,13 +56,73 @@
                 </servicesHighlights>
                 <statsBand
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="company/components/stats"/>
+                    sling:resourceType="company/components/stats">
+                    <items jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" number="500+" label="Members coached"/>
+                        <item1 jcr:primaryType="nt:unstructured" number="10+" label="Years experience"/>
+                        <item2 jcr:primaryType="nt:unstructured" number="15k+" label="Sessions delivered"/>
+                        <item3 jcr:primaryType="nt:unstructured" number="4.9&#9733;" label="Average rating"/>
+                    </items>
+                </statsBand>
                 <pricingPlans
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="company/components/pricing"/>
+                    sling:resourceType="company/components/pricing"
+                    sectionTitle="Membership Plans"
+                    subtitle="Simple pricing. Cancel anytime. Start with a free consult.">
+                    <plans jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            name="Starter"
+                            price="$39"
+                            period="/mo"
+                            features="Gym floor access&#10;Group classes (4/mo)&#10;Training app plans"
+                            ctaLabel="Choose Starter"
+                            ctaLink="/content/company/us/en/contact-us"/>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            name="Pro"
+                            price="$79"
+                            period="/mo"
+                            featured="{Boolean}true"
+                            badge="Most popular"
+                            features="Everything in Starter&#10;Unlimited group classes&#10;Monthly coaching check-in&#10;Nutrition guidance"
+                            ctaLabel="Choose Pro"
+                            ctaLink="/content/company/us/en/contact-us"/>
+                        <item2
+                            jcr:primaryType="nt:unstructured"
+                            name="Elite"
+                            price="$149"
+                            period="/mo"
+                            features="Everything in Pro&#10;Weekly 1:1 personal training&#10;Custom nutrition plan&#10;Priority scheduling"
+                            ctaLabel="Choose Elite"
+                            ctaLink="/content/company/us/en/contact-us"/>
+                    </plans>
+                </pricingPlans>
                 <memberTestimonials
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="company/components/testimonials"/>
+                    sling:resourceType="company/components/testimonials"
+                    sectionTitle="What our members say">
+                    <items jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            rating="{Long}5"
+                            name="Priya S."
+                            program="Fat-loss program"
+                            quote="Down 8kg and stronger than ever in 12 weeks. The coaching is next level."/>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            rating="{Long}5"
+                            name="Marcus T."
+                            program="Mobility program"
+                            quote="Finally training without pain. The mobility work changed everything for me."/>
+                        <item2
+                            jcr:primaryType="nt:unstructured"
+                            rating="{Long}5"
+                            name="Dan R."
+                            program="Strength program"
+                            quote="Hit a 140kg deadlift I never thought possible. Progressive overload works."/>
+                    </items>
+                </memberTestimonials>
                 <latestFitnessBlogs
                     jcr:primaryType="nt:unstructured"
                     blogRootPath="/content/company/us/en/blog"

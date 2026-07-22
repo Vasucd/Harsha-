@@ -1,8 +1,16 @@
-<section class="cmp-stats" data-animate-on-scroll>
+<sly data-sly-use.model="com.company.core.core.models.StatsModel"/>
+<sly data-sly-use.style="com.adobe.cq.wcm.style.ComponentStyleInfo"/>
+
+<section data-sly-test="${!model.empty}" class="cmp-stats ${style.cssClasses}" data-animate-on-scroll>
     <div class="cmp-stats__grid">
-        <div class="cmp-stats__item"><span class="cmp-stats__num">500+</span><span class="cmp-stats__label">Members coached</span></div>
-        <div class="cmp-stats__item"><span class="cmp-stats__num">10+</span><span class="cmp-stats__label">Years experience</span></div>
-        <div class="cmp-stats__item"><span class="cmp-stats__num">15k+</span><span class="cmp-stats__label">Sessions delivered</span></div>
-        <div class="cmp-stats__item"><span class="cmp-stats__num">4.9★</span><span class="cmp-stats__label">Average rating</span></div>
+        <div data-sly-list.item="${model.items}" class="cmp-stats__item">
+            <span class="cmp-stats__num">${item.number}</span>
+            <span class="cmp-stats__label">${item.label}</span>
+        </div>
     </div>
 </section>
+
+<sly
+        data-sly-test="${model.empty}"
+        data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+        data-sly-call="${template.placeholder @ isEmpty=true}"/>

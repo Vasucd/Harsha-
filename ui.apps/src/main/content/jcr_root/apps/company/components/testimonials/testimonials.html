@@ -1,20 +1,18 @@
-<section class="cmp-testimonials" data-animate-on-scroll>
-    <h2 class="cmp-testimonials__title">What our members say</h2>
+<sly data-sly-use.model="com.company.core.core.models.TestimonialsModel"/>
+<sly data-sly-use.style="com.adobe.cq.wcm.style.ComponentStyleInfo"/>
+
+<section data-sly-test="${!model.empty}" class="cmp-testimonials ${style.cssClasses}" data-animate-on-scroll>
+    <h2 data-sly-test="${model.sectionTitle}" class="cmp-testimonials__title">${model.sectionTitle}</h2>
     <div class="cmp-testimonials__grid">
-        <figure class="cmp-testimonials__card">
-            <div class="cmp-testimonials__stars">★★★★★</div>
-            <blockquote>Down 8kg and stronger than ever in 12 weeks. The coaching is next level.</blockquote>
-            <figcaption><strong>Priya S.</strong> · Fat-loss program</figcaption>
-        </figure>
-        <figure class="cmp-testimonials__card">
-            <div class="cmp-testimonials__stars">★★★★★</div>
-            <blockquote>Finally training without pain. The mobility work changed everything for me.</blockquote>
-            <figcaption><strong>Marcus T.</strong> · Mobility program</figcaption>
-        </figure>
-        <figure class="cmp-testimonials__card">
-            <div class="cmp-testimonials__stars">★★★★★</div>
-            <blockquote>Hit a 140kg deadlift I never thought possible. Progressive overload works.</blockquote>
-            <figcaption><strong>Dan R.</strong> · Strength program</figcaption>
+        <figure data-sly-list.item="${model.items}" class="cmp-testimonials__card">
+            <div class="cmp-testimonials__stars" aria-label="${item.rating} out of 5 stars">${item.stars}</div>
+            <blockquote data-sly-test="${item.quote}">${item.quote}</blockquote>
+            <figcaption><strong>${item.name}</strong> <sly data-sly-test="${item.program}">· ${item.program}</sly></figcaption>
         </figure>
     </div>
 </section>
+
+<sly
+        data-sly-test="${model.empty}"
+        data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+        data-sly-call="${template.placeholder @ isEmpty=true}"/>
