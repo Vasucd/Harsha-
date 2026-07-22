@@ -1,9 +1,7 @@
 package com.company.core.core.models;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.Resource;
@@ -65,8 +63,8 @@ public class PricingModel {
         @ValueMapValue
         private String badge;
 
-        @ValueMapValue
-        private String features;
+        @ChildResource(name = "features")
+        private List<Feature> features;
 
         @ValueMapValue
         private String ctaLabel;
@@ -94,14 +92,8 @@ public class PricingModel {
             return badge;
         }
 
-        public List<String> getFeatures() {
-            if (StringUtils.isBlank(features)) {
-                return Collections.emptyList();
-            }
-            return Arrays.stream(features.split("\\r?\\n"))
-                    .map(String::trim)
-                    .filter(StringUtils::isNotBlank)
-                    .collect(Collectors.toList());
+        public List<Feature> getFeatures() {
+            return features == null ? Collections.emptyList() : features;
         }
 
         public String getCtaLabel() {
@@ -115,6 +107,17 @@ public class PricingModel {
             return ctaLink.startsWith("/content/") && !ctaLink.endsWith(".html")
                     ? ctaLink + ".html"
                     : ctaLink;
+        }
+    }
+
+    @Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
+    public static class Feature {
+
+        @ValueMapValue
+        private String value;
+
+        public String getValue() {
+            return StringUtils.defaultString(value);
         }
     }
 }

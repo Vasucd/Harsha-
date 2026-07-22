@@ -103,9 +103,14 @@
                             name="Starter"
                             price="$39"
                             period="/mo"
-                            features="Gym floor access&#10;Group classes (4/mo)&#10;Training app plans"
                             ctaLabel="Choose Starter"
-                            ctaLink="/content/company/us/en/contact-us"/>
+                            ctaLink="/content/company/us/en/contact-us">
+                            <features jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" value="Gym floor access"/>
+                                <item1 jcr:primaryType="nt:unstructured" value="Group classes (4/mo)"/>
+                                <item2 jcr:primaryType="nt:unstructured" value="Training app plans"/>
+                            </features>
+                        </item0>
                         <item1
                             jcr:primaryType="nt:unstructured"
                             name="Pro"
@@ -113,17 +118,29 @@
                             period="/mo"
                             featured="{Boolean}true"
                             badge="Most popular"
-                            features="Everything in Starter&#10;Unlimited group classes&#10;Monthly coaching check-in&#10;Nutrition guidance"
                             ctaLabel="Choose Pro"
-                            ctaLink="/content/company/us/en/contact-us"/>
+                            ctaLink="/content/company/us/en/contact-us">
+                            <features jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" value="Everything in Starter"/>
+                                <item1 jcr:primaryType="nt:unstructured" value="Unlimited group classes"/>
+                                <item2 jcr:primaryType="nt:unstructured" value="Monthly coaching check-in"/>
+                                <item3 jcr:primaryType="nt:unstructured" value="Nutrition guidance"/>
+                            </features>
+                        </item1>
                         <item2
                             jcr:primaryType="nt:unstructured"
                             name="Elite"
                             price="$149"
                             period="/mo"
-                            features="Everything in Pro&#10;Weekly 1:1 personal training&#10;Custom nutrition plan&#10;Priority scheduling"
                             ctaLabel="Choose Elite"
-                            ctaLink="/content/company/us/en/contact-us"/>
+                            ctaLink="/content/company/us/en/contact-us">
+                            <features jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" value="Everything in Pro"/>
+                                <item1 jcr:primaryType="nt:unstructured" value="Weekly 1:1 personal training"/>
+                                <item2 jcr:primaryType="nt:unstructured" value="Custom nutrition plan"/>
+                                <item3 jcr:primaryType="nt:unstructured" value="Priority scheduling"/>
+                            </features>
+                        </item2>
                     </plans>
                 </membership>
                 <servicesCta

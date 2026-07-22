@@ -62,10 +62,22 @@
                                 uncheckedValue="{Boolean}false"/>
                         <features
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
-                                fieldLabel="Features"
-                                fieldDescription="One feature per line"
-                                name="./features"/>
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Features">
+                            <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./features">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <value
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Feature"
+                                            name="./value"/>
+                                </items>
+                            </field>
+                        </features>
                         <ctaLabel
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
