@@ -1104,10 +1104,30 @@ footer.experiencefragment .cmp-text a,
   gap: 1rem;
   text-align: center;
 }
-.cmp-stats__item { display: flex; flex-direction: column; gap: 0.25rem; }
-.cmp-stats__num { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; color: #ffb347; }
-.cmp-stats__label { color: #cfeaef; font-size: 0.95rem; }
-@media (max-width: 640px) { .cmp-stats__grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; } }
+.cmp-stats__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 0.25rem;
+}
+
+.cmp-stats__num {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 800;
+    color: #ffb347;
+}
+
+.cmp-stats__label {
+    color: #cfeaef;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+    .cmp-stats__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
 
 /* =============================================================
    Pricing
@@ -1843,7 +1863,7 @@ header.experiencefragment::before,
    ============================================================= */
 .cmp-site-footer {
   width: 100vw !important;
-  margin-left: calc(50% - 50vw) !important;
+  margin-left: calc(46% - 50vw) !important;
   margin-right: calc(50% - 50vw) !important;
   margin-bottom: 0 !important;
 }
@@ -1863,7 +1883,7 @@ html, body { margin: 0 !important; padding-bottom: 0 !important; }
 body > .root:last-child { margin-bottom: 0 !important; }
 
 /* tighter page side gutters (content was inset too far) */
-.root.container { padding-left: clamp(.75rem, 2.5vw, 2rem) !important; padding-right: clamp(.75rem, 2.5vw, 2rem) !important; }
+// .root.container { padding-left: clamp(.75rem, 2.5vw, 2rem) !important; padding-right: clamp(7.5rem, 2.5vw, 2rem) !important; }
 
 /* keep the footer's inner content aligned with the page content */
 .cmp-site-footer__inner,

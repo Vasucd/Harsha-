@@ -4,8 +4,10 @@
 <section data-sly-test="${!model.empty}" class="cmp-stats ${style.cssClasses}" data-animate-on-scroll>
     <div class="cmp-stats__grid">
         <div data-sly-list.item="${model.items}" class="cmp-stats__item">
-            <span class="cmp-stats__num">${item.number}</span>
-            <span class="cmp-stats__label">${item.label}</span>
+            <div class="cmp-stats__content">
+                <span class="cmp-stats__num">${item.number}</span>
+                <span class="cmp-stats__label">${item.label}</span>
+            </div>
         </div>
     </div>
 </section>
