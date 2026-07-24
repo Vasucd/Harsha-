@@ -718,7 +718,7 @@
 </cq:styleGroups>
                     <grpLayout jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Layout">
                         <cq:styles jcr:primaryType="nt:unstructured">
-                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-stats--horizontal" cq:styleId="{Long}1741700900001" cq:styleLabel="Horizontal row"/>
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-stats--vertical" cq:styleId="{Long}1741700900001" cq:styleLabel="Vertical stack"/>
                         </cq:styles>
                     </grpLayout>
                 </policy_stats>
