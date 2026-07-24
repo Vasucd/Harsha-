@@ -3323,3 +3323,51 @@ body > .root.container > .aem-Grid {
   background: linear-gradient(120deg, #fb923c, var(--fitness-accent, #f97316)) !important;
 }
 .cmp-pricing__cta:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(14, 116, 144, .25); }
+
+/* =============================================================
+   STATS — vertical layout (authoritative, supersedes the 4-across)
+   A centred vertical list inside the band, with hairline dividers,
+   so it fills the band properly instead of hugging the left edge.
+   ============================================================= */
+.cmp-stats {
+  padding: clamp(1.75rem, 4vw, 2.75rem) clamp(1.25rem, 3vw, 2rem) !important;
+}
+.cmp-stats__grid {
+  display: flex !important;
+  flex-direction: column !important;
+  grid-template-columns: none !important;   /* cancel the earlier grid */
+  gap: 0 !important;
+  width: 100%;
+  max-width: 560px;
+  margin-inline: auto !important;           /* centre the stack in the band */
+  text-align: center !important;
+}
+.cmp-stats__item {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: .15rem !important;
+  padding-block: clamp(.85rem, 2vw, 1.15rem) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, .14);
+}
+.cmp-stats__item:last-child { border-bottom: none; }
+.cmp-stats__content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: .15rem !important;
+}
+.cmp-stats__num {
+  display: block !important;
+  font-size: clamp(2rem, 5vw, 2.9rem) !important;
+  font-weight: 800;
+  color: #ffb347;
+  line-height: 1.05;
+}
+.cmp-stats__label {
+  display: block !important;
+  color: #cfeaef;
+  font-size: 1rem;
+  line-height: 1.35;
+}
