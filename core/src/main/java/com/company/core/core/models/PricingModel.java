@@ -121,15 +121,17 @@ public class PricingModel {
 
         public List<String> getFeatures() {
             List<String> list = new ArrayList<>();
-            // the dialog's Feature 1..6 fields are the authoritative source
-            for (String f : new String[]{feature1, feature2, feature3, feature4, feature5, feature6}) {
-                if (StringUtils.isNotBlank(f)) {
-                    list.add(f.trim());
+            // the Features multifield (multi-value property) is the primary source
+            if (features != null) {
+                for (String f : features) {
+                    if (StringUtils.isNotBlank(f)) {
+                        list.add(f.trim());
+                    }
                 }
             }
-            // fall back to a multi-value "features" property if those are empty
-            if (list.isEmpty() && features != null) {
-                for (String f : features) {
+            // fall back to the legacy feature1..6 fields so older content still renders
+            if (list.isEmpty()) {
+                for (String f : new String[]{feature1, feature2, feature3, feature4, feature5, feature6}) {
                     if (StringUtils.isNotBlank(f)) {
                         list.add(f.trim());
                     }

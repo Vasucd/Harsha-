@@ -66,36 +66,17 @@
                                 fieldLabel="Intro line"
                                 fieldDescription="Shown above the features, e.g. &quot;Unlimited access to&quot;"
                                 name="./intro"/>
-                        <feature1
+                        <features
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                fieldLabel="Feature 1"
-                                name="./feature1"/>
-                        <feature2
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                fieldLabel="Feature 2"
-                                name="./feature2"/>
-                        <feature3
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                fieldLabel="Feature 3"
-                                name="./feature3"/>
-                        <feature4
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                fieldLabel="Feature 4"
-                                name="./feature4"/>
-                        <feature5
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                fieldLabel="Feature 5"
-                                name="./feature5"/>
-                        <feature6
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                fieldLabel="Feature 6"
-                                name="./feature6"/>
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                fieldLabel="Features"
+                                fieldDescription="Click + to add a feature. One per row — no limit.">
+                            <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    emptyText="e.g. Unlimited group classes"
+                                    name="./features"/>
+                        </features>
                         <ctaLabel
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
