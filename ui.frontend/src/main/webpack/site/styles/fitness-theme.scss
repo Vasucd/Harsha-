@@ -1130,45 +1130,6 @@ footer.experiencefragment .cmp-text a,
 }
 
 /* =============================================================
-   Pricing
-   ============================================================= */
-.cmp-pricing { margin: 2.5rem 0; text-align: center; }
-.cmp-pricing__title { font-size: clamp(1.7rem, 3vw, 2.3rem); font-weight: 800; color: var(--fitness-text); margin: 0 0 0.4rem; }
-.cmp-pricing__sub { color: var(--fitness-muted); margin: 0 0 2rem; }
-.cmp-pricing__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; align-items: stretch; }
-.cmp-pricing__card {
-  position: relative;
-  display: flex; flex-direction: column;
-  padding: 2rem 1.75rem;
-  background: #fff;
-  border: 1px solid var(--fitness-border);
-  border-radius: 16px;
-  box-shadow: 0 8px 26px rgba(20,30,50,0.06);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-.cmp-pricing__card:hover { transform: translateY(-6px); box-shadow: 0 16px 38px rgba(20,30,50,0.12); }
-.cmp-pricing__card--featured { border-color: var(--fitness-accent); box-shadow: 0 16px 40px rgba(249,115,22,0.18); }
-.cmp-pricing__badge {
-  position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
-  background: linear-gradient(120deg, var(--fitness-primary), var(--fitness-accent));
-  color: #fff; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.03em;
-  padding: 0.3rem 0.9rem; border-radius: 999px;
-}
-.cmp-pricing__name { margin: 0.3rem 0 0.5rem; font-size: 1.25rem; font-weight: 700; color: var(--fitness-text); }
-.cmp-pricing__price { font-size: 2.4rem; font-weight: 800; color: var(--fitness-primary); margin-bottom: 1rem; }
-.cmp-pricing__price span { font-size: 1rem; font-weight: 600; color: var(--fitness-muted); }
-.cmp-pricing__features { list-style: none; margin: 0 0 1.5rem; padding: 0; text-align: left; display: grid; gap: 0.6rem; flex: 1; }
-.cmp-pricing__features li { position: relative; padding-left: 1.6rem; color: var(--fitness-muted); }
-.cmp-pricing__features li::before { content: "✓"; position: absolute; left: 0; color: var(--fitness-primary); font-weight: 800; }
-.cmp-pricing__cta {
-  display: inline-block; padding: 0.8rem 1.5rem; border-radius: 999px; font-weight: 700; text-decoration: none;
-  background: var(--fitness-bg-soft); color: var(--fitness-text); transition: all 0.2s ease;
-}
-.cmp-pricing__card--featured .cmp-pricing__cta { background: linear-gradient(120deg, var(--fitness-primary), var(--fitness-accent)); color: #fff; }
-.cmp-pricing__cta:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(14,116,144,0.22); }
-@media (max-width: 800px) { .cmp-pricing__grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; } }
-
-/* =============================================================
    Testimonials
    ============================================================= */
 .cmp-testimonials { margin: 2.5rem 0; text-align: center; }
@@ -1349,55 +1310,9 @@ footer.experiencefragment .cmp-text a,
   from { opacity: 0; transform: translateY(26px) scale(0.985); }
   to   { opacity: 1; transform: translateY(0) scale(1); }
 }
-.is-visible .cmp-schedule__day,
-.is-visible .cmp-coaches__card,
-.is-visible .cmp-pricing__card,
-.is-visible .cmp-testimonials__card {
-  animation: premiumRise 0.7s var(--ease-premium) both;
-}
-.is-visible .cmp-schedule__day:nth-child(1),
-.is-visible .cmp-coaches__card:nth-child(1),
-.is-visible .cmp-pricing__card:nth-child(1),
-.is-visible .cmp-testimonials__card:nth-child(1) { animation-delay: 0.05s; }
-.is-visible .cmp-schedule__day:nth-child(2),
-.is-visible .cmp-coaches__card:nth-child(2),
-.is-visible .cmp-pricing__card:nth-child(2),
-.is-visible .cmp-testimonials__card:nth-child(2) { animation-delay: 0.14s; }
-.is-visible .cmp-schedule__day:nth-child(3),
-.is-visible .cmp-coaches__card:nth-child(3),
-.is-visible .cmp-pricing__card:nth-child(3),
-.is-visible .cmp-testimonials__card:nth-child(3) { animation-delay: 0.23s; }
 .is-visible .cmp-schedule__day:nth-child(4) { animation-delay: 0.32s; }
 .is-visible .cmp-schedule__day:nth-child(5) { animation-delay: 0.41s; }
 .is-visible .cmp-schedule__day:nth-child(6) { animation-delay: 0.50s; }
-
-/* premium section rhythm + headings */
-.cmp-schedule, .cmp-coaches, .cmp-pricing, .cmp-testimonials, .cmp-stats {
-  padding: 0.5rem 0;
-}
-.cmp-schedule__title, .cmp-coaches__title, .cmp-pricing__title, .cmp-testimonials__title {
-  letter-spacing: -0.02em;
-}
-.cmp-schedule__title::after,
-.cmp-coaches__title::after,
-.cmp-pricing__title::after,
-.cmp-testimonials__title::after {
-  content: "";
-  display: block;
-  width: 54px; height: 4px;
-  margin: 0.8rem auto 0;
-  border-radius: 2px;
-  background: linear-gradient(90deg, var(--fitness-primary), var(--fitness-accent));
-}
-
-/* refined card elevation + smooth hover on all cards */
-.cmp-schedule__day,
-.cmp-coaches__card,
-.cmp-pricing__card,
-.cmp-testimonials__card,
-.cmp-services-card__item {
-  transition: transform 0.45s var(--ease-premium), box-shadow 0.45s var(--ease-premium), border-color 0.3s ease;
-}
 
 /* subtle sheen on the stats band */
 .cmp-stats { position: relative; overflow: hidden; }
@@ -1410,13 +1325,6 @@ footer.experiencefragment .cmp-text a,
 
 /* smooth global link/button easing */
 a, button { transition: color 0.25s var(--ease-premium), background 0.25s var(--ease-premium), transform 0.25s var(--ease-premium); }
-
-@media (prefers-reduced-motion: reduce) {
-  .is-visible .cmp-schedule__day,
-  .is-visible .cmp-coaches__card,
-  .is-visible .cmp-pricing__card,
-  .is-visible .cmp-testimonials__card { animation: none !important; opacity: 1 !important; }
-}
 
 /* =============================================================
    Remove gap under the footer
@@ -1514,41 +1422,6 @@ body {
 }
 h1, h2, h3, h4 { color: var(--ink-900); letter-spacing: -0.021em; }
 
-/* --- consistent section rhythm --- */
-.cmp-services-card,
-.cmp-blog-listing,
-.cmp-pricing,
-.cmp-testimonials,
-.cmp-schedule,
-.cmp-coaches,
-.cmp-stats { margin-block: var(--sp-5); }
-
-.cmp-pricing__title,
-.cmp-testimonials__title,
-.cmp-schedule__title,
-.cmp-coaches__title { font-size: var(--fs-h2); }
-
-/* --- unified card treatment (radius + layered elevation) --- */
-.cmp-pricing__card,
-.cmp-testimonials__card,
-.cmp-coaches__card,
-.cmp-schedule__day,
-.cmp-services-card__item,
-.cmp-blog-listing__item {
-  border-radius: var(--r-md);
-  border: 1px solid var(--ink-200);
-  box-shadow: var(--el-1);
-}
-.cmp-pricing__card:hover,
-.cmp-testimonials__card:hover,
-.cmp-coaches__card:hover,
-.cmp-schedule__day:hover,
-.cmp-services-card__item:hover {
-  box-shadow: var(--el-2);
-  border-color: rgba(14, 116, 144, 0.28);
-}
-.cmp-pricing__card--featured { box-shadow: var(--el-3); }
-
 /* --- section containers --- */
 .cmp-services-card,
 .cmp-blog-listing,
@@ -1557,15 +1430,6 @@ h1, h2, h3, h4 { color: var(--ink-900); letter-spacing: -0.021em; }
 /* --- hero typographic upgrade --- */
 .cmp-hero-banner__title { font-size: var(--fs-display); line-height: 1.06; }
 .cmp-hero-banner { border-radius: var(--r-lg); box-shadow: var(--el-2); }
-
-/* --- buttons: consistent pill + weight --- */
-.cmp-hero-banner__cta,
-.cmp-pricing__cta,
-.cmp-contact-form__submit {
-  border-radius: var(--r-pill);
-  font-weight: 700;
-  letter-spacing: 0.005em;
-}
 
 /* =============================================================
    FOOTER — redesigned (CTA band + compact columns + bottom bar)
@@ -3062,86 +2926,6 @@ body > .root.container > .aem-Grid {
 }
 
 /* =============================================================
-   PRICING — authoritative layout (clean, clearly separated cards)
-   Guarantees each plan is its own elevated card, works stacked
-   (vertical) and side-by-side. Overrides any earlier/stale rules.
-   ============================================================= */
-.cmp-pricing { margin-block: var(--sp-5, 2rem); text-align: center; }
-.cmp-pricing__title { font-size: var(--fs-h2, 2rem); color: var(--ink-900, #0f1720); margin: 0 0 .4rem; }
-.cmp-pricing__sub { color: var(--ink-500, #5c6b83); margin: 0 0 2rem; }
-
-.cmp-pricing__grid {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)) !important;
-  gap: clamp(1.5rem, 2.5vw, 2rem) !important;
-  align-items: stretch;
-  max-width: 1100px;
-  margin-inline: auto;
-}
-
-/* each plan = its own separated, elevated card */
-.cmp-pricing__card {
-  display: flex !important;
-  flex-direction: column !important;
-  position: relative;
-  margin: 0 !important;
-  padding: clamp(2rem, 3vw, 2.5rem) clamp(1.5rem, 2.5vw, 2rem) !important;
-  background: #ffffff !important;
-  border: 1px solid var(--ink-200, #dde4ee) !important;
-  border-radius: 18px !important;
-  box-shadow: 0 8px 26px rgba(20, 30, 50, .07) !important;
-  text-align: center;
-  transition: transform .3s ease, box-shadow .3s ease;
-}
-.cmp-pricing__card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(20, 30, 50, .12) !important; }
-
-/* featured plan stands out */
-.cmp-pricing__card--featured {
-  border: 2px solid var(--fitness-accent, #f97316) !important;
-  box-shadow: 0 18px 44px rgba(249, 115, 22, .20) !important;
-}
-
-.cmp-pricing__badge {
-  position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
-  background: linear-gradient(120deg, var(--fitness-primary, #0e7490), var(--fitness-accent, #f97316));
-  color: #fff; font-size: .72rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase;
-  padding: .35rem 1rem; border-radius: 999px; white-space: nowrap;
-}
-
-.cmp-pricing__name { margin: .25rem 0 .5rem; font-size: 1.3rem; font-weight: 800; color: var(--ink-900, #0f1720); }
-.cmp-pricing__price { font-size: clamp(2rem, 4vw, 2.6rem); font-weight: 800; color: var(--fitness-primary, #0e7490); line-height: 1; margin: 0 0 .25rem; }
-.cmp-pricing__price span { font-size: 1rem; font-weight: 600; color: var(--ink-500, #5c6b83); }
-
-/* features: visible, left-aligned checklist that fills the card */
-.cmp-pricing__features {
-  list-style: none; margin: 1.25rem 0 1.75rem; padding: 0;
-  text-align: left; display: grid; gap: .65rem; flex: 1 1 auto;
-}
-.cmp-pricing__features li {
-  position: relative; padding-left: 1.75rem;
-  color: var(--ink-700, #2b3949); line-height: 1.45;
-}
-.cmp-pricing__features li::before {
-  content: "✓"; position: absolute; left: 0; top: 0;
-  color: var(--fitness-primary, #0e7490); font-weight: 800;
-}
-
-/* CTA pinned to the bottom so all cards line up */
-.cmp-pricing__cta {
-  margin-top: auto; align-self: center;
-  display: inline-block; padding: .85rem 1.8rem; border-radius: 999px;
-  font-weight: 700; text-decoration: none;
-  background: var(--surface-2, #f6f9fc); color: var(--ink-900, #0f1720);
-  border: 1px solid var(--ink-200, #dde4ee);
-  transition: transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
-}
-.cmp-pricing__card--featured .cmp-pricing__cta {
-  background: linear-gradient(120deg, var(--fitness-primary, #0e7490), var(--fitness-accent, #f97316));
-  color: #fff; border-color: transparent;
-}
-.cmp-pricing__cta:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(14, 116, 144, .22); }
-
-/* =============================================================
    UNIVERSAL STYLE SYSTEM — Spacing (padding) + Background color
    Added to every component's policy. Authors pick these from the
    paintbrush to change padding or the background colour.
@@ -3214,115 +2998,6 @@ body > .root.container > .aem-Grid {
 @media (max-width: 640px) {
   .cmp-stats__grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
 }
-
-/* --- Pricing: horizontal (3 across) on desktop --- */
-.cmp-pricing__grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  gap: clamp(1.25rem, 2vw, 2rem) !important;
-  align-items: stretch !important;
-  max-width: 1100px;
-  margin-inline: auto;
-}
-@media (max-width: 900px) {
-  .cmp-pricing__grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)) !important; }
-}
-@media (max-width: 600px) {
-  .cmp-pricing__grid { grid-template-columns: 1fr !important; max-width: 420px; }
-}
-
-/* =============================================================
-   PRICING — redesigned card (light theme, reference-inspired)
-   Coloured header block stands in for the reference's image,
-   then an intro line + bullet feature list + button. Light, not dark.
-   ============================================================= */
-.cmp-pricing__card {
-  display: flex !important;
-  flex-direction: column !important;
-  overflow: hidden !important;
-  padding: 0 !important;              /* header/body supply their own padding */
-  background: #ffffff !important;
-  border: 1px solid var(--ink-200, #dde4ee) !important;
-  border-radius: 20px !important;
-  box-shadow: 0 8px 26px rgba(20, 30, 50, .07) !important;
-  text-align: left !important;
-}
-
-/* coloured header block (replaces the reference's image) */
-.cmp-pricing__head {
-  position: relative;
-  padding: 1.9rem 1.5rem 1.5rem !important;
-  background: linear-gradient(135deg, #0e7490 0%, #0a4c60 100%);
-  color: #fff;
-  text-align: center;
-}
-.cmp-pricing__card--featured .cmp-pricing__head {
-  background: linear-gradient(135deg, #fb923c 0%, var(--fitness-accent, #f97316) 100%);
-}
-.cmp-pricing__name {
-  margin: 0 0 .4rem !important;
-  font-size: clamp(1.4rem, 2.6vw, 1.9rem) !important;
-  font-weight: 800 !important;
-  letter-spacing: .05em;
-  text-transform: uppercase;
-  color: #ffffff !important;
-}
-.cmp-pricing__price {
-  margin: 0 !important;
-  font-size: clamp(1.7rem, 3.2vw, 2.2rem) !important;
-  font-weight: 800 !important;
-  color: #ffd9a8 !important;
-  line-height: 1.1;
-}
-.cmp-pricing__card--featured .cmp-pricing__price { color: #ffffff !important; }
-.cmp-pricing__price span { font-size: .95rem !important; font-weight: 600; color: rgba(255, 255, 255, .8) !important; }
-.cmp-pricing__badge {
-  position: absolute !important; top: .8rem; right: .8rem; left: auto !important; transform: none !important;
-  background: rgba(255, 255, 255, .2) !important;
-  border: 1px solid rgba(255, 255, 255, .45);
-  color: #fff !important; font-size: .65rem; font-weight: 800;
-  letter-spacing: .06em; text-transform: uppercase;
-  padding: .25rem .6rem; border-radius: 999px;
-}
-
-/* body: intro + bullet features */
-.cmp-pricing__body { padding: 1.5rem 1.5rem .5rem !important; flex: 1 1 auto; }
-.cmp-pricing__intro {
-  margin: 0 0 .9rem !important;
-  font-size: 1.05rem; font-weight: 700;
-  color: var(--ink-900, #0f1720);
-}
-.cmp-pricing__features {
-  list-style: none !important; margin: 0 !important; padding: 0 !important;
-  display: grid !important; gap: .65rem !important; text-align: left !important; flex: 0 0 auto !important;
-}
-.cmp-pricing__features li {
-  position: relative; padding-left: 1.2rem !important;
-  color: var(--ink-500, #5c6b83); line-height: 1.5;
-}
-.cmp-pricing__features li::before {
-  content: "•" !important;
-  position: absolute; left: 0; top: 0;
-  color: var(--fitness-accent, #f97316); font-weight: 800; font-size: 1.1rem; line-height: 1.35;
-}
-
-/* button pinned to the bottom */
-.cmp-pricing__cta {
-  margin: 1.25rem 1.5rem 1.5rem !important;
-  align-self: stretch !important;
-  text-align: center;
-  padding: .85rem 1.5rem !important;
-  border-radius: 999px;
-  font-weight: 800; letter-spacing: .03em; text-transform: uppercase; font-size: .82rem;
-  text-decoration: none;
-  background: var(--fitness-primary, #0e7490) !important;
-  color: #ffffff !important;
-  border: 1px solid transparent;
-}
-.cmp-pricing__card--featured .cmp-pricing__cta {
-  background: linear-gradient(120deg, #fb923c, var(--fitness-accent, #f97316)) !important;
-}
-.cmp-pricing__cta:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(14, 116, 144, .25); }
 
 /* =============================================================
    STATS — vertical layout (authoritative, supersedes the 4-across)
@@ -3418,36 +3093,160 @@ body > .root.container > .aem-Grid {
   .cmp-stats--horizontal .cmp-stats__grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
 }
 
-/* ---------- PRICING: polished cards, 3 across ---------- */
-.cmp-pricing__grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  gap: clamp(1.25rem, 2vw, 2rem) !important;
-  align-items: stretch !important;
-  max-width: 1100px;
-  margin-inline: auto !important;
+/* =============================================================
+   PRICING — single clean design (light, modern SaaS-style table)
+   This is the ONLY .cmp-pricing block in this file. Keep it that
+   way: add changes here rather than appending new blocks.
+   ============================================================= */
+.cmp-pricing {
+  margin-block: clamp(2.5rem, 6vw, 4rem);
+  padding-inline: clamp(1rem, 3vw, 2rem);
+  text-align: center;
 }
+.cmp-pricing__title {
+  margin: 0 0 .5rem;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  color: var(--ink-900, #0f1720);
+}
+.cmp-pricing__sub {
+  margin: 0 auto 2.5rem;
+  max-width: 560px;
+  color: var(--ink-500, #5c6b83);
+}
+
+.cmp-pricing__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  align-items: stretch;
+  max-width: 1080px;
+  margin-inline: auto;
+}
+
 .cmp-pricing__card {
-  transition: transform .3s ease, box-shadow .3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: #ffffff;
+  border: 1px solid var(--ink-200, #dde4ee);
+  border-radius: 16px;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 32, .04), 0 8px 24px rgba(15, 23, 32, .05);
+  text-align: left;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.cmp-pricing__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(15, 23, 32, .10);
 }
 .cmp-pricing__card--featured {
-  transform: translateY(-6px);
-  z-index: 1;
+  border-color: var(--fitness-primary, #0e7490);
+  box-shadow: 0 0 0 1px var(--fitness-primary, #0e7490), 0 16px 40px rgba(14, 116, 144, .14);
 }
-.cmp-pricing__card--featured:hover { transform: translateY(-10px); }
 
-/* graceful empty state: keep the body from collapsing when no features yet */
-.cmp-pricing__features:empty { min-height: 1.5rem; }
-
-/* Pricing LAYOUT variants */
-.cmp-pricing--2col .cmp-pricing__grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; max-width: 780px; }
-.cmp-pricing--stacked .cmp-pricing__grid { grid-template-columns: 1fr !important; max-width: 460px; }
-.cmp-pricing--stacked .cmp-pricing__card--featured { transform: none; }
-
-@media (max-width: 900px) {
-  .cmp-pricing__grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)) !important; }
-  .cmp-pricing__card--featured { transform: none; }
+/* header: small uppercase plan name, then a big price */
+.cmp-pricing__badge {
+  position: absolute;
+  top: -.7rem;
+  left: 1.75rem;
+  background: var(--fitness-primary, #0e7490);
+  color: #fff;
+  font-size: .66rem;
+  font-weight: 800;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  padding: .3rem .75rem;
+  border-radius: 999px;
 }
-@media (max-width: 600px) {
-  .cmp-pricing__grid { grid-template-columns: 1fr !important; max-width: 420px; }
+.cmp-pricing__name {
+  margin: 0 0 .7rem;
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink-500, #5c6b83);
 }
+.cmp-pricing__price {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  font-weight: 800;
+  color: var(--ink-900, #0f1720);
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.cmp-pricing__price span {
+  margin-left: .15rem;
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--ink-500, #5c6b83);
+}
+
+/* body: divider, intro, tick list — grows so buttons line up */
+.cmp-pricing__body {
+  flex: 1 1 auto;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--ink-200, #dde4ee);
+}
+.cmp-pricing__intro {
+  margin: 0 0 .9rem;
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--ink-900, #0f1720);
+}
+.cmp-pricing__features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: .7rem;
+}
+.cmp-pricing__features li {
+  position: relative;
+  padding-left: 1.7rem;
+  color: var(--ink-700, #2b3949);
+  font-size: .94rem;
+  line-height: 1.5;
+}
+.cmp-pricing__features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: .1rem;
+  width: 1.15rem;
+  height: 1.15rem;
+  line-height: 1.15rem;
+  text-align: center;
+  border-radius: 50%;
+  background: rgba(14, 116, 144, .12);
+  color: var(--fitness-primary, #0e7490);
+  font-size: .68rem;
+  font-weight: 800;
+}
+
+/* button: outlined by default, solid on the featured plan */
+.cmp-pricing__cta {
+  display: block;
+  margin-top: 1.75rem;
+  padding: .85rem 1.25rem;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: .92rem;
+  background: #ffffff;
+  color: var(--fitness-primary, #0e7490);
+  border: 1.5px solid var(--fitness-primary, #0e7490);
+  transition: background .2s ease, color .2s ease;
+}
+.cmp-pricing__cta:hover { background: var(--fitness-primary, #0e7490); color: #fff; }
+.cmp-pricing__card--featured .cmp-pricing__cta {
+  background: var(--fitness-primary, #0e7490);
+  color: #fff;
+}
+.cmp-pricing__card--featured .cmp-pricing__cta:hover { background: #0b5a70; }
+
+/* Layout variants (Style System → "Layout") */
+.cmp-pricing--2col .cmp-pricing__grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); max-width: 760px; }
+.cmp-pricing--stacked .cmp-pricing__grid { grid-template-columns: 1fr; max-width: 460px; }
