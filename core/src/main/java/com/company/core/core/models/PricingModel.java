@@ -65,6 +65,9 @@ public class PricingModel {
         private String badge;
 
         @ValueMapValue
+        private String intro;
+
+        @ValueMapValue
         private String feature1;
 
         @ValueMapValue
@@ -106,6 +109,10 @@ public class PricingModel {
 
         public String getBadge() {
             return badge;
+        }
+
+        public String getIntro() {
+            return intro;
         }
 
         public List<String> getFeatures() {

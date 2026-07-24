@@ -60,6 +60,12 @@
                                 name="./featured"
                                 value="{Boolean}true"
                                 uncheckedValue="{Boolean}false"/>
+                        <intro
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Intro line"
+                                fieldDescription="Shown above the features, e.g. &quot;Unlimited access to&quot;"
+                                name="./intro"/>
                         <feature1
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"

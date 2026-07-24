@@ -4,16 +4,25 @@
 <section data-sly-test="${!model.empty}" class="cmp-pricing ${style.cssClasses}" data-animate-on-scroll>
     <h2 data-sly-test="${model.sectionTitle}" class="cmp-pricing__title">${model.sectionTitle}</h2>
     <p data-sly-test="${model.subtitle}" class="cmp-pricing__sub">${model.subtitle}</p>
+
     <div class="cmp-pricing__grid">
         <div
                 data-sly-list.plan="${model.plans}"
                 class="cmp-pricing__card ${plan.featured ? 'cmp-pricing__card--featured' : ''}">
-            <span data-sly-test="${plan.badge}" class="cmp-pricing__badge">${plan.badge}</span>
-            <h3 data-sly-test="${plan.name}" class="cmp-pricing__name">${plan.name}</h3>
-            <div class="cmp-pricing__price">${plan.price}<span data-sly-test="${plan.period}">${plan.period}</span></div>
-            <ul class="cmp-pricing__features">
-                <li data-sly-list.feature="${plan.features}" data-sly-test="${feature}">${feature}</li>
-            </ul>
+
+            <div class="cmp-pricing__head">
+                <span data-sly-test="${plan.badge}" class="cmp-pricing__badge">${plan.badge}</span>
+                <h3 data-sly-test="${plan.name}" class="cmp-pricing__name">${plan.name}</h3>
+                <div class="cmp-pricing__price">${plan.price}<span data-sly-test="${plan.period}">${plan.period}</span></div>
+            </div>
+
+            <div class="cmp-pricing__body">
+                <p data-sly-test="${plan.intro}" class="cmp-pricing__intro">${plan.intro}</p>
+                <ul class="cmp-pricing__features">
+                    <li data-sly-list.feature="${plan.features}">${feature}</li>
+                </ul>
+            </div>
+
             <a
                     data-sly-test="${plan.ctaLabel && plan.ctaLink}"
                     class="cmp-pricing__cta"
