@@ -5,8 +5,8 @@
     <div class="cmp-stats__grid">
         <div data-sly-repeat.item="${model.items}" class="cmp-stats__item">
             <div class="cmp-stats__content">
-                <span class="cmp-stats__num">${item.number}</span>
-                <span class="cmp-stats__label">${item.label}</span>
+                <span class="cmp-stats__num">${item.number @ context='text'}</span>
+                <span class="cmp-stats__label">${item.label @ context='text'}</span>
             </div>
         </div>
     </div>

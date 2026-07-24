@@ -4,15 +4,15 @@
 <section data-sly-test="${!model.empty}" class="cmp-cta-band ${style.cssClasses}">
     <div class="cmp-cta-band__inner">
         <div class="cmp-cta-band__copy">
-            <h2 data-sly-test="${model.heading}" class="cmp-cta-band__heading">${model.heading}</h2>
-            <p data-sly-test="${model.text}" class="cmp-cta-band__text">${model.text}</p>
+            <h2 data-sly-test="${model.heading}" class="cmp-cta-band__heading">${model.heading @ context='text'}</h2>
+            <p data-sly-test="${model.text}" class="cmp-cta-band__text">${model.text @ context='text'}</p>
         </div>
         <a
                 data-sly-test="${model.ctaLabel && model.ctaLink}"
                 class="cmp-cta-band__cta"
                 href="${model.ctaLink @ context='uri'}"
                 target="${model.openInNewTab ? '_blank' : ''}"
-                rel="${model.openInNewTab ? 'noopener noreferrer' : ''}">${model.ctaLabel}</a>
+                rel="${model.openInNewTab ? 'noopener noreferrer' : ''}">${model.ctaLabel @ context='text'}</a>
     </div>
 </section>
 

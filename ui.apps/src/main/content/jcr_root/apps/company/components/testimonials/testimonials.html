@@ -6,8 +6,8 @@
     <div class="cmp-testimonials__grid">
         <figure data-sly-repeat.item="${model.items}" class="cmp-testimonials__card">
             <div class="cmp-testimonials__stars" aria-label="${item.rating} out of 5 stars">${item.stars}</div>
-            <blockquote data-sly-test="${item.quote}">${item.quote}</blockquote>
-            <figcaption><strong>${item.name}</strong> <sly data-sly-test="${item.program}">· ${item.program}</sly></figcaption>
+            <blockquote data-sly-test="${item.quote}">${item.quote @ context='text'}</blockquote>
+            <figcaption><strong>${item.name @ context='text'}</strong> <sly data-sly-test="${item.program}">· ${item.program @ context='text'}</sly></figcaption>
         </figure>
     </div>
 </section>

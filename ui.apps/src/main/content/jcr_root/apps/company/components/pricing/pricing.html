@@ -11,22 +11,22 @@
                 class="cmp-pricing__card ${plan.featured ? 'cmp-pricing__card--featured' : ''}">
 
             <div class="cmp-pricing__head">
-                <span data-sly-test="${plan.badge}" class="cmp-pricing__badge">${plan.badge}</span>
-                <h3 data-sly-test="${plan.name}" class="cmp-pricing__name">${plan.name}</h3>
-                <div class="cmp-pricing__price">${plan.price}<span data-sly-test="${plan.period}">${plan.period}</span></div>
+                <span data-sly-test="${plan.badge}" class="cmp-pricing__badge">${plan.badge @ context='text'}</span>
+                <h3 data-sly-test="${plan.name}" class="cmp-pricing__name">${plan.name @ context='text'}</h3>
+                <div class="cmp-pricing__price">${plan.price @ context='text'}<span data-sly-test="${plan.period}">${plan.period @ context='text'}</span></div>
             </div>
 
             <div class="cmp-pricing__body">
-                <p data-sly-test="${plan.intro}" class="cmp-pricing__intro">${plan.intro}</p>
+                <p data-sly-test="${plan.intro}" class="cmp-pricing__intro">${plan.intro @ context='text'}</p>
                 <ul class="cmp-pricing__features">
-                    <li data-sly-repeat.feature="${plan.features}">${feature}</li>
+                    <li data-sly-repeat.feature="${plan.features}">${feature @ context='text'}</li>
                 </ul>
             </div>
 
             <a
                     data-sly-test="${plan.ctaLabel}"
                     class="cmp-pricing__cta"
-                    href="${plan.ctaLink @ context='uri'}">${plan.ctaLabel}</a>
+                    href="${plan.ctaLink @ context='uri'}">${plan.ctaLabel @ context='text'}</a>
         </div>
     </div>
 </section>
