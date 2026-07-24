@@ -1978,8 +1978,10 @@ body > .root:last-child { margin-bottom: 0 !important; }
 /* =============================================================
    FOOTER — kill remaining blank space after it
    ============================================================= */
-.aem-Grid::after,
-.aem-Grid::before { content: none !important; display: none !important; }
+/* NOTE: do NOT disable .aem-Grid::before/::after — they are AEM's clearfix that
+   contains the floated grid columns. Removing them collapses every container
+   (empty containers render as a sliver and content overlaps, and the template
+   editor's structure view breaks). They are zero-height and add no blank space. */
 .root.container > .aem-Grid { margin-bottom: 0 !important; padding-bottom: 0 !important; }
 main.container { padding-bottom: 0 !important; }
 .cmp-site-footer { display: block; }
@@ -2098,17 +2100,12 @@ body { min-height: 0 !important; }
    Cause: the page container's trailing drop-zone / empty grid
    column renders after the footer and leaves white space.
    ============================================================= */
-/* hide any empty trailing placeholder after the footer */
-.root.container > .aem-Grid > .new,
-.root.container > .aem-Grid > .newpar,
-.root.container > .aem-Grid > .section.new,
-.aem-Grid > .aem-GridColumn:empty {
-  display: none !important;
-  height: 0 !important;
-  min-height: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
+/* NOTE: previously this hid .new / .newpar / .section.new and any empty grid
+   column. Those drop zones only exist in AUTHOR mode (AEM does not render them
+   on publish), so the rule did nothing for real visitors and instead broke
+   authoring — empty containers collapsed and the "drag components here" targets
+   disappeared, including in the template editor. Trailing space is handled by
+   the margin/padding resets below instead. */
 
 /* absolutely nothing may add height after the footer */
 .cmp-experiencefragment--footer,
@@ -2521,46 +2518,21 @@ body > .root.container {
    and drop the grid clearfix pseudo-elements, which become
    zero-width flex items and leave a visible strip.
    ============================================================= */
+/* Keep AEM's responsive grid intact — do NOT turn .aem-Grid into a flex column
+   or strip the column floats/widths. Doing so overrides AEM's float-based grid,
+   collapses containers and breaks the template editor's structure view.
+   Trailing blank space is handled with margin/padding resets only. */
 body {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   background-color: #fff !important;
 }
 body > .root,
 body > .root.container {
-  flex: 1 0 auto;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
 }
 body > .root > .aem-Grid,
 body > .root.container > .aem-Grid {
-  flex: 1 0 auto;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  margin-bottom: 0 !important;
-}
-/* clearfix pseudo-elements would render as flex items -> stray gap */
-body > .root > .aem-Grid::before,
-body > .root > .aem-Grid::after,
-body > .root.container > .aem-Grid::before,
-body > .root.container > .aem-Grid::after { display: none !important; }
-
-/* root cells are all full-bleed rows once the grid is a flex column */
-body > .root > .aem-Grid > .aem-GridColumn,
-body > .root.container > .aem-Grid > .aem-GridColumn {
-  width: 100%;
-  float: none;
-  clear: none;
-}
-/* push the footer cell to the bottom on short pages */
-body > .root > .aem-Grid > .aem-GridColumn:last-child,
-body > .root.container > .aem-Grid > .aem-GridColumn:last-child {
-  margin-top: auto;
   margin-bottom: 0 !important;
 }
 .cmp-experiencefragment--footer,
