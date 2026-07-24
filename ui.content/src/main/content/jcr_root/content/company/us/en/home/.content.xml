@@ -76,7 +76,9 @@
                             price="$39"
                             period="/mo"
                             intro="Unlimited access to"
-                            features="[Gym floor access,Group classes (4/mo),Training app plans]"
+                            feature1="Gym floor access"
+                            feature2="Group classes (4/mo)"
+                            feature3="Training app plans"
                             ctaLabel="Choose Starter"
                             ctaLink="/content/company/us/en/contact-us"/>
                         <item1
@@ -87,7 +89,10 @@
                             featured="{Boolean}true"
                             badge="Most popular"
                             intro="Unlimited access to"
-                            features="[Everything in Starter,Unlimited group classes,Monthly coaching check-in,Nutrition guidance]"
+                            feature1="Everything in Starter"
+                            feature2="Unlimited group classes"
+                            feature3="Monthly coaching check-in"
+                            feature4="Nutrition guidance"
                             ctaLabel="Choose Pro"
                             ctaLink="/content/company/us/en/contact-us"/>
                         <item2
@@ -96,7 +101,10 @@
                             price="$149"
                             period="/mo"
                             intro="Unlimited access to"
-                            features="[Everything in Pro,Weekly 1:1 personal training,Custom nutrition plan,Priority scheduling]"
+                            feature1="Everything in Pro"
+                            feature2="Weekly 1:1 personal training"
+                            feature3="Custom nutrition plan"
+                            feature4="Priority scheduling"
                             ctaLabel="Choose Elite"
                             ctaLink="/content/company/us/en/contact-us"/>
                     </plans>
