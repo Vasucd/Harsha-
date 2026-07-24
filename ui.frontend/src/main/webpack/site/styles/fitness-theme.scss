@@ -3198,3 +3198,63 @@ body > .root.container > .aem-Grid > .aem-GridColumn:last-child {
   padding: clamp(1.5rem, 4vw, 3rem);
 }
 .u-bg--accent :is(h1, h2, h3, h4, h5) { color: #ffffff !important; }
+
+/* =============================================================
+   STATS + PRICING — authoritative horizontal layouts
+   Forces the stats band into an even horizontal row and the
+   pricing plans into side-by-side columns on desktop.
+   ============================================================= */
+/* --- Stats: 4 across, number stacked above its label, centered --- */
+.cmp-stats__grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: clamp(1rem, 2.5vw, 2rem) !important;
+  text-align: center !important;
+  align-items: start;
+}
+.cmp-stats__item {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: .3rem;
+  text-align: center;
+}
+.cmp-stats__content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: .2rem;
+}
+.cmp-stats__num {
+  display: block !important;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  color: #ffb347;
+  line-height: 1.05;
+}
+.cmp-stats__label {
+  display: block !important;
+  color: #cfeaef;
+  font-size: .95rem;
+  line-height: 1.35;
+}
+@media (max-width: 640px) {
+  .cmp-stats__grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+
+/* --- Pricing: horizontal (3 across) on desktop --- */
+.cmp-pricing__grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: clamp(1.25rem, 2vw, 2rem) !important;
+  align-items: stretch !important;
+  max-width: 1100px;
+  margin-inline: auto;
+}
+@media (max-width: 900px) {
+  .cmp-pricing__grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)) !important; }
+}
+@media (max-width: 600px) {
+  .cmp-pricing__grid { grid-template-columns: 1fr !important; max-width: 420px; }
+}
