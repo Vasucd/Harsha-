@@ -1,6 +1,6 @@
 package com.company.core.core.models;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -65,7 +65,22 @@ public class PricingModel {
         private String badge;
 
         @ValueMapValue
-        private String[] features;
+        private String feature1;
+
+        @ValueMapValue
+        private String feature2;
+
+        @ValueMapValue
+        private String feature3;
+
+        @ValueMapValue
+        private String feature4;
+
+        @ValueMapValue
+        private String feature5;
+
+        @ValueMapValue
+        private String feature6;
 
         @ValueMapValue
         private String ctaLabel;
@@ -94,7 +109,13 @@ public class PricingModel {
         }
 
         public List<String> getFeatures() {
-            return features == null ? Collections.emptyList() : Arrays.asList(features);
+            List<String> list = new ArrayList<>();
+            for (String f : new String[]{feature1, feature2, feature3, feature4, feature5, feature6}) {
+                if (StringUtils.isNotBlank(f)) {
+                    list.add(f.trim());
+                }
+            }
+            return list;
         }
 
         public String getCtaLabel() {
