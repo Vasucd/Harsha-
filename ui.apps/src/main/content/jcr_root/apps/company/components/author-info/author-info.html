@@ -1,5 +1,6 @@
 <sly data-sly-use.model="com.company.core.core.models.AuthorInfoModel"/>
-<section data-sly-test="${!model.empty}" class="cmp-author-info">
+<sly data-sly-use.style="com.adobe.cq.wcm.style.ComponentStyleInfo"/>
+<section data-sly-test="${!model.empty}" class="cmp-author-info ${style.cssClasses}">
     <div class="cmp-author-info__header">
         <span class="cmp-author-info__avatar" aria-hidden="true"></span>
         <div class="cmp-author-info__meta">

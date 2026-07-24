@@ -1892,16 +1892,16 @@ main.experiencefragment,
 /* =============================================================
    FOOTER — remove the last of the trailing blank space
    ============================================================= */
+/* NOTE: min-height:0 !important used to be forced on the last grid column, .root
+   and body here. In the template/page editor the last column is usually the empty
+   Layout Container or the "drag components" target, so those rules squashed them
+   flat. Only the margin/padding resets are needed for the footer gap. */
 .root.container > .aem-Grid > .aem-GridColumn:last-child,
 .root.container > .aem-Grid > .aem-GridColumn:last-of-type {
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
-  min-height: 0 !important;
 }
-.cmp-experiencefragment--footer { display: block !important; line-height: 0; }
-.cmp-experiencefragment--footer .cmp-site-footer { line-height: 1.65; }
-.root, .root.container { min-height: 0 !important; }
-body { min-height: 0 !important; }
+.cmp-experiencefragment--footer { display: block !important; }
 
 /* =============================================================
    Contact panel — logo now leads the panel (art removed)
@@ -1934,7 +1934,6 @@ body { min-height: 0 !important; }
 html, body {
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
-  min-height: 0 !important;
 }
 .root, .root.container, main, main.container, .aem-Grid {
   margin-bottom: 0 !important;

@@ -1,8 +1,9 @@
 <sly data-sly-use.model="com.company.core.core.models.BlogListingModel"/>
+<sly data-sly-use.style="com.adobe.cq.wcm.style.ComponentStyleInfo"/>
 
 <section
         data-sly-test="${!model.empty}"
-        class="cmp-blog-listing"
+        class="cmp-blog-listing ${style.cssClasses}"
         data-dynamic="true"
         data-blog-root="${properties.blogRootPath || '/content/company/us/en/blog'}"
         data-limit="${properties.maxItems || '5'}">

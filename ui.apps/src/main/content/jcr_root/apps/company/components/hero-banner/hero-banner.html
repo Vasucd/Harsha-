@@ -1,8 +1,9 @@
 <sly data-sly-use.model="com.company.core.core.models.HeroBannerModel"/>
+<sly data-sly-use.style="com.adobe.cq.wcm.style.ComponentStyleInfo"/>
 
 <section
         data-sly-test="${!model.empty}"
-        class="cmp-hero-banner"
+        class="cmp-hero-banner ${style.cssClasses}"
         style="background-image: url('${model.image @ context='uri'}');">
 
     <div class="cmp-hero-banner__overlay">

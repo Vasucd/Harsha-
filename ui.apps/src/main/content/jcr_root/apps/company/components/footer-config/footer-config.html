@@ -1,5 +1,6 @@
 <sly data-sly-use.model="com.company.core.core.models.FooterConfigurationModel"/>
-<div class="cmp-footer-config">
+<sly data-sly-use.style="com.adobe.cq.wcm.style.ComponentStyleInfo"/>
+<div class="cmp-footer-config ${style.cssClasses}">
     <span class="cmp-footer-config__text">${model.companyName} - ${model.footerText}</span>
     <a data-sly-test="${model.supportEmail}" href="mailto:${model.supportEmail}">${model.supportEmail}</a>
 </div>
