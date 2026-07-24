@@ -1,5 +1,6 @@
 package com.company.core.core.models;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -63,8 +64,8 @@ public class PricingModel {
         @ValueMapValue
         private String badge;
 
-        @ChildResource(name = "features")
-        private List<Feature> features;
+        @ValueMapValue
+        private String[] features;
 
         @ValueMapValue
         private String ctaLabel;
@@ -92,8 +93,8 @@ public class PricingModel {
             return badge;
         }
 
-        public List<Feature> getFeatures() {
-            return features == null ? Collections.emptyList() : features;
+        public List<String> getFeatures() {
+            return features == null ? Collections.emptyList() : Arrays.asList(features);
         }
 
         public String getCtaLabel() {
@@ -107,17 +108,6 @@ public class PricingModel {
             return ctaLink.startsWith("/content/") && !ctaLink.endsWith(".html")
                     ? ctaLink + ".html"
                     : ctaLink;
-        }
-    }
-
-    @Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
-    public static class Feature {
-
-        @ValueMapValue
-        private String value;
-
-        public String getValue() {
-            return StringUtils.defaultString(value);
         }
     }
 }

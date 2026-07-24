@@ -63,20 +63,12 @@
                         <features
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                                composite="{Boolean}true"
-                                fieldLabel="Features">
+                                fieldLabel="Features"
+                                fieldDescription="Add one feature per row">
                             <field
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/coral/foundation/container"
-                                    name="./features">
-                                <items jcr:primaryType="nt:unstructured">
-                                    <value
-                                            jcr:primaryType="nt:unstructured"
-                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                            fieldLabel="Feature"
-                                            name="./value"/>
-                                </items>
-                            </field>
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    name="./features"/>
                         </features>
                         <ctaLabel
                                 jcr:primaryType="nt:unstructured"

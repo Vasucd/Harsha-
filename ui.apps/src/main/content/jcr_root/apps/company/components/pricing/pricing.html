@@ -12,7 +12,7 @@
             <h3 data-sly-test="${plan.name}" class="cmp-pricing__name">${plan.name}</h3>
             <div class="cmp-pricing__price">${plan.price}<span data-sly-test="${plan.period}">${plan.period}</span></div>
             <ul class="cmp-pricing__features">
-                <li data-sly-list.feature="${plan.features}" data-sly-test="${feature.value}">${feature.value}</li>
+                <li data-sly-list.feature="${plan.features}" data-sly-test="${feature}">${feature}</li>
             </ul>
             <a
                     data-sly-test="${plan.ctaLabel && plan.ctaLink}"
