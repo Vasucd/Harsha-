@@ -3168,3 +3168,33 @@ body > .root.container > .aem-Grid > .aem-GridColumn:last-child {
   color: #fff; border-color: transparent;
 }
 .cmp-pricing__cta:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(14, 116, 144, .22); }
+
+/* =============================================================
+   UNIVERSAL STYLE SYSTEM — Spacing (padding) + Background color
+   Added to every component's policy. Authors pick these from the
+   paintbrush to change padding or the background colour.
+   ============================================================= */
+/* --- Spacing (padding) --- */
+.u-pad--compact  { padding-block: clamp(.75rem, 2vw, 1.25rem) !important; }
+.u-pad--spacious { padding-block: clamp(3rem, 6vw, 5rem) !important; }
+
+/* --- Background colour --- */
+.u-bg--light {
+  background: var(--surface-2, #f6f9fc) !important;
+  border-radius: 18px;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+.u-bg--primary {
+  background: var(--fitness-primary, #0e7490) !important;
+  color: #eaf6f8 !important;
+  border-radius: 18px;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+.u-bg--primary :is(h1, h2, h3, h4, h5) { color: #ffffff !important; }
+.u-bg--accent {
+  background: linear-gradient(120deg, #fb923c, var(--fitness-accent, #f97316)) !important;
+  color: #ffffff !important;
+  border-radius: 18px;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+.u-bg--accent :is(h1, h2, h3, h4, h5) { color: #ffffff !important; }

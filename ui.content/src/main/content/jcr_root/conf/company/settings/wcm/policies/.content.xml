@@ -81,7 +81,20 @@
                                 <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-image--full" cq:styleId="{Long}1741700000033" cq:styleLabel="Full width"/>
                             </cq:styles>
                         </item0>
-                    </cq:styleGroups>
+                                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700300000" cq:styleLabel="Compact padding"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700300001" cq:styleLabel="Spacious padding"/>
+                        </cq:styles>
+                    </grpSpacing>
+                    <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700300002" cq:styleLabel="Light grey"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700300003" cq:styleLabel="Primary (teal)"/>
+                            <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700300004" cq:styleLabel="Accent (orange)"/>
+                        </cq:styles>
+                    </grpBackground>
+</cq:styleGroups>
                 </policy_651483963895698>
             </image>
             <text jcr:primaryType="nt:unstructured">
@@ -180,7 +193,20 @@
                                 <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-text--center" cq:styleId="{Long}1741700000004" cq:styleLabel="Centered"/>
                             </cq:styles>
                         </item0>
-                    </cq:styleGroups>
+                                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700300005" cq:styleLabel="Compact padding"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700300006" cq:styleLabel="Spacious padding"/>
+                        </cq:styles>
+                    </grpSpacing>
+                    <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700300007" cq:styleLabel="Light grey"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700300008" cq:styleLabel="Primary (teal)"/>
+                            <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700300009" cq:styleLabel="Accent (orange)"/>
+                        </cq:styles>
+                    </grpBackground>
+</cq:styleGroups>
                 </policy_641562756958017>
             </text>
             <title jcr:primaryType="nt:unstructured">
@@ -210,7 +236,20 @@
                                 <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-title--center" cq:styleId="{Long}1741700000012" cq:styleLabel="Centered"/>
                             </cq:styles>
                         </item0>
-                    </cq:styleGroups>
+                                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700300010" cq:styleLabel="Compact padding"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700300011" cq:styleLabel="Spacious padding"/>
+                        </cq:styles>
+                    </grpSpacing>
+                    <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700300012" cq:styleLabel="Light grey"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700300013" cq:styleLabel="Primary (teal)"/>
+                            <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700300014" cq:styleLabel="Accent (orange)"/>
+                        </cq:styles>
+                    </grpBackground>
+</cq:styleGroups>
                 </policy_641528232375303>
             </title>
             <experiencefragment jcr:primaryType="nt:unstructured">
@@ -269,7 +308,20 @@
                                 <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-container--narrow" cq:styleId="{Long}1741700000043" cq:styleLabel="Narrow width"/>
                             </cq:styles>
                         </item0>
-                    </cq:styleGroups>
+                                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700300015" cq:styleLabel="Compact padding"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700300016" cq:styleLabel="Spacious padding"/>
+                        </cq:styles>
+                    </grpSpacing>
+                    <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700300017" cq:styleLabel="Light grey"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700300018" cq:styleLabel="Primary (teal)"/>
+                            <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700300019" cq:styleLabel="Accent (orange)"/>
+                        </cq:styles>
+                    </grpBackground>
+</cq:styleGroups>
                 </policy_1574694950110>
                 <policy_1574695586800
                     jcr:description="Allows the page components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
@@ -356,7 +408,20 @@
                                 <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-teaser--center" cq:styleId="{Long}1741700000023" cq:styleLabel="Centered"/>
                             </cq:styles>
                         </item0>
-                    </cq:styleGroups>
+                                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700300020" cq:styleLabel="Compact padding"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700300021" cq:styleLabel="Spacious padding"/>
+                        </cq:styles>
+                    </grpSpacing>
+                    <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700300022" cq:styleLabel="Light grey"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700300023" cq:styleLabel="Primary (teal)"/>
+                            <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700300024" cq:styleLabel="Accent (orange)"/>
+                        </cq:styles>
+                    </grpBackground>
+</cq:styleGroups>
                 </policy_1575031387650>
             </teaser>
             <services-card jcr:primaryType="nt:unstructured">
@@ -381,7 +446,20 @@
                                 <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-services-card--numbered" cq:styleId="{Long}1741700000056" cq:styleLabel="Numbered steps"/>
                             </cq:styles>
                         </item1>
-                    </cq:styleGroups>
+                                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700300025" cq:styleLabel="Compact padding"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700300026" cq:styleLabel="Spacious padding"/>
+                        </cq:styles>
+                    </grpSpacing>
+                    <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700300027" cq:styleLabel="Light grey"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700300028" cq:styleLabel="Primary (teal)"/>
+                            <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700300029" cq:styleLabel="Accent (orange)"/>
+                        </cq:styles>
+                    </grpBackground>
+</cq:styleGroups>
                 </policy_services_card>
             </services-card>
             <cta-band jcr:primaryType="nt:unstructured">
@@ -405,7 +483,20 @@
                                 <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-cta-band--soft" cq:styleId="{Long}1741700000065" cq:styleLabel="Soft"/>
                             </cq:styles>
                         </item1>
-                    </cq:styleGroups>
+                                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700300030" cq:styleLabel="Compact padding"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700300031" cq:styleLabel="Spacious padding"/>
+                        </cq:styles>
+                    </grpSpacing>
+                    <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700300032" cq:styleLabel="Light grey"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700300033" cq:styleLabel="Primary (teal)"/>
+                            <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700300034" cq:styleLabel="Accent (orange)"/>
+                        </cq:styles>
+                    </grpBackground>
+</cq:styleGroups>
                 </policy_cta_band>
             </cta-band>
             <feature-grid jcr:primaryType="nt:unstructured">
@@ -430,7 +521,20 @@
                                 <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-feature-grid--center" cq:styleId="{Long}1741700000076" cq:styleLabel="Centered text"/>
                             </cq:styles>
                         </item1>
-                    </cq:styleGroups>
+                                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700300035" cq:styleLabel="Compact padding"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700300036" cq:styleLabel="Spacious padding"/>
+                        </cq:styles>
+                    </grpSpacing>
+                    <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700300037" cq:styleLabel="Light grey"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700300038" cq:styleLabel="Primary (teal)"/>
+                            <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700300039" cq:styleLabel="Accent (orange)"/>
+                        </cq:styles>
+                    </grpBackground>
+</cq:styleGroups>
                 </policy_feature_grid>
             </feature-grid>
             <hero-banner jcr:primaryType="nt:unstructured">
@@ -452,7 +556,20 @@
                                 <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700100107" cq:styleLabel="Tight spacing"/>
                             </cq:styles>
                         </item0>
-                    </cq:styleGroups>
+                                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700300040" cq:styleLabel="Compact padding"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700300041" cq:styleLabel="Spacious padding"/>
+                        </cq:styles>
+                    </grpSpacing>
+                    <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700300042" cq:styleLabel="Light grey"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700300043" cq:styleLabel="Primary (teal)"/>
+                            <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700300044" cq:styleLabel="Accent (orange)"/>
+                        </cq:styles>
+                    </grpBackground>
+</cq:styleGroups>
                 </policy_hero_banner>
             </hero-banner>
             <pricing jcr:primaryType="nt:unstructured">
@@ -474,7 +591,20 @@
                                 <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700100207" cq:styleLabel="Tight spacing"/>
                             </cq:styles>
                         </item0>
-                    </cq:styleGroups>
+                                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700300045" cq:styleLabel="Compact padding"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700300046" cq:styleLabel="Spacious padding"/>
+                        </cq:styles>
+                    </grpSpacing>
+                    <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700300047" cq:styleLabel="Light grey"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700300048" cq:styleLabel="Primary (teal)"/>
+                            <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700300049" cq:styleLabel="Accent (orange)"/>
+                        </cq:styles>
+                    </grpBackground>
+</cq:styleGroups>
                 </policy_pricing>
             </pricing>
             <coaches jcr:primaryType="nt:unstructured">
@@ -496,7 +626,20 @@
                                 <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700100307" cq:styleLabel="Tight spacing"/>
                             </cq:styles>
                         </item0>
-                    </cq:styleGroups>
+                                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700300050" cq:styleLabel="Compact padding"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700300051" cq:styleLabel="Spacious padding"/>
+                        </cq:styles>
+                    </grpSpacing>
+                    <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700300052" cq:styleLabel="Light grey"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700300053" cq:styleLabel="Primary (teal)"/>
+                            <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700300054" cq:styleLabel="Accent (orange)"/>
+                        </cq:styles>
+                    </grpBackground>
+</cq:styleGroups>
                 </policy_coaches>
             </coaches>
             <testimonials jcr:primaryType="nt:unstructured">
@@ -518,7 +661,20 @@
                                 <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700100407" cq:styleLabel="Tight spacing"/>
                             </cq:styles>
                         </item0>
-                    </cq:styleGroups>
+                                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700300055" cq:styleLabel="Compact padding"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700300056" cq:styleLabel="Spacious padding"/>
+                        </cq:styles>
+                    </grpSpacing>
+                    <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700300057" cq:styleLabel="Light grey"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700300058" cq:styleLabel="Primary (teal)"/>
+                            <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700300059" cq:styleLabel="Accent (orange)"/>
+                        </cq:styles>
+                    </grpBackground>
+</cq:styleGroups>
                 </policy_testimonials>
             </testimonials>
             <stats jcr:primaryType="nt:unstructured">
@@ -540,7 +696,20 @@
                                 <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700100507" cq:styleLabel="Tight spacing"/>
                             </cq:styles>
                         </item0>
-                    </cq:styleGroups>
+                                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700300060" cq:styleLabel="Compact padding"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700300061" cq:styleLabel="Spacious padding"/>
+                        </cq:styles>
+                    </grpSpacing>
+                    <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700300062" cq:styleLabel="Light grey"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700300063" cq:styleLabel="Primary (teal)"/>
+                            <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700300064" cq:styleLabel="Accent (orange)"/>
+                        </cq:styles>
+                    </grpBackground>
+</cq:styleGroups>
                 </policy_stats>
             </stats>
             <class-schedule jcr:primaryType="nt:unstructured">
@@ -562,7 +731,20 @@
                                 <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700100607" cq:styleLabel="Tight spacing"/>
                             </cq:styles>
                         </item0>
-                    </cq:styleGroups>
+                                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700300065" cq:styleLabel="Compact padding"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700300066" cq:styleLabel="Spacious padding"/>
+                        </cq:styles>
+                    </grpSpacing>
+                    <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700300067" cq:styleLabel="Light grey"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700300068" cq:styleLabel="Primary (teal)"/>
+                            <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700300069" cq:styleLabel="Accent (orange)"/>
+                        </cq:styles>
+                    </grpBackground>
+</cq:styleGroups>
                 </policy_class_schedule>
             </class-schedule>
             <blog-listing jcr:primaryType="nt:unstructured">
@@ -584,7 +766,20 @@
                                 <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700100707" cq:styleLabel="Tight spacing"/>
                             </cq:styles>
                         </item0>
-                    </cq:styleGroups>
+                                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700300070" cq:styleLabel="Compact padding"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700300071" cq:styleLabel="Spacious padding"/>
+                        </cq:styles>
+                    </grpSpacing>
+                    <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700300072" cq:styleLabel="Light grey"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700300073" cq:styleLabel="Primary (teal)"/>
+                            <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700300074" cq:styleLabel="Accent (orange)"/>
+                        </cq:styles>
+                    </grpBackground>
+</cq:styleGroups>
                 </policy_blog_listing>
             </blog-listing>
             <about-story jcr:primaryType="nt:unstructured">
@@ -606,7 +801,20 @@
                                 <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700100807" cq:styleLabel="Tight spacing"/>
                             </cq:styles>
                         </item0>
-                    </cq:styleGroups>
+                                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700300075" cq:styleLabel="Compact padding"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700300076" cq:styleLabel="Spacious padding"/>
+                        </cq:styles>
+                    </grpSpacing>
+                    <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700300077" cq:styleLabel="Light grey"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700300078" cq:styleLabel="Primary (teal)"/>
+                            <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700300079" cq:styleLabel="Accent (orange)"/>
+                        </cq:styles>
+                    </grpBackground>
+</cq:styleGroups>
                 </policy_about_story>
             </about-story>
             <contact-form jcr:primaryType="nt:unstructured">
@@ -628,7 +836,20 @@
                                 <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700100907" cq:styleLabel="Tight spacing"/>
                             </cq:styles>
                         </item0>
-                    </cq:styleGroups>
+                                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700300080" cq:styleLabel="Compact padding"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700300081" cq:styleLabel="Spacious padding"/>
+                        </cq:styles>
+                    </grpSpacing>
+                    <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700300082" cq:styleLabel="Light grey"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700300083" cq:styleLabel="Primary (teal)"/>
+                            <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700300084" cq:styleLabel="Accent (orange)"/>
+                        </cq:styles>
+                    </grpBackground>
+</cq:styleGroups>
                 </policy_contact_form>
             </contact-form>
             <author-info jcr:primaryType="nt:unstructured">
@@ -650,7 +871,20 @@
                                 <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700101007" cq:styleLabel="Tight spacing"/>
                             </cq:styles>
                         </item0>
-                    </cq:styleGroups>
+                                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700300085" cq:styleLabel="Compact padding"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700300086" cq:styleLabel="Spacious padding"/>
+                        </cq:styles>
+                    </grpSpacing>
+                    <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700300087" cq:styleLabel="Light grey"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700300088" cq:styleLabel="Primary (teal)"/>
+                            <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700300089" cq:styleLabel="Accent (orange)"/>
+                        </cq:styles>
+                    </grpBackground>
+</cq:styleGroups>
                 </policy_author_info>
             </author-info>
             <download jcr:primaryType="nt:unstructured">
