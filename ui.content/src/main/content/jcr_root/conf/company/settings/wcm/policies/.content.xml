@@ -887,6 +887,584 @@
 </cq:styleGroups>
                 </policy_author_info>
             </author-info>
+            <accordion jcr:primaryType="nt:unstructured">
+                <policy_accordion
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="accordion"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700500000" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700500001" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700500002" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700500003" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700500004" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700500005" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700500006" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700500007" cq:styleLabel="Compact padding"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700500008" cq:styleLabel="Spacious padding"/>
+                            </cq:styles>
+                        </grpSpacing>
+                        <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700500009" cq:styleLabel="Light grey"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700500010" cq:styleLabel="Primary (teal)"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700500011" cq:styleLabel="Accent (orange)"/>
+                            </cq:styles>
+                        </grpBackground>
+                    </cq:styleGroups>
+                </policy_accordion>
+            </accordion>
+            <breadcrumb jcr:primaryType="nt:unstructured">
+                <policy_breadcrumb
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="breadcrumb"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700500012" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700500013" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700500014" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700500015" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700500016" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700500017" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700500018" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700500019" cq:styleLabel="Compact padding"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700500020" cq:styleLabel="Spacious padding"/>
+                            </cq:styles>
+                        </grpSpacing>
+                        <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700500021" cq:styleLabel="Light grey"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700500022" cq:styleLabel="Primary (teal)"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700500023" cq:styleLabel="Accent (orange)"/>
+                            </cq:styles>
+                        </grpBackground>
+                    </cq:styleGroups>
+                </policy_breadcrumb>
+            </breadcrumb>
+            <button jcr:primaryType="nt:unstructured">
+                <policy_button
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="button"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700500024" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700500025" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700500026" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700500027" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700500028" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700500029" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700500030" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700500031" cq:styleLabel="Compact padding"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700500032" cq:styleLabel="Spacious padding"/>
+                            </cq:styles>
+                        </grpSpacing>
+                        <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700500033" cq:styleLabel="Light grey"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700500034" cq:styleLabel="Primary (teal)"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700500035" cq:styleLabel="Accent (orange)"/>
+                            </cq:styles>
+                        </grpBackground>
+                    </cq:styleGroups>
+                </policy_button>
+            </button>
+            <carousel jcr:primaryType="nt:unstructured">
+                <policy_carousel
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="carousel"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700500036" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700500037" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700500038" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700500039" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700500040" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700500041" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700500042" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700500043" cq:styleLabel="Compact padding"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700500044" cq:styleLabel="Spacious padding"/>
+                            </cq:styles>
+                        </grpSpacing>
+                        <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700500045" cq:styleLabel="Light grey"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700500046" cq:styleLabel="Primary (teal)"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700500047" cq:styleLabel="Accent (orange)"/>
+                            </cq:styles>
+                        </grpBackground>
+                    </cq:styleGroups>
+                </policy_carousel>
+            </carousel>
+            <contentfragment jcr:primaryType="nt:unstructured">
+                <policy_contentfragment
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="contentfragment"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700500048" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700500049" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700500050" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700500051" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700500052" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700500053" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700500054" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700500055" cq:styleLabel="Compact padding"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700500056" cq:styleLabel="Spacious padding"/>
+                            </cq:styles>
+                        </grpSpacing>
+                        <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700500057" cq:styleLabel="Light grey"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700500058" cq:styleLabel="Primary (teal)"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700500059" cq:styleLabel="Accent (orange)"/>
+                            </cq:styles>
+                        </grpBackground>
+                    </cq:styleGroups>
+                </policy_contentfragment>
+            </contentfragment>
+            <contentfragmentlist jcr:primaryType="nt:unstructured">
+                <policy_contentfragmentlist
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="contentfragmentlist"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700500060" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700500061" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700500062" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700500063" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700500064" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700500065" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700500066" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700500067" cq:styleLabel="Compact padding"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700500068" cq:styleLabel="Spacious padding"/>
+                            </cq:styles>
+                        </grpSpacing>
+                        <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700500069" cq:styleLabel="Light grey"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700500070" cq:styleLabel="Primary (teal)"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700500071" cq:styleLabel="Accent (orange)"/>
+                            </cq:styles>
+                        </grpBackground>
+                    </cq:styleGroups>
+                </policy_contentfragmentlist>
+            </contentfragmentlist>
+            <embed jcr:primaryType="nt:unstructured">
+                <policy_embed
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="embed"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700500072" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700500073" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700500074" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700500075" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700500076" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700500077" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700500078" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700500079" cq:styleLabel="Compact padding"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700500080" cq:styleLabel="Spacious padding"/>
+                            </cq:styles>
+                        </grpSpacing>
+                        <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700500081" cq:styleLabel="Light grey"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700500082" cq:styleLabel="Primary (teal)"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700500083" cq:styleLabel="Accent (orange)"/>
+                            </cq:styles>
+                        </grpBackground>
+                    </cq:styleGroups>
+                </policy_embed>
+            </embed>
+            <list jcr:primaryType="nt:unstructured">
+                <policy_list
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="list"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700500084" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700500085" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700500086" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700500087" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700500088" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700500089" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700500090" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700500091" cq:styleLabel="Compact padding"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700500092" cq:styleLabel="Spacious padding"/>
+                            </cq:styles>
+                        </grpSpacing>
+                        <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700500093" cq:styleLabel="Light grey"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700500094" cq:styleLabel="Primary (teal)"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700500095" cq:styleLabel="Accent (orange)"/>
+                            </cq:styles>
+                        </grpBackground>
+                    </cq:styleGroups>
+                </policy_list>
+            </list>
+            <pdfviewer jcr:primaryType="nt:unstructured">
+                <policy_pdfviewer
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="pdfviewer"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700500096" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700500097" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700500098" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700500099" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700500100" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700500101" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700500102" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700500103" cq:styleLabel="Compact padding"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700500104" cq:styleLabel="Spacious padding"/>
+                            </cq:styles>
+                        </grpSpacing>
+                        <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700500105" cq:styleLabel="Light grey"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700500106" cq:styleLabel="Primary (teal)"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700500107" cq:styleLabel="Accent (orange)"/>
+                            </cq:styles>
+                        </grpBackground>
+                    </cq:styleGroups>
+                </policy_pdfviewer>
+            </pdfviewer>
+            <progressbar jcr:primaryType="nt:unstructured">
+                <policy_progressbar
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="progressbar"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700500108" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700500109" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700500110" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700500111" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700500112" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700500113" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700500114" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700500115" cq:styleLabel="Compact padding"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700500116" cq:styleLabel="Spacious padding"/>
+                            </cq:styles>
+                        </grpSpacing>
+                        <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700500117" cq:styleLabel="Light grey"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700500118" cq:styleLabel="Primary (teal)"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700500119" cq:styleLabel="Accent (orange)"/>
+                            </cq:styles>
+                        </grpBackground>
+                    </cq:styleGroups>
+                </policy_progressbar>
+            </progressbar>
+            <search jcr:primaryType="nt:unstructured">
+                <policy_search
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="search"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700500120" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700500121" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700500122" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700500123" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700500124" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700500125" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700500126" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700500127" cq:styleLabel="Compact padding"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700500128" cq:styleLabel="Spacious padding"/>
+                            </cq:styles>
+                        </grpSpacing>
+                        <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700500129" cq:styleLabel="Light grey"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700500130" cq:styleLabel="Primary (teal)"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700500131" cq:styleLabel="Accent (orange)"/>
+                            </cq:styles>
+                        </grpBackground>
+                    </cq:styleGroups>
+                </policy_search>
+            </search>
+            <separator jcr:primaryType="nt:unstructured">
+                <policy_separator
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="separator"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700500132" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700500133" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700500134" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700500135" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700500136" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700500137" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700500138" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700500139" cq:styleLabel="Compact padding"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700500140" cq:styleLabel="Spacious padding"/>
+                            </cq:styles>
+                        </grpSpacing>
+                        <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700500141" cq:styleLabel="Light grey"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700500142" cq:styleLabel="Primary (teal)"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700500143" cq:styleLabel="Accent (orange)"/>
+                            </cq:styles>
+                        </grpBackground>
+                    </cq:styleGroups>
+                </policy_separator>
+            </separator>
+            <tableofcontents jcr:primaryType="nt:unstructured">
+                <policy_tableofcontents
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="tableofcontents"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700500144" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700500145" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700500146" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700500147" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700500148" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700500149" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700500150" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700500151" cq:styleLabel="Compact padding"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700500152" cq:styleLabel="Spacious padding"/>
+                            </cq:styles>
+                        </grpSpacing>
+                        <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700500153" cq:styleLabel="Light grey"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700500154" cq:styleLabel="Primary (teal)"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700500155" cq:styleLabel="Accent (orange)"/>
+                            </cq:styles>
+                        </grpBackground>
+                    </cq:styleGroups>
+                </policy_tableofcontents>
+            </tableofcontents>
+            <tabs jcr:primaryType="nt:unstructured">
+                <policy_tabs
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="tabs"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700500156" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700500157" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700500158" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700500159" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700500160" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700500161" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700500162" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700500163" cq:styleLabel="Compact padding"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700500164" cq:styleLabel="Spacious padding"/>
+                            </cq:styles>
+                        </grpSpacing>
+                        <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700500165" cq:styleLabel="Light grey"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700500166" cq:styleLabel="Primary (teal)"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700500167" cq:styleLabel="Accent (orange)"/>
+                            </cq:styles>
+                        </grpBackground>
+                    </cq:styleGroups>
+                </policy_tabs>
+            </tabs>
+            <logo jcr:primaryType="nt:unstructured">
+                <policy_logo
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="logo"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700500168" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700500169" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700500170" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700500171" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700500172" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700500173" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700500174" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700500175" cq:styleLabel="Compact padding"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700500176" cq:styleLabel="Spacious padding"/>
+                            </cq:styles>
+                        </grpSpacing>
+                        <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700500177" cq:styleLabel="Light grey"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700500178" cq:styleLabel="Primary (teal)"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700500179" cq:styleLabel="Accent (orange)"/>
+                            </cq:styles>
+                        </grpBackground>
+                    </cq:styleGroups>
+                </policy_logo>
+            </logo>
+            <site-footer jcr:primaryType="nt:unstructured">
+                <policy_site_footer
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="site-footer"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700500180" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700500181" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700500182" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700500183" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700500184" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700500185" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700500186" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700500187" cq:styleLabel="Compact padding"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700500188" cq:styleLabel="Spacious padding"/>
+                            </cq:styles>
+                        </grpSpacing>
+                        <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700500189" cq:styleLabel="Light grey"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700500190" cq:styleLabel="Primary (teal)"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700500191" cq:styleLabel="Accent (orange)"/>
+                            </cq:styles>
+                        </grpBackground>
+                    </cq:styleGroups>
+                </policy_site_footer>
+            </site-footer>
+            <footer-config jcr:primaryType="nt:unstructured">
+                <policy_footer_config
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="footer-config"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700500192" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700500193" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700500194" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700500195" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700500196" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700500197" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700500198" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700500199" cq:styleLabel="Compact padding"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700500200" cq:styleLabel="Spacious padding"/>
+                            </cq:styles>
+                        </grpSpacing>
+                        <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700500201" cq:styleLabel="Light grey"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700500202" cq:styleLabel="Primary (teal)"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700500203" cq:styleLabel="Accent (orange)"/>
+                            </cq:styles>
+                        </grpBackground>
+                    </cq:styleGroups>
+                </policy_footer_config>
+            </footer-config>
             <download jcr:primaryType="nt:unstructured">
                 <policy_1575032193319
                     jcr:description="Sets the title size to H3."
@@ -899,6 +1477,32 @@
                     displaySize="true"
                     titleType="h3">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Section Style">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--soft" cq:styleId="{Long}1741700500204" cq:styleLabel="Soft background"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--dark" cq:styleId="{Long}1741700500205" cq:styleLabel="Dark background"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--accent" cq:styleId="{Long}1741700500206" cq:styleLabel="Accent gradient"/>
+                                <item3 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--center" cq:styleId="{Long}1741700500207" cq:styleLabel="Centered text"/>
+                                <item4 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--narrow" cq:styleId="{Long}1741700500208" cq:styleLabel="Narrow width"/>
+                                <item5 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--elevated" cq:styleId="{Long}1741700500209" cq:styleLabel="Elevated card"/>
+                                <item6 jcr:primaryType="nt:unstructured" cq:styleClasses="u-style--flush" cq:styleId="{Long}1741700500210" cq:styleLabel="Tight spacing"/>
+                            </cq:styles>
+                        </item0>
+                        <grpSpacing jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Spacing">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--compact" cq:styleId="{Long}1741700500211" cq:styleLabel="Compact padding"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-pad--spacious" cq:styleId="{Long}1741700500212" cq:styleLabel="Spacious padding"/>
+                            </cq:styles>
+                        </grpSpacing>
+                        <grpBackground jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Background color">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--light" cq:styleId="{Long}1741700500213" cq:styleLabel="Light grey"/>
+                                <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--primary" cq:styleId="{Long}1741700500214" cq:styleLabel="Primary (teal)"/>
+                                <item2 jcr:primaryType="nt:unstructured" cq:styleClasses="u-bg--accent" cq:styleId="{Long}1741700500215" cq:styleLabel="Accent (orange)"/>
+                            </cq:styles>
+                        </grpBackground>
+                    </cq:styleGroups>
                 </policy_1575032193319>
             </download>
             <page jcr:primaryType="nt:unstructured">
