@@ -605,6 +605,12 @@
                         </cq:styles>
                     </grpBackground>
 </cq:styleGroups>
+                    <grpLayout jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Layout">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-pricing--2col" cq:styleId="{Long}1741700900011" cq:styleLabel="Two columns"/>
+                            <item1 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-pricing--stacked" cq:styleId="{Long}1741700900012" cq:styleLabel="Stacked (one per row)"/>
+                        </cq:styles>
+                    </grpLayout>
                 </policy_pricing>
             </pricing>
             <coaches jcr:primaryType="nt:unstructured">
@@ -710,6 +716,11 @@
                         </cq:styles>
                     </grpBackground>
 </cq:styleGroups>
+                    <grpLayout jcr:primaryType="nt:unstructured" cq:styleGroupLabel="Layout">
+                        <cq:styles jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" cq:styleClasses="cmp-stats--horizontal" cq:styleId="{Long}1741700900001" cq:styleLabel="Horizontal row"/>
+                        </cq:styles>
+                    </grpLayout>
                 </policy_stats>
             </stats>
             <class-schedule jcr:primaryType="nt:unstructured">

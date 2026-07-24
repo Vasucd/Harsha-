@@ -3371,3 +3371,83 @@ body > .root.container > .aem-Grid {
   font-size: 1rem;
   line-height: 1.35;
 }
+
+/* =============================================================
+   STATS + PRICING — final reworked designs (+ Layout variants)
+   Base stats = vertical stack. Base pricing = 3 across.
+   Authors switch direction from the paintbrush ("Layout" group).
+   ============================================================= */
+
+/* ---------- STATS: polished vertical band ---------- */
+.cmp-stats {
+  border-radius: 20px !important;
+  background: linear-gradient(135deg, #0e7490 0%, #0a4c60 100%) !important;
+  padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 3vw, 2.5rem) !important;
+}
+.cmp-stats__grid {
+  display: flex !important;
+  flex-direction: column !important;
+  grid-template-columns: none !important;
+  gap: 0 !important;
+  width: 100%;
+  max-width: 620px;
+  margin-inline: auto !important;
+  text-align: center !important;
+}
+.cmp-stats__item {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: .1rem !important;
+  padding-block: clamp(.9rem, 2vw, 1.25rem) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, .15);
+}
+.cmp-stats__item:last-child { border-bottom: none !important; }
+.cmp-stats__num  { display: block !important; font-size: clamp(2.1rem, 5vw, 3rem) !important; font-weight: 800; color: #ffb347; line-height: 1.05; letter-spacing: -.01em; }
+.cmp-stats__label{ display: block !important; color: #cfeaef; font-size: 1rem; line-height: 1.35; }
+
+/* Stats LAYOUT variant — horizontal row */
+.cmp-stats--horizontal .cmp-stats__grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  max-width: 1100px;
+  gap: clamp(1rem, 2.5vw, 2rem) !important;
+}
+.cmp-stats--horizontal .cmp-stats__item { border-bottom: none !important; padding-block: 0 !important; }
+@media (max-width: 700px) {
+  .cmp-stats--horizontal .cmp-stats__grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+
+/* ---------- PRICING: polished cards, 3 across ---------- */
+.cmp-pricing__grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: clamp(1.25rem, 2vw, 2rem) !important;
+  align-items: stretch !important;
+  max-width: 1100px;
+  margin-inline: auto !important;
+}
+.cmp-pricing__card {
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.cmp-pricing__card--featured {
+  transform: translateY(-6px);
+  z-index: 1;
+}
+.cmp-pricing__card--featured:hover { transform: translateY(-10px); }
+
+/* graceful empty state: keep the body from collapsing when no features yet */
+.cmp-pricing__features:empty { min-height: 1.5rem; }
+
+/* Pricing LAYOUT variants */
+.cmp-pricing--2col .cmp-pricing__grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; max-width: 780px; }
+.cmp-pricing--stacked .cmp-pricing__grid { grid-template-columns: 1fr !important; max-width: 460px; }
+.cmp-pricing--stacked .cmp-pricing__card--featured { transform: none; }
+
+@media (max-width: 900px) {
+  .cmp-pricing__grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)) !important; }
+  .cmp-pricing__card--featured { transform: none; }
+}
+@media (max-width: 600px) {
+  .cmp-pricing__grid { grid-template-columns: 1fr !important; max-width: 420px; }
+}
