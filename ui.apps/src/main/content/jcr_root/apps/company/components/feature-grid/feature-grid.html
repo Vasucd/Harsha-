@@ -8,7 +8,7 @@
     </header>
 
     <div class="cmp-feature-grid__grid">
-        <article data-sly-list.feature="${model.features}" class="cmp-feature-grid__item">
+        <article data-sly-repeat.feature="${model.features}" class="cmp-feature-grid__item">
             <span data-sly-test="${feature.icon}" class="cmp-feature-grid__icon" aria-hidden="true">${feature.icon}</span>
             <h3 data-sly-test="${feature.title}" class="cmp-feature-grid__item-title">${feature.title}</h3>
             <p data-sly-test="${feature.description}" class="cmp-feature-grid__item-description">${feature.description}</p>

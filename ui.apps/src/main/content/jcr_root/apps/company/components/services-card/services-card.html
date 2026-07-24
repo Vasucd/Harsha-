@@ -5,7 +5,7 @@
     <h2 data-sly-test="${model.sectionTitle}" class="cmp-services-card__title">${model.sectionTitle}</h2>
 
     <div class="cmp-services-card__grid">
-        <article data-sly-list.service="${model.services}" class="cmp-services-card__item">
+        <article data-sly-repeat.service="${model.services}" class="cmp-services-card__item">
             <span data-sly-test="${service.icon}" class="cmp-services-card__item-icon" aria-hidden="true">${service.icon}</span>
             <h3 data-sly-test="${service.title}" class="cmp-services-card__item-title">${service.title}</h3>
             <p data-sly-test="${service.description}" class="cmp-services-card__item-description">${service.description}</p>

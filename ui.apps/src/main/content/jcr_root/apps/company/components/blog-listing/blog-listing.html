@@ -8,7 +8,7 @@
         data-limit="${properties.maxItems || '5'}">
     <h2 data-sly-test="${model.sectionTitle}" class="cmp-blog-listing__title">${model.sectionTitle}</h2>
     <ul class="cmp-blog-listing__items">
-        <li data-sly-list.item="${model.blogItems}" class="cmp-blog-listing__item">
+        <li data-sly-repeat.item="${model.blogItems}" class="cmp-blog-listing__item">
             <h3 class="cmp-blog-listing__item-title">
                 <a href="${item.path @ context='uri'}" class="cmp-blog-listing__link">${item.title}</a>
             </h3>

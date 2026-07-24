@@ -4,7 +4,7 @@
 <section data-sly-test="${!model.empty}" class="cmp-testimonials ${style.cssClasses}" data-animate-on-scroll>
     <h2 data-sly-test="${model.sectionTitle}" class="cmp-testimonials__title">${model.sectionTitle}</h2>
     <div class="cmp-testimonials__grid">
-        <figure data-sly-list.item="${model.items}" class="cmp-testimonials__card">
+        <figure data-sly-repeat.item="${model.items}" class="cmp-testimonials__card">
             <div class="cmp-testimonials__stars" aria-label="${item.rating} out of 5 stars">${item.stars}</div>
             <blockquote data-sly-test="${item.quote}">${item.quote}</blockquote>
             <figcaption><strong>${item.name}</strong> <sly data-sly-test="${item.program}">· ${item.program}</sly></figcaption>

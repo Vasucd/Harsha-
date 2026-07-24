@@ -7,7 +7,7 @@
 
     <div class="cmp-pricing__grid">
         <div
-                data-sly-list.plan="${model.plans}"
+                data-sly-repeat.plan="${model.plans}"
                 class="cmp-pricing__card ${plan.featured ? 'cmp-pricing__card--featured' : ''}">
 
             <div class="cmp-pricing__head">
@@ -19,7 +19,7 @@
             <div class="cmp-pricing__body">
                 <p data-sly-test="${plan.intro}" class="cmp-pricing__intro">${plan.intro}</p>
                 <ul class="cmp-pricing__features">
-                    <li data-sly-list.feature="${plan.features}">${feature}</li>
+                    <li data-sly-repeat.feature="${plan.features}">${feature}</li>
                 </ul>
             </div>
 

@@ -67,6 +67,10 @@ public class PricingModel {
         @ValueMapValue
         private String intro;
 
+        /** Preferred: the "Features" multifield (stored as a multi-value property). */
+        @ValueMapValue
+        private String[] features;
+
         @ValueMapValue
         private String feature1;
 
@@ -117,9 +121,19 @@ public class PricingModel {
 
         public List<String> getFeatures() {
             List<String> list = new ArrayList<>();
-            for (String f : new String[]{feature1, feature2, feature3, feature4, feature5, feature6}) {
-                if (StringUtils.isNotBlank(f)) {
-                    list.add(f.trim());
+            if (features != null) {
+                for (String f : features) {
+                    if (StringUtils.isNotBlank(f)) {
+                        list.add(f.trim());
+                    }
+                }
+            }
+            // fall back to the legacy single fields if the multifield is empty
+            if (list.isEmpty()) {
+                for (String f : new String[]{feature1, feature2, feature3, feature4, feature5, feature6}) {
+                    if (StringUtils.isNotBlank(f)) {
+                        list.add(f.trim());
+                    }
                 }
             }
             return list;

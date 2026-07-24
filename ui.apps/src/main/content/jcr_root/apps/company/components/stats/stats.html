@@ -3,7 +3,7 @@
 
 <section data-sly-test="${!model.empty}" class="cmp-stats ${style.cssClasses}" data-animate-on-scroll>
     <div class="cmp-stats__grid">
-        <div data-sly-list.item="${model.items}" class="cmp-stats__item">
+        <div data-sly-repeat.item="${model.items}" class="cmp-stats__item">
             <div class="cmp-stats__content">
                 <span class="cmp-stats__num">${item.number}</span>
                 <span class="cmp-stats__label">${item.label}</span>
