@@ -3181,20 +3181,27 @@ body > .root.container > .aem-Grid {
 
 /* the bar: full-width, logo hugs the left, nav hugs the right, tight height */
 .cmp-experiencefragment--header .cmp-container,
-.experiencefragment--header .cmp-container {
+.experiencefragment--header .cmp-container,
+.cmp-container:has(.cmp-navigation) {
   display: flex !important;
   align-items: center !important;
   gap: .4rem 1rem !important;
+  box-sizing: border-box !important;
   max-width: none !important;        /* was 1240px centered -> big side gaps */
   width: 100% !important;
   margin: 0 !important;
-  padding: .45rem clamp(1.25rem, 3vw, 2.25rem) !important;  /* less top/bottom + tighter sides */
+  padding: .5rem clamp(1.25rem, 3vw, 2.5rem) !important;
+  padding-left: clamp(1.25rem, 3vw, 2.5rem) !important;   /* kill the leftover 180px logo padding */
+  padding-right: clamp(1.25rem, 3vw, 2.5rem) !important;
 }
 
-/* no gap above the header, and keep the sticky chain unclipped so it sticks */
-html, body { margin: 0 !important; }
-body > .root:first-child,
-body > .root.container:first-child { padding-top: 0 !important; margin-top: 0 !important; }
+/* KILL the 76px top padding that was reserved for the old FIXED header.
+   The header is sticky (in flow) now, so that padding was just a gap on top. */
+.root.container,
+.root.container > .aem-Grid { padding-top: 0 !important; margin-top: 0 !important; }
+html, body { margin: 0 !important; padding-top: 0 !important; }
+
+/* sticky needs an unclipped ancestor chain — otherwise it silently won't stick */
 html, body,
 .root, .root.container,
 .root > .aem-Grid, .root.container > .aem-Grid,
