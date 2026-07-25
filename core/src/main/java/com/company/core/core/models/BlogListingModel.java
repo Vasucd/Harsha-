@@ -112,7 +112,13 @@ public class BlogListingModel {
     }
 
     private BlogItem toBlogItem(Page page) {
-        Date sortDate = page.getLastModified() != null ? page.getLastModified().getTime() : page.getProperties().get("jcr:created", Date.class);
+        // Prefer an authored publish date; fall back to last-modified, then created.
+        Date sortDate = page.getProperties().get("publishDate", Date.class);
+        if (sortDate == null) {
+            sortDate = page.getLastModified() != null
+                    ? page.getLastModified().getTime()
+                    : page.getProperties().get("jcr:created", Date.class);
+        }
         String title = StringUtils.defaultIfBlank(page.getTitle(), page.getName());
         String description = StringUtils.defaultIfBlank(page.getDescription(), StringUtils.EMPTY);
         return new BlogItem(title, description, page.getPath() + ".html", sortDate);

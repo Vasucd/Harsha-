@@ -7,6 +7,7 @@
         authorRole="Head Fitness Coach"
         cq:template="/conf/company/settings/wcm/templates/page-content"
         jcr:primaryType="cq:PageContent"
+        publishDate="{Date}2026-07-10T09:00:00.000+05:30"
         jcr:title="Fat Loss Guide: 5 Habits That Work"
         jcr:description="Simple habit-based fat loss strategies for sustainable progress."
         sling:resourceType="company/components/page">

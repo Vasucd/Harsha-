@@ -3026,13 +3026,16 @@ body > .root.container > .aem-Grid {
 /* long feature text wraps instead of overflowing the card */
 .cmp-pricing__features li,
 .cmp-pricing__intro { overflow-wrap: anywhere; }
-/* guard: nothing pasted into a field can blow the card out */
-.cmp-pricing__card { min-width: 0; overflow: hidden; }
+/* guard: nothing pasted into a field can blow the card out.
+   NB: overflow:hidden must NOT go on the card itself — the "Most popular"
+   badge sits above the card top (top:-.7rem) and would get clipped. Clip
+   the body instead, and clamp any media. */
+.cmp-pricing__card { min-width: 0; }
 .cmp-pricing__card img,
 .cmp-pricing__card svg,
 .cmp-pricing__card iframe,
 .cmp-pricing__card video { max-width: 100%; height: auto; }
-.cmp-pricing__body { min-width: 0; }
+.cmp-pricing__body { min-width: 0; overflow: hidden; }
 
 .cmp-pricing__features li::before {
   content: "✓";

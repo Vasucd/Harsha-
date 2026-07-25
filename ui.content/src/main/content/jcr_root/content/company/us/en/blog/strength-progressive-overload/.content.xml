@@ -7,6 +7,7 @@
         authorRole="Head Fitness Coach"
         cq:template="/conf/company/settings/wcm/templates/page-content"
         jcr:primaryType="cq:PageContent"
+        publishDate="{Date}2026-07-23T09:00:00.000+05:30"
         jcr:title="Progressive Overload Explained"
         jcr:description="How to increase training volume and intensity safely for long-term strength gains."
         sling:resourceType="company/components/page">

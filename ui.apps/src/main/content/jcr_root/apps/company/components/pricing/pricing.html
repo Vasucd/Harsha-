@@ -26,7 +26,7 @@
             <a
                     data-sly-test="${plan.ctaLabel}"
                     class="cmp-pricing__cta"
-                    href="${plan.ctaLink @ context='uri'}">${plan.ctaLabel @ context='text'}</a>
+                    href="${plan.ctaLink ? plan.ctaLink : '#' @ context='uri'}">${plan.ctaLabel @ context='text'}</a>
         </div>
     </div>
 </section>
