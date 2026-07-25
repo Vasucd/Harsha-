@@ -3159,3 +3159,55 @@ body > .root.container > .aem-Grid {
   border-bottom: 1px solid rgba(255, 255, 255, .16);
 }
 .cmp-stats--vertical .cmp-stats__item:last-child { border-bottom: none; }
+
+/* =============================================================
+   HEADER — clean solid bar (authoritative; overrides the
+   transparent/blur sticky header that let the hero bleed through
+   and the nav overlap). Edit the header here, not above.
+   ============================================================= */
+.cmp-experiencefragment--header,
+.experiencefragment--header {
+  position: sticky !important;
+  top: 0;
+  z-index: 100;
+  background: #ffffff !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  border-bottom: 1px solid var(--ink-200, #dde4ee) !important;
+  box-shadow: 0 2px 10px rgba(15, 23, 32, .06);
+}
+.cmp-experiencefragment--header::after,
+.experiencefragment--header::after { display: none !important; } /* kill the scroll-progress bar */
+
+/* the bar: logo left, nav right, one clean row */
+.cmp-experiencefragment--header .cmp-container,
+.experiencefragment--header .cmp-container {
+  display: flex !important;
+  align-items: center !important;
+  gap: .5rem 1.25rem !important;
+  max-width: 1240px;
+  margin-inline: auto !important;
+  padding: .7rem clamp(1rem, 3vw, 2rem) !important;
+}
+
+/* nav: horizontal, right-aligned, wraps gracefully (never overlaps) */
+.cmp-experiencefragment--header .cmp-navigation,
+.experiencefragment--header .cmp-navigation { margin-left: auto !important; min-width: 0; }
+.cmp-experiencefragment--header .cmp-navigation__group--level-0,
+.experiencefragment--header .cmp-navigation__group--level-0 {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: .35rem clamp(.75rem, 1.8vw, 1.4rem) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+.cmp-experiencefragment--header .cmp-navigation__item,
+.experiencefragment--header .cmp-navigation__item { margin: 0 !important; }
+.cmp-experiencefragment--header .cmp-navigation__item-link,
+.experiencefragment--header .cmp-navigation__item-link {
+  white-space: nowrap !important;
+  padding: .3rem 0 !important;
+}
