@@ -3167,9 +3167,14 @@ body > .root.container > .aem-Grid {
    ============================================================= */
 .cmp-experiencefragment--header,
 .experiencefragment--header {
-  position: sticky !important;
-  top: 0;
-  z-index: 100;
+  position: fixed !important;   /* fixed = always pinned + naturally full-bleed
+                                   (sticky failed: its parent column is short) */
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  margin: 0 !important;
+  z-index: 1000;
   background: #ffffff !important;
   -webkit-backdrop-filter: none !important;
   backdrop-filter: none !important;
@@ -3195,17 +3200,17 @@ body > .root.container > .aem-Grid {
   padding-right: clamp(1.25rem, 3vw, 2.5rem) !important;
 }
 
-/* KILL the 76px top padding that was reserved for the old FIXED header.
-   The header is sticky (in flow) now, so that padding was just a gap on top. */
-.root.container,
-.root.container > .aem-Grid { padding-top: 0 !important; margin-top: 0 !important; }
+/* the header is fixed (out of flow) — offset the page content by its height so
+   nothing hides under it. ~62px = .5rem*2 padding + ~40px logo/nav + 1px border.
+   Apply the offset on ONE level only (the page container) to avoid doubling it. */
 html, body { margin: 0 !important; padding-top: 0 !important; }
-
-/* sticky needs an unclipped ancestor chain — otherwise it silently won't stick */
-html, body,
-.root, .root.container,
-.root > .aem-Grid, .root.container > .aem-Grid,
-.aem-GridColumn.experiencefragment { overflow: visible !important; }
+.root.container { padding-top: 62px !important; margin-top: 0 !important; }
+.root:not(.container) { padding-top: 62px !important; }   /* fallback if no .container */
+@media (max-width: 700px) {
+  /* nav can wrap to 2 rows on small screens -> taller header */
+  .root.container,
+  .root:not(.container) { padding-top: 96px !important; }
+}
 
 /* nav: horizontal, right-aligned, wraps gracefully (never overlaps) */
 .cmp-experiencefragment--header .cmp-navigation,
