@@ -3056,6 +3056,10 @@ body > .root.container > .aem-Grid {
 /* button: outlined by default, solid on the featured plan */
 .cmp-pricing__cta {
   display: block;
+  position: relative;   /* sit above any sibling so the click always lands */
+  z-index: 2;
+  cursor: pointer;
+  pointer-events: auto;
   margin-top: 1.75rem;
   padding: .85rem 1.25rem;
   border-radius: 10px;
