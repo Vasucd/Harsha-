@@ -3212,24 +3212,40 @@ html, body { margin: 0 !important; padding-top: 0 !important; }
   .root:not(.container) { padding-top: 96px !important; }
 }
 
-/* nav: horizontal, right-aligned, wraps gracefully (never overlaps) */
+/* nav: ONE horizontal row, right-aligned. Target every possible group class
+   (AEM renders the top-level list as .cmp-navigation__group, not --level-0). */
 .cmp-experiencefragment--header .cmp-navigation,
 .experiencefragment--header .cmp-navigation { margin-left: auto !important; min-width: 0; }
+.cmp-experiencefragment--header .cmp-navigation > ul,
+.cmp-experiencefragment--header .cmp-navigation__group,
 .cmp-experiencefragment--header .cmp-navigation__group--level-0,
+.experiencefragment--header .cmp-navigation > ul,
+.experiencefragment--header .cmp-navigation__group,
 .experiencefragment--header .cmp-navigation__group--level-0 {
   display: flex !important;
-  flex-wrap: wrap !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;          /* keep it on ONE line */
   align-items: center !important;
   justify-content: flex-end !important;
-  gap: .35rem clamp(.75rem, 1.8vw, 1.4rem) !important;
+  gap: clamp(.6rem, 1.6vw, 1.5rem) !important;
   margin: 0 !important;
   padding: 0 !important;
   list-style: none !important;
+  width: auto !important;
+}
+/* only the TOP-level list is a row; any dropdown submenu stays vertical */
+.cmp-experiencefragment--header .cmp-navigation__item .cmp-navigation__group {
+  flex-direction: column !important;
+  flex-wrap: nowrap !important;
 }
 .cmp-experiencefragment--header .cmp-navigation__item,
-.experiencefragment--header .cmp-navigation__item { margin: 0 !important; }
+.experiencefragment--header .cmp-navigation__item {
+  margin: 0 !important;
+  list-style: none !important;
+}
 .cmp-experiencefragment--header .cmp-navigation__item-link,
 .experiencefragment--header .cmp-navigation__item-link {
+  display: inline-block !important;
   white-space: nowrap !important;
   padding: .3rem 0 !important;
 }
