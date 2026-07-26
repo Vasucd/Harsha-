@@ -3233,3 +3233,18 @@ html, body { margin: 0 !important; padding-top: 0 !important; }
   white-space: nowrap !important;
   padding: .3rem 0 !important;
 }
+
+/* =============================================================
+   HERO — lock the background image (fixes vertical tiling)
+   A Style System "Background color"/"Elevated" style sets a
+   `background:` shorthand, which resets background-size/repeat and
+   makes the hero image tile. Force cover/no-repeat so it can't.
+   ============================================================= */
+.cmp-hero-banner {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  min-height: clamp(20rem, 42vw, 34rem) !important;
+}
+/* if an image is set, don't let a style paint a solid colour over it */
+.cmp-hero-banner[style*="background-image"] { background-color: transparent !important; }
