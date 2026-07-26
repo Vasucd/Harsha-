@@ -3328,3 +3328,17 @@ html, body { margin: 0 !important; padding-top: 0 !important; }
 .cmp-experiencefragment--header .cmp-navigation__item--level-2 {
   display: none !important;
 }
+
+/* =============================================================
+   REMOVE the SECOND header. The deployed header XF contains a
+   stray NESTED experience fragment + a language navigation inside
+   its container — they render a whole second header/nav. The real
+   header is the CSS logo (::before) + the .navigation only. Hide
+   the nested XF and language nav so only ONE header shows.
+   ============================================================= */
+.cmp-experiencefragment--header .cmp-container .experiencefragment,
+.cmp-experiencefragment--header .cmp-container .cmp-experiencefragment,
+.cmp-experiencefragment--header .languagenavigation,
+.cmp-experiencefragment--header .cmp-languagenavigation {
+  display: none !important;
+}
