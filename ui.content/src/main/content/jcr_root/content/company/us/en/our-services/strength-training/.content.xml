@@ -3,11 +3,66 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:template="/conf/company/settings/wcm/templates/page-content"
-        jcr:primaryType="cq:PageContent" jcr:title="Strength Training"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Strength Training"
+        jcr:description="Progressive overload coaching to build real, lasting strength."
         sling:resourceType="company/components/page">
-        <root jcr:primaryType="nt:unstructured" sling:resourceType="company/components/container" layout="responsiveGrid">
-            <title jcr:primaryType="nt:unstructured" sling:resourceType="company/components/title" jcr:title="Strength Training" type="h1"/>
-            <text jcr:primaryType="nt:unstructured" sling:resourceType="company/components/text" text="&lt;p>Progressive overload programming to build real, lasting strength.&lt;/p>" textIsRich="true"/>
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="company/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="company/components/container"
+                layout="responsiveGrid">
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="company/components/container"
+                    layout="responsiveGrid">
+                    <hero
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="company/components/hero-banner"
+                        title="Build Real, Lasting Strength"
+                        description="&lt;p>Progressive overload programming with hands-on coaching to build strength, power and confidence under the bar.&lt;/p>"
+                        image="/content/dam/company/fitness/home-hero.jpg"
+                        altText="Strength training"
+                        ctaLabel="Book a Free Consult"
+                        ctaLink="/content/company/us/en/contact-us"/>
+                    <benefits
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="company/components/feature-grid"
+                        sectionTitle="What's included"
+                        sectionIntro="Coached programming that actually progresses.">
+                        <features jcr:primaryType="nt:unstructured">
+                            <item_0 jcr:primaryType="nt:unstructured" icon="&#127947;" title="Strength programming" description="Structured plans built around the big lifts and your individual goals."/>
+                            <item_1 jcr:primaryType="nt:unstructured" icon="&#128170;" title="Hands-on form coaching" description="Real-time technique correction so every rep is safe and effective."/>
+                            <item_2 jcr:primaryType="nt:unstructured" icon="&#128200;" title="Progressive overload" description="Systematic progression so you keep getting stronger week after week."/>
+                            <item_3 jcr:primaryType="nt:unstructured" icon="&#129309;" title="1:1 support" description="Direct access to your coach for adjustments, questions and accountability."/>
+                        </features>
+                    </benefits>
+                    <intro
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="company/components/text"
+                        textIsRich="true"
+                        text="&lt;p>Whether you're new to lifting or chasing a new PR, this program builds strength the right way: sound technique, intelligent programming and steady progression. Your coach designs each block around your goals and adjusts as you progress.&lt;/p>&lt;p>Expect to move better, lift more, and build strength that carries over into everything you do.&lt;/p>"/>
+                    <quotes
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="company/components/testimonials"
+                        sectionTitle="Member results">
+                        <items jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" rating="{Long}5" name="Dan R." program="Strength program" quote="Hit a 140kg deadlift I never thought possible. Progressive overload works."/>
+                            <item1 jcr:primaryType="nt:unstructured" rating="{Long}5" name="Leah M." program="Strength program" quote="I feel strong and capable for the first time. The coaching made it click."/>
+                        </items>
+                    </quotes>
+                    <cta
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="company/components/cta-band"
+                        heading="Ready to get seriously strong?"
+                        text="Book a free consult and we'll build a strength plan around your goals."
+                        ctaLabel="Book a Free Consult"
+                        ctaLink="/content/company/us/en/contact-us"/>
+                </container>
+            </container>
         </root>
     </jcr:content>
 </jcr:root>

@@ -3,11 +3,66 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:template="/conf/company/settings/wcm/templates/page-content"
-        jcr:primaryType="cq:PageContent" jcr:title="Fat Loss"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Fat Loss"
+        jcr:description="Sustainable fat loss through coached nutrition and conditioning."
         sling:resourceType="company/components/page">
-        <root jcr:primaryType="nt:unstructured" sling:resourceType="company/components/container" layout="responsiveGrid">
-            <title jcr:primaryType="nt:unstructured" sling:resourceType="company/components/title" jcr:title="Fat Loss" type="h1"/>
-            <text jcr:primaryType="nt:unstructured" sling:resourceType="company/components/text" text="&lt;p>Coached nutrition and conditioning to lose fat and keep it off.&lt;/p>" textIsRich="true"/>
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="company/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="company/components/container"
+                layout="responsiveGrid">
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="company/components/container"
+                    layout="responsiveGrid">
+                    <hero
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="company/components/hero-banner"
+                        title="Fat Loss Without the Burnout"
+                        description="&lt;p>Sustainable fat loss through coached nutrition, smart conditioning and habits that actually stick — no crash diets.&lt;/p>"
+                        image="/content/dam/company/fitness/services-hero.jpg"
+                        altText="Athlete training"
+                        ctaLabel="Book a Free Consult"
+                        ctaLink="/content/company/us/en/contact-us"/>
+                    <benefits
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="company/components/feature-grid"
+                        sectionTitle="What's included"
+                        sectionIntro="Everything you need to lose fat and keep it off.">
+                        <features jcr:primaryType="nt:unstructured">
+                            <item_0 jcr:primaryType="nt:unstructured" icon="&#128293;" title="Conditioning sessions" description="Efficient cardio and circuit training that burns fat and builds work capacity."/>
+                            <item_1 jcr:primaryType="nt:unstructured" icon="&#129382;" title="Nutrition coaching" description="A sustainable plan around your life — macros and habits, not restriction."/>
+                            <item_2 jcr:primaryType="nt:unstructured" icon="&#128202;" title="Progress tracking" description="Regular check-ins on body composition so you always know it's working."/>
+                            <item_3 jcr:primaryType="nt:unstructured" icon="&#129309;" title="Weekly accountability" description="A coach in your corner every week to keep you consistent."/>
+                        </features>
+                    </benefits>
+                    <intro
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="company/components/text"
+                        textIsRich="true"
+                        text="&lt;p>This program is for anyone who wants to lose fat for good — without hopping between fad diets. We pair coached conditioning with a nutrition approach built around your real schedule, then track the numbers that matter so progress is steady and repeatable.&lt;/p>&lt;p>Most members see meaningful changes within the first 6&#8211;8 weeks and, more importantly, learn the habits to maintain them.&lt;/p>"/>
+                    <quotes
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="company/components/testimonials"
+                        sectionTitle="Member results">
+                        <items jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" rating="{Long}5" name="Priya S." program="Fat-loss program" quote="Down 8kg and stronger than ever in 12 weeks. The coaching is next level."/>
+                            <item1 jcr:primaryType="nt:unstructured" rating="{Long}5" name="Rohan K." program="Fat-loss program" quote="Finally a plan I could stick to. No crash diets, just steady results."/>
+                        </items>
+                    </quotes>
+                    <cta
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="company/components/cta-band"
+                        heading="Ready to start your transformation?"
+                        text="Book a free consult and we'll build a fat-loss plan around your goals and schedule."
+                        ctaLabel="Book a Free Consult"
+                        ctaLink="/content/company/us/en/contact-us"/>
+                </container>
+            </container>
         </root>
     </jcr:content>
 </jcr:root>

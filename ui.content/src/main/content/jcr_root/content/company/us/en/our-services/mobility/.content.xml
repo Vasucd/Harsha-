@@ -3,11 +3,66 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:template="/conf/company/settings/wcm/templates/page-content"
-        jcr:primaryType="cq:PageContent" jcr:title="Mobility"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Mobility"
+        jcr:description="Mobility and recovery coaching to move better and train pain-free."
         sling:resourceType="company/components/page">
-        <root jcr:primaryType="nt:unstructured" sling:resourceType="company/components/container" layout="responsiveGrid">
-            <title jcr:primaryType="nt:unstructured" sling:resourceType="company/components/title" jcr:title="Mobility" type="h1"/>
-            <text jcr:primaryType="nt:unstructured" sling:resourceType="company/components/text" text="&lt;p>Move better and stay injury-free with targeted mobility work.&lt;/p>" textIsRich="true"/>
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="company/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="company/components/container"
+                layout="responsiveGrid">
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="company/components/container"
+                    layout="responsiveGrid">
+                    <hero
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="company/components/hero-banner"
+                        title="Move Better, Train Pain-Free"
+                        description="&lt;p>Mobility and recovery coaching to improve movement quality, reduce stiffness and prevent injury — so you can train for life.&lt;/p>"
+                        image="/content/dam/company/fitness/about-hero.jpg"
+                        altText="Mobility training"
+                        ctaLabel="Book a Free Consult"
+                        ctaLink="/content/company/us/en/contact-us"/>
+                    <benefits
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="company/components/feature-grid"
+                        sectionTitle="What's included"
+                        sectionIntro="Move well, recover faster, stay injury-free.">
+                        <features jcr:primaryType="nt:unstructured">
+                            <item_0 jcr:primaryType="nt:unstructured" icon="&#129496;" title="Mobility flows" description="Guided routines that open up hips, shoulders and spine for better range of motion."/>
+                            <item_1 jcr:primaryType="nt:unstructured" icon="&#127919;" title="Movement assessment" description="We find the restrictions holding you back and build a plan to fix them."/>
+                            <item_2 jcr:primaryType="nt:unstructured" icon="&#128170;" title="Recovery protocols" description="Structured recovery so you train harder with less soreness and downtime."/>
+                            <item_3 jcr:primaryType="nt:unstructured" icon="&#129309;" title="Guided sessions" description="Coached, progressive sessions — never a generic stretching video."/>
+                        </features>
+                    </benefits>
+                    <intro
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="company/components/text"
+                        textIsRich="true"
+                        text="&lt;p>Whether you sit at a desk all day or train hard and feel beaten up, this program restores the movement your body is missing. We assess how you move, target the real restrictions, and coach you through mobility and recovery work that fits into a busy week.&lt;/p>&lt;p>The result: less pain, better positions in your lifts, and a body that holds up for the long run.&lt;/p>"/>
+                    <quotes
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="company/components/testimonials"
+                        sectionTitle="Member results">
+                        <items jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" rating="{Long}5" name="Marcus T." program="Mobility program" quote="Finally training without pain. The mobility work changed everything for me."/>
+                            <item1 jcr:primaryType="nt:unstructured" rating="{Long}5" name="Aisha N." program="Mobility program" quote="My squat and overhead press feel completely different. Worth every session."/>
+                        </items>
+                    </quotes>
+                    <cta
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="company/components/cta-band"
+                        heading="Ready to move pain-free?"
+                        text="Book a free consult and we'll assess your movement and build a mobility plan."
+                        ctaLabel="Book a Free Consult"
+                        ctaLink="/content/company/us/en/contact-us"/>
+                </container>
+            </container>
         </root>
     </jcr:content>
 </jcr:root>
