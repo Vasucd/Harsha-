@@ -3315,3 +3315,16 @@ html, body { margin: 0 !important; padding-top: 0 !important; }
   content: "" !important;
   display: block !important;
 }
+
+/* =============================================================
+   HEADER NAV — top-level only. The nav previously used
+   structureDepth=2 and pulled child pages (blog articles, service
+   sub-pages) into inline submenus. structureDepth is now 1; this
+   hides any nested submenu as a safety net so no child list can
+   ever render inline in the header.
+   ============================================================= */
+.cmp-experiencefragment--header .cmp-navigation__item--level-0 .cmp-navigation__group,
+.cmp-experiencefragment--header .cmp-navigation__item--level-1,
+.cmp-experiencefragment--header .cmp-navigation__item--level-2 {
+  display: none !important;
+}

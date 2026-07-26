@@ -27,7 +27,7 @@
                 collectAllPages="false"
                 navigationRoot="/content/company/us/en"
                 skipNavigationRoot="false"
-                structureDepth="2"/>
+                structureDepth="1"/>
             <logo
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="company/components/logo"/>
