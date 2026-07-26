@@ -3195,9 +3195,9 @@ body > .root.container > .aem-Grid {
   max-width: none !important;        /* was 1240px centered -> big side gaps */
   width: 100% !important;
   margin: 0 !important;
-  padding: .5rem clamp(1.25rem, 3vw, 2.5rem) !important;
-  padding-left: clamp(1.25rem, 3vw, 2.5rem) !important;   /* kill the leftover 180px logo padding */
-  padding-right: clamp(1.25rem, 3vw, 2.5rem) !important;
+  padding: .5rem clamp(.5rem, 1.2vw, 1rem) !important;    /* minimal side padding */
+  padding-left: clamp(.5rem, 1.2vw, 1rem) !important;
+  padding-right: clamp(.5rem, 1.2vw, 1rem) !important;
 }
 
 /* the header is fixed (out of flow) — offset the page content by its height so
@@ -3264,3 +3264,22 @@ html, body { margin: 0 !important; padding-top: 0 !important; }
 }
 /* if an image is set, don't let a style paint a solid colour over it */
 .cmp-hero-banner[style*="background-image"] { background-color: transparent !important; }
+
+/* =============================================================
+   TEMPLATE EDITOR / AUTHOR — don't let empty containers collapse
+   to a thin sliver in the structure view. An empty responsive grid
+   has no intrinsic width, so force author-mode containers/grids to
+   full width. Publish is unaffected (these classes are author-only).
+   ============================================================= */
+.aem-AuthorLayer-Edit .cmp-container,
+.aem-AuthorLayer-Edit .aem-Grid,
+.aem-AuthorLayer-Structure .cmp-container,
+.aem-AuthorLayer-Structure .aem-Grid,
+.aem-Grid--void,
+.cq-Editable-dom .aem-Grid,
+.cq-Editable-dom .cmp-container {
+  width: 100% !important;
+  min-width: 100% !important;
+  box-sizing: border-box;
+}
+.aem-Grid--void { min-height: 96px !important; }
