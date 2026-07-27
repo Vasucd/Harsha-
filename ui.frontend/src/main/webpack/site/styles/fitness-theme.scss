@@ -3266,23 +3266,33 @@ html, body { margin: 0 !important; padding-top: 0 !important; }
 .cmp-hero-banner[style*="background-image"] { background-color: transparent !important; }
 
 /* =============================================================
-   TEMPLATE EDITOR / AUTHOR — don't let empty containers collapse
-   to a thin sliver in the structure view. An empty responsive grid
-   has no intrinsic width, so force author-mode containers/grids to
-   full width. Publish is unaffected (these classes are author-only).
+   TEMPLATE EDITOR / AUTHOR — empty containers collapsed to a tiny
+   sliver you couldn't drop into. Force EVERY container/grid to full
+   width + a clearly visible min-height while editing. Broad on
+   purpose; all selectors are author-only so publish is untouched.
    ============================================================= */
-.aem-AuthorLayer-Edit .cmp-container,
-.aem-AuthorLayer-Edit .aem-Grid,
-.aem-AuthorLayer-Structure .cmp-container,
-.aem-AuthorLayer-Structure .aem-Grid,
-.aem-Grid--void,
-.cq-Editable-dom .aem-Grid,
-.cq-Editable-dom .cmp-container {
+.cq-wcm-edit .cmp-container,           .cq-wcm-edit .aem-Grid,           .cq-wcm-edit .responsivegrid,
+.aem-AuthorLayer-Edit .cmp-container,  .aem-AuthorLayer-Edit .aem-Grid,  .aem-AuthorLayer-Edit .responsivegrid,
+.aem-AuthorLayer-Structure .cmp-container, .aem-AuthorLayer-Structure .aem-Grid, .aem-AuthorLayer-Structure .responsivegrid,
+.cq-Editable-dom .aem-Grid,            .cq-Editable-dom .cmp-container,
+.cq-Editable-dom.aem-Grid,            .cq-Editable-dom.cmp-container {
   width: 100% !important;
   min-width: 100% !important;
-  box-sizing: border-box;
+  max-width: none !important;
+  float: none !important;
+  box-sizing: border-box !important;
 }
-.aem-Grid--void { min-height: 96px !important; }
+/* empty grids / drop targets get a real, clickable size */
+.aem-Grid--void,
+.cq-Editable-dom--container:empty,
+.aem-Grid > .new.section,
+.aem-Grid > .newpar,
+.aem-Grid > .cq-Editable-dom.new {
+  min-height: 140px !important;
+  width: 100% !important;
+  display: block !important;
+}
+.cq-placeholder { min-height: 60px !important; }
 
 /* =============================================================
    FIX DUPLICATE HEADER (authoritative, last word)
