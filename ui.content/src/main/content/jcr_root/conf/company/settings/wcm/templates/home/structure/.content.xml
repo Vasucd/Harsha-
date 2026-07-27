@@ -16,8 +16,14 @@
                 fragmentVariationPath="/content/experience-fragments/company/us/en/site/header/master"/>
             <container
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/foundation/components/responsivegrid"
-                editable="{Boolean}true"/>
+                sling:resourceType="company/components/container"
+                layout="responsiveGrid">
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="company/components/container"
+                    editable="{Boolean}true"
+                    layout="responsiveGrid"/>
+            </container>
             <experiencefragment-footer
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="company/components/experiencefragment"

@@ -3266,33 +3266,23 @@ html, body { margin: 0 !important; padding-top: 0 !important; }
 .cmp-hero-banner[style*="background-image"] { background-color: transparent !important; }
 
 /* =============================================================
-   TEMPLATE EDITOR / AUTHOR — empty containers collapsed to a tiny
-   sliver you couldn't drop into. Force EVERY container/grid to full
-   width + a clearly visible min-height while editing. Broad on
-   purpose; all selectors are author-only so publish is untouched.
+   TEMPLATE EDITOR / AUTHOR — don't let empty containers collapse
+   to a thin sliver in the structure view. An empty responsive grid
+   has no intrinsic width, so force author-mode containers/grids to
+   full width. Publish is unaffected (these classes are author-only).
    ============================================================= */
-.cq-wcm-edit .cmp-container,           .cq-wcm-edit .aem-Grid,           .cq-wcm-edit .responsivegrid,
-.aem-AuthorLayer-Edit .cmp-container,  .aem-AuthorLayer-Edit .aem-Grid,  .aem-AuthorLayer-Edit .responsivegrid,
-.aem-AuthorLayer-Structure .cmp-container, .aem-AuthorLayer-Structure .aem-Grid, .aem-AuthorLayer-Structure .responsivegrid,
-.cq-Editable-dom .aem-Grid,            .cq-Editable-dom .cmp-container,
-.cq-Editable-dom.aem-Grid,            .cq-Editable-dom.cmp-container {
+.aem-AuthorLayer-Edit .cmp-container,
+.aem-AuthorLayer-Edit .aem-Grid,
+.aem-AuthorLayer-Structure .cmp-container,
+.aem-AuthorLayer-Structure .aem-Grid,
+.aem-Grid--void,
+.cq-Editable-dom .aem-Grid,
+.cq-Editable-dom .cmp-container {
   width: 100% !important;
   min-width: 100% !important;
-  max-width: none !important;
-  float: none !important;
-  box-sizing: border-box !important;
+  box-sizing: border-box;
 }
-/* empty grids / drop targets get a real, clickable size */
-.aem-Grid--void,
-.cq-Editable-dom--container:empty,
-.aem-Grid > .new.section,
-.aem-Grid > .newpar,
-.aem-Grid > .cq-Editable-dom.new {
-  min-height: 140px !important;
-  width: 100% !important;
-  display: block !important;
-}
-.cq-placeholder { min-height: 60px !important; }
+.aem-Grid--void { min-height: 96px !important; }
 
 /* =============================================================
    FIX DUPLICATE HEADER (authoritative, last word)
@@ -3352,24 +3342,3 @@ html, body { margin: 0 !important; padding-top: 0 !important; }
 .cmp-experiencefragment--header .cmp-languagenavigation {
   display: none !important;
 }
-
-/* =============================================================
-   GRID COLUMNS — full width (fixes the compact "sliver" container)
-   In the template editor the empty editable container's grid column
-   shrank to the width of the "Drag components here" text. Force every
-   non-experiencefragment grid column to a full-width block so the
-   container is always full width and usable. Content on this site is
-   single-column (stacked sections), so this is safe on published pages.
-   ============================================================= */
-.aem-Grid > .aem-GridColumn:not(.experiencefragment) {
-  display: block !important;
-  width: 100% !important;
-  min-width: 0 !important;
-  max-width: 100% !important;
-  float: none !important;
-  clear: both !important;
-}
-.aem-GridColumn > .cmp-container,
-.aem-GridColumn > .cmp-container > .aem-Grid,
-.cmp-container > .aem-Grid { width: 100% !important; min-width: 100% !important; }
-.aem-Grid--void { min-height: 120px !important; width: 100% !important; display: block !important; }
