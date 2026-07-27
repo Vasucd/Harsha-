@@ -26,11 +26,8 @@
                 sling:resourceType="company/components/navigation"
                 collectAllPages="false"
                 navigationRoot="/content/company/us/en"
-                skipNavigationRoot="false"
+                skipNavigationRoot="true"
                 structureDepth="1"/>
-            <logo
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="company/components/logo"/>
         </root>
     </jcr:content>
 </jcr:root>

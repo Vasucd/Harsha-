@@ -3342,3 +3342,31 @@ html, body { margin: 0 !important; padding-top: 0 !important; }
 .cmp-experiencefragment--header .cmp-languagenavigation {
   display: none !important;
 }
+
+/* =============================================================
+   HEADER — sticky, single logo, full-bleed (LAST WORD)
+   position:fixed made the AEM editor render a duplicate header.
+   Use position:sticky (stays in flow -> no duplicate), full-bleed
+   to the viewport edges, no content offset needed. The logo comes
+   from the CSS ::before only (the <logo> component was removed from
+   the XF), so there is exactly one logo.
+   ============================================================= */
+.cmp-experiencefragment--header,
+.experiencefragment--header {
+  position: sticky !important;
+  top: 0 !important;
+  left: auto !important;
+  right: auto !important;
+  width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  z-index: 100 !important;
+  background: #ffffff !important;
+  border-bottom: 1px solid var(--ink-200, #dde4ee) !important;
+  box-shadow: 0 2px 10px rgba(15, 23, 32, .06);
+}
+/* sticky is in flow -> no fixed-header offset (kill the 76px/62px top padding) */
+.root.container { padding-top: 0 !important; }
+/* single logo: keep the CSS ::before, ensure no stray real logo */
+.cmp-experiencefragment--header .cmp-logo,
+.experiencefragment--header .cmp-logo { display: none !important; }
