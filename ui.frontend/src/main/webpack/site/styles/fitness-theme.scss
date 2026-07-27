@@ -3352,3 +3352,24 @@ html, body { margin: 0 !important; padding-top: 0 !important; }
 .cmp-experiencefragment--header .cmp-languagenavigation {
   display: none !important;
 }
+
+/* =============================================================
+   GRID COLUMNS — full width (fixes the compact "sliver" container)
+   In the template editor the empty editable container's grid column
+   shrank to the width of the "Drag components here" text. Force every
+   non-experiencefragment grid column to a full-width block so the
+   container is always full width and usable. Content on this site is
+   single-column (stacked sections), so this is safe on published pages.
+   ============================================================= */
+.aem-Grid > .aem-GridColumn:not(.experiencefragment) {
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  float: none !important;
+  clear: both !important;
+}
+.aem-GridColumn > .cmp-container,
+.aem-GridColumn > .cmp-container > .aem-Grid,
+.cmp-container > .aem-Grid { width: 100% !important; min-width: 100% !important; }
+.aem-Grid--void { min-height: 120px !important; width: 100% !important; display: block !important; }
