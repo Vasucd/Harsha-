@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        authorBio="Sara builds sustainable nutrition plans that fit real life - no crash diets, just steady results."
+        authorName="Sara Chen"
+        authorRole="Nutrition Coach"
+        cq:template="/conf/company/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        publishDate="{Date}2026-07-24T09:00:00.000+05:30"
+        jcr:title="How Much Protein Do You Really Need?"
+        jcr:description="A simple, science-based way to set your daily protein target."
+        sling:resourceType="company/components/page">
+        <root jcr:primaryType="nt:unstructured" sling:resourceType="company/components/container" layout="responsiveGrid">
+            <container jcr:primaryType="nt:unstructured" sling:resourceType="company/components/container" layout="responsiveGrid">
+              <container jcr:primaryType="nt:unstructured" sling:resourceType="company/components/container" layout="responsiveGrid">
+                <articleBody jcr:primaryType="nt:unstructured" sling:resourceType="company/components/text" textIsRich="true"
+                    text="&lt;h2&gt;Protein, Simplified&lt;/h2&gt;&lt;p&gt;For most people training regularly, 1.6-2.2g of protein per kg of bodyweight per day supports muscle and recovery.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Spread it across 3-4 meals&lt;/li&gt;&lt;li&gt;Prioritise a protein source each meal&lt;/li&gt;&lt;li&gt;Whole foods first, shakes to top up&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Consistency matters more than perfection.&lt;/p&gt;"/>
+                <authorInfo jcr:primaryType="nt:unstructured" sling:resourceType="company/components/author-info"/>
+              </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

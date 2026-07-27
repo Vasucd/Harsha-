@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        authorBio="Marcus is a movement specialist helping members train pain-free and move better for life."
+        authorName="Marcus Lee"
+        authorRole="Mobility &amp; Rehab Coach"
+        cq:template="/conf/company/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        publishDate="{Date}2026-07-06T09:00:00.000+05:30"
+        jcr:title="How Many Rest Days Do You Actually Need?"
+        jcr:description="Recovery is where the results happen."
+        sling:resourceType="company/components/page">
+        <root jcr:primaryType="nt:unstructured" sling:resourceType="company/components/container" layout="responsiveGrid">
+            <container jcr:primaryType="nt:unstructured" sling:resourceType="company/components/container" layout="responsiveGrid">
+              <container jcr:primaryType="nt:unstructured" sling:resourceType="company/components/container" layout="responsiveGrid">
+                <articleBody jcr:primaryType="nt:unstructured" sling:resourceType="company/components/text" textIsRich="true"
+                    text="&lt;h2&gt;Rest Is Part of the Plan&lt;/h2&gt;&lt;p&gt;Rest days let your body adapt and come back stronger.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;1-2 full rest days per week&lt;/li&gt;&lt;li&gt;Active recovery: walks, mobility&lt;/li&gt;&lt;li&gt;Listen to persistent fatigue&lt;/li&gt;&lt;/ul&gt;"/>
+                <authorInfo jcr:primaryType="nt:unstructured" sling:resourceType="company/components/author-info"/>
+              </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

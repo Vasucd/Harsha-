@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        authorBio="Dan specialises in progressive overload programming for lifters of every level."
+        authorName="Dan Rivera"
+        authorRole="Strength Coach"
+        cq:template="/conf/company/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        publishDate="{Date}2026-07-12T09:00:00.000+05:30"
+        jcr:title="The Beginner's Deadlift Checklist"
+        jcr:description="Set up safely and pull with confidence."
+        sling:resourceType="company/components/page">
+        <root jcr:primaryType="nt:unstructured" sling:resourceType="company/components/container" layout="responsiveGrid">
+            <container jcr:primaryType="nt:unstructured" sling:resourceType="company/components/container" layout="responsiveGrid">
+              <container jcr:primaryType="nt:unstructured" sling:resourceType="company/components/container" layout="responsiveGrid">
+                <articleBody jcr:primaryType="nt:unstructured" sling:resourceType="company/components/text" textIsRich="true"
+                    text="&lt;h2&gt;Pull Safely, Every Rep&lt;/h2&gt;&lt;p&gt;The deadlift is one of the best strength builders - when set up correctly.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Bar over mid-foot&lt;/li&gt;&lt;li&gt;Flat back, braced core&lt;/li&gt;&lt;li&gt;Push the floor away&lt;/li&gt;&lt;li&gt;Lock out with glutes&lt;/li&gt;&lt;/ul&gt;"/>
+                <authorInfo jcr:primaryType="nt:unstructured" sling:resourceType="company/components/author-info"/>
+              </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

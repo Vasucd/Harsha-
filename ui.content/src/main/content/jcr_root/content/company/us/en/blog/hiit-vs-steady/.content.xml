@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        authorBio="Ava is a certified strength coach who has helped 500+ members improve performance and confidence through structured training and recovery."
+        authorName="Ava Martinez"
+        authorRole="Head Fitness Coach"
+        cq:template="/conf/company/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        publishDate="{Date}2026-07-18T09:00:00.000+05:30"
+        jcr:title="HIIT vs Steady-State: Which Burns More Fat?"
+        jcr:description="Two cardio styles, one honest comparison."
+        sling:resourceType="company/components/page">
+        <root jcr:primaryType="nt:unstructured" sling:resourceType="company/components/container" layout="responsiveGrid">
+            <container jcr:primaryType="nt:unstructured" sling:resourceType="company/components/container" layout="responsiveGrid">
+              <container jcr:primaryType="nt:unstructured" sling:resourceType="company/components/container" layout="responsiveGrid">
+                <articleBody jcr:primaryType="nt:unstructured" sling:resourceType="company/components/text" textIsRich="true"
+                    text="&lt;h2&gt;Pick the Cardio You'll Actually Do&lt;/h2&gt;&lt;p&gt;HIIT is time-efficient; steady-state is easier to recover from. Both work for fat loss when paired with nutrition.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;HIIT: 1-2 short sessions per week&lt;/li&gt;&lt;li&gt;Steady-state: daily walks add up&lt;/li&gt;&lt;li&gt;Consistency beats intensity&lt;/li&gt;&lt;/ul&gt;"/>
+                <authorInfo jcr:primaryType="nt:unstructured" sling:resourceType="company/components/author-info"/>
+              </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

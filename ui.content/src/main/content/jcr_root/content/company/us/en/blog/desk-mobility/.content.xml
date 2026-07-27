@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        authorBio="Marcus is a movement specialist helping members train pain-free and move better for life."
+        authorName="Marcus Lee"
+        authorRole="Mobility &amp; Rehab Coach"
+        cq:template="/conf/company/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        publishDate="{Date}2026-07-20T09:00:00.000+05:30"
+        jcr:title="5 Mobility Drills for Desk Workers"
+        jcr:description="Undo the effects of sitting with a few minutes a day."
+        sling:resourceType="company/components/page">
+        <root jcr:primaryType="nt:unstructured" sling:resourceType="company/components/container" layout="responsiveGrid">
+            <container jcr:primaryType="nt:unstructured" sling:resourceType="company/components/container" layout="responsiveGrid">
+              <container jcr:primaryType="nt:unstructured" sling:resourceType="company/components/container" layout="responsiveGrid">
+                <articleBody jcr:primaryType="nt:unstructured" sling:resourceType="company/components/text" textIsRich="true"
+                    text="&lt;h2&gt;Move Better at Your Desk&lt;/h2&gt;&lt;p&gt;Long hours seated tighten hips and round shoulders. These drills reset your posture.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Hip flexor stretch&lt;/li&gt;&lt;li&gt;Thoracic rotations&lt;/li&gt;&lt;li&gt;Cat-cow&lt;/li&gt;&lt;li&gt;Wall slides&lt;/li&gt;&lt;li&gt;90/90 hip switches&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Two minutes an hour keeps you moving well.&lt;/p&gt;"/>
+                <authorInfo jcr:primaryType="nt:unstructured" sling:resourceType="company/components/author-info"/>
+              </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>
