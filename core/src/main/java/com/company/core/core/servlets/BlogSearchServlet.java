@@ -1,8 +1,11 @@
 package com.company.core.core.servlets;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -82,7 +85,7 @@ public class BlogSearchServlet extends SlingSafeMethodsServlet {
 
         matches.sort(
                 Comparator.comparing(
-                        Page::getLastModified,
+                        BlogSearchServlet::sortDate,
                         Comparator.nullsLast(Comparator.naturalOrder())
                 ).reversed()
         );
@@ -98,6 +101,25 @@ public class BlogSearchServlet extends SlingSafeMethodsServlet {
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
         response.getWriter().write(toJson(results));
+    }
+
+    private static Date sortDate(Page page) {
+        Date publishDate = page.getProperties().get("publishDate", Date.class);
+        if (publishDate != null) {
+            return publishDate;
+        }
+        Calendar lastMod = page.getLastModified();
+        if (lastMod != null) {
+            return lastMod.getTime();
+        }
+        return page.getProperties().get("jcr:created", Date.class);
+    }
+
+    private String formatDate(Date date) {
+        if (date == null) {
+            return "";
+        }
+        return new SimpleDateFormat("MMM d, yyyy", Locale.ENGLISH).format(date);
     }
 
     private int parseLimit(String limitParam) {
@@ -130,12 +152,24 @@ public class BlogSearchServlet extends SlingSafeMethodsServlet {
                     page.getDescription()
             );
 
+            String author = StringUtils.defaultString(
+                    page.getProperties().get("authorName", String.class)
+            );
+
+            String date = formatDate(sortDate(page));
+
             builder.append('{')
                     .append("\"title\":\"")
                     .append(escapeJson(title))
                     .append("\",")
                     .append("\"description\":\"")
                     .append(escapeJson(description))
+                    .append("\",")
+                    .append("\"author\":\"")
+                    .append(escapeJson(author))
+                    .append("\",")
+                    .append("\"date\":\"")
+                    .append(escapeJson(date))
                     .append("\",")
                     .append("\"path\":\"")
                     .append(escapeJson(page.getPath()))

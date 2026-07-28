@@ -2640,7 +2640,7 @@ body > .root.container > .aem-Grid {
 }
 
 /* =============================================================
-   BLOG LISTING — card grid redesign (authoritative)
+   BLOG LISTING — card grid + live search (authoritative)
    ============================================================= */
 .cmp-blog-listing {
   background: none;
@@ -2649,23 +2649,101 @@ body > .root.container > .aem-Grid {
   padding: clamp(1.5rem, 3vw, 2.5rem) 0;
   margin-block: var(--sp-5);
 }
+
+/* --- header: title + search on one comfortable row --- */
+.cmp-blog-listing__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+  margin: 0 0 clamp(1.5rem, 3vw, 2.25rem);
+}
 .cmp-blog-listing__title {
-  text-align: center;
   font-size: var(--fs-h2);
   color: var(--ink-900);
-  margin: 0 0 var(--sp-5);
-  padding-bottom: var(--sp-2);
+  margin: 0;
+  padding-bottom: .55rem;
   position: relative;
 }
 .cmp-blog-listing__title::after {
   content: "";
   position: absolute;
-  left: 50%; bottom: 0;
-  transform: translateX(-50%);
+  left: 0; bottom: 0;
   width: 64px; height: 4px;
   border-radius: var(--r-pill);
   background: linear-gradient(90deg, var(--fitness-primary), var(--fitness-accent));
 }
+
+/* --- search field --- */
+.cmp-blog-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1 1 260px;
+  max-width: 380px;
+  margin-left: auto;
+}
+.cmp-blog-search__icon {
+  position: absolute;
+  left: .95rem;
+  display: inline-flex;
+  color: var(--ink-400, #94a3b8);
+  pointer-events: none;
+}
+.cmp-blog-search__input {
+  width: 100%;
+  font: inherit;
+  font-size: var(--fs-sm);
+  color: var(--ink-900);
+  background: var(--surface);
+  border: 1px solid var(--ink-200);
+  border-radius: var(--r-pill);
+  padding: .7rem 2.5rem .7rem 2.75rem;
+  box-shadow: var(--el-1);
+  transition: border-color .2s ease, box-shadow .2s ease;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.cmp-blog-search__input::-webkit-search-decoration,
+.cmp-blog-search__input::-webkit-search-cancel-button { -webkit-appearance: none; }
+.cmp-blog-search__input::placeholder { color: var(--ink-400, #94a3b8); }
+.cmp-blog-search__input:focus {
+  outline: none;
+  border-color: var(--fitness-primary);
+  box-shadow: 0 0 0 3px rgba(14, 116, 144, .16);
+}
+.cmp-blog-search__clear {
+  position: absolute;
+  right: .55rem;
+  width: 1.6rem; height: 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  line-height: 1;
+  color: var(--ink-500);
+  background: var(--surface-2, #f1f5f9);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease;
+}
+.cmp-blog-search__clear:hover { background: var(--fitness-primary); color: #fff; }
+
+/* --- status line (result count / empty state) --- */
+.cmp-blog-listing__status {
+  margin: 0 0 var(--sp-4);
+  color: var(--ink-500);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+/* subtle fade while a search request is in flight */
+.cmp-blog-listing.is-searching .cmp-blog-listing__items { opacity: .55; }
+.cmp-blog-listing__items { transition: opacity .2s ease; }
+
+/* --- card grid --- */
 .cmp-blog-listing__items {
   display: grid;
   gap: clamp(1rem, 2.2vw, 1.75rem);
@@ -2675,16 +2753,13 @@ body > .root.container > .aem-Grid {
   padding: 0;
 }
 .cmp-blog-listing__item {
-  display: flex;
-  flex-direction: column;
   position: relative;
-  overflow: hidden;
   isolation: isolate;
   background: var(--surface);
   border: 1px solid var(--ink-200);
   border-radius: var(--r-lg);
   box-shadow: var(--el-1);
-  padding: clamp(1.35rem, 2.4vw, 1.9rem);
+  overflow: hidden;
   transition: transform .45s var(--ease-premium),
               box-shadow .45s var(--ease-premium),
               border-color .3s ease;
@@ -2698,6 +2773,7 @@ body > .root.container > .aem-Grid {
   transform: scaleX(0);
   transform-origin: left;
   transition: transform .45s var(--ease-premium);
+  z-index: 2;
 }
 .cmp-blog-listing__item:hover {
   transform: translateY(-6px);
@@ -2706,24 +2782,37 @@ body > .root.container > .aem-Grid {
 }
 .cmp-blog-listing__item:hover::before { transform: scaleX(1); }
 
+/* the whole card is a single clickable link */
+.cmp-blog-listing__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: clamp(1.35rem, 2.4vw, 1.9rem);
+  color: inherit;
+  text-decoration: none;
+}
+.cmp-blog-listing__eyebrow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .35rem;
+  margin: 0 0 .65rem;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--ink-400, #94a3b8);
+}
+.cmp-blog-listing__author { color: var(--fitness-accent); }
 .cmp-blog-listing__item-title {
   margin: 0 0 var(--sp-2);
   font-size: var(--fs-h3);
   line-height: 1.25;
-}
-.cmp-blog-listing__link {
   color: var(--ink-900);
   font-weight: 700;
-  text-decoration: none;
-  /* let the whole card be clickable via the title link */
+  transition: color .3s ease;
 }
-.cmp-blog-listing__link::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
-.cmp-blog-listing__link:hover { color: var(--fitness-primary); text-decoration: none; }
+.cmp-blog-listing__item:hover .cmp-blog-listing__item-title { color: var(--fitness-primary); }
 .cmp-blog-listing__description {
   color: var(--ink-500);
   font-size: var(--fs-body);
@@ -2739,7 +2828,6 @@ body > .root.container > .aem-Grid {
   font-weight: 700;
   font-size: var(--fs-sm);
   color: var(--fitness-primary);
-  text-decoration: none;
 }
 .cmp-blog-listing__more::after {
   content: "\2192";
@@ -2766,6 +2854,12 @@ body > .root.container > .aem-Grid {
 @keyframes blogCardRise {
   from { opacity: 0; transform: translateY(18px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 640px) {
+  .cmp-blog-listing__head { flex-direction: column; align-items: stretch; }
+  .cmp-blog-search { max-width: none; margin-left: 0; }
+  .cmp-blog-listing__title::after { left: 0; }
 }
 
 /* =============================================================

@@ -1,9 +1,11 @@
 package com.company.core.core.models;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.stream.Collectors;
 
 import javax.annotation.PostConstruct;
@@ -121,7 +123,11 @@ public class BlogListingModel {
         }
         String title = StringUtils.defaultIfBlank(page.getTitle(), page.getName());
         String description = StringUtils.defaultIfBlank(page.getDescription(), StringUtils.EMPTY);
-        return new BlogItem(title, description, page.getPath() + ".html", sortDate);
+        String author = StringUtils.defaultString(page.getProperties().get("authorName", String.class));
+        String formattedDate = sortDate != null
+                ? new SimpleDateFormat("MMM d, yyyy", Locale.ENGLISH).format(sortDate)
+                : StringUtils.EMPTY;
+        return new BlogItem(title, description, page.getPath() + ".html", sortDate, author, formattedDate);
     }
 
     public String getSectionTitle() {
@@ -141,12 +147,17 @@ public class BlogListingModel {
         private final String description;
         private final String path;
         private final Date sortDate;
+        private final String author;
+        private final String formattedDate;
 
-        public BlogItem(String title, String description, String path, Date sortDate) {
+        public BlogItem(String title, String description, String path, Date sortDate,
+                        String author, String formattedDate) {
             this.title = title;
             this.description = description;
             this.path = path;
             this.sortDate = sortDate;
+            this.author = author;
+            this.formattedDate = formattedDate;
         }
 
         public String getTitle() {
@@ -163,6 +174,14 @@ public class BlogListingModel {
 
         public Date getSortDate() {
             return sortDate;
+        }
+
+        public String getAuthor() {
+            return author;
+        }
+
+        public String getFormattedDate() {
+            return formattedDate;
         }
     }
 }

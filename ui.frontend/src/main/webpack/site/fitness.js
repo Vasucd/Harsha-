@@ -26,42 +26,121 @@
   const blogListings = document.querySelectorAll(".cmp-blog-listing[data-dynamic='true']");
   blogListings.forEach((listing) => {
     const rootPath = listing.getAttribute("data-blog-root");
-    const limit = listing.getAttribute("data-limit") || "3";
+    const limit = listing.getAttribute("data-limit") || "12";
     const list = listing.querySelector(".cmp-blog-listing__items");
     if (!rootPath || !list) {
       return;
     }
 
-    fetch(`/bin/company/blogsearch?rootPath=${encodeURIComponent(rootPath)}&limit=${encodeURIComponent(limit)}`)
-      .then((response) => response.json())
-      .then((payload) => {
-        if (!payload || !Array.isArray(payload.results) || !payload.results.length) {
-          return;
-        }
+    const input = listing.querySelector(".cmp-blog-search__input");
+    const clearBtn = listing.querySelector(".cmp-blog-search__clear");
+    const status = listing.querySelector(".cmp-blog-listing__status");
 
-        list.innerHTML = payload.results
-          .map(
-            (item) => `
-              <li class="cmp-blog-listing__item">
-                <h3 class="cmp-blog-listing__item-title">
-                  <a class="cmp-blog-listing__link" href="${item.path}">${item.title}</a>
-                </h3>
-                <p class="cmp-blog-listing__description">${item.description || ""}</p>
-                <a class="cmp-blog-listing__more" href="${item.path}" tabindex="-1" aria-hidden="true">
-                  <span class="cmp-blog-listing__more-label">Read article</span>
-                </a>
-              </li>`
-          )
-          .join("");
+    const escapeHtml = (value) =>
+      String(value == null ? "" : value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
 
-        // Re-trigger the staggered reveal now that cards have been injected.
-        listing.classList.remove("is-visible");
-        void listing.offsetWidth;
-        listing.classList.add("is-visible");
-      })
-      .catch(() => {
-        // Keep authored fallback list when search endpoint is unavailable.
-      });
+    const cardMarkup = (item) => {
+      const date = escapeHtml(item.date);
+      const author = escapeHtml(item.author);
+      let eyebrow = "";
+      if (date || author) {
+        eyebrow =
+          '<p class="cmp-blog-listing__eyebrow">' +
+          (date ? `<span class="cmp-blog-listing__date">${date}</span>` : "") +
+          (date && author ? " · " : "") +
+          (author ? `<span class="cmp-blog-listing__author">${author}</span>` : "") +
+          "</p>";
+      }
+      return `
+        <li class="cmp-blog-listing__item">
+          <a class="cmp-blog-listing__link" href="${escapeHtml(item.path)}">
+            ${eyebrow}
+            <h3 class="cmp-blog-listing__item-title">${escapeHtml(item.title)}</h3>
+            <p class="cmp-blog-listing__description">${escapeHtml(item.description)}</p>
+            <span class="cmp-blog-listing__more" aria-hidden="true">
+              <span class="cmp-blog-listing__more-label">Read article</span>
+            </span>
+          </a>
+        </li>`;
+    };
+
+    const replay = () => {
+      listing.classList.remove("is-visible");
+      void listing.offsetWidth;
+      listing.classList.add("is-visible");
+    };
+
+    const setStatus = (message) => {
+      if (!status) return;
+      if (message) {
+        status.textContent = message;
+        status.hidden = false;
+      } else {
+        status.textContent = "";
+        status.hidden = true;
+      }
+    };
+
+    const render = (query) => {
+      const q = (query || "").trim();
+      const url =
+        `/bin/company/blogsearch?rootPath=${encodeURIComponent(rootPath)}` +
+        `&limit=${encodeURIComponent(limit)}` +
+        (q ? `&q=${encodeURIComponent(q)}` : "");
+
+      listing.classList.add("is-searching");
+
+      fetch(url)
+        .then((response) => response.json())
+        .then((payload) => {
+          const results = payload && Array.isArray(payload.results) ? payload.results : [];
+          listing.classList.remove("is-searching");
+
+          if (!results.length) {
+            list.innerHTML = "";
+            setStatus(q ? `No articles match "${q}".` : "No articles found.");
+            return;
+          }
+
+          list.innerHTML = results.map(cardMarkup).join("");
+          setStatus(
+            q ? `${results.length} article${results.length === 1 ? "" : "s"} for "${q}".` : ""
+          );
+          replay();
+        })
+        .catch(() => {
+          listing.classList.remove("is-searching");
+          // Keep authored fallback list when search endpoint is unavailable.
+        });
+    };
+
+    // Initial dynamic load (latest articles, newest first).
+    render("");
+
+    if (input) {
+      let debounce;
+      const onInput = () => {
+        const hasValue = input.value.trim().length > 0;
+        if (clearBtn) clearBtn.hidden = !hasValue;
+        window.clearTimeout(debounce);
+        debounce = window.setTimeout(() => render(input.value), 220);
+      };
+      input.addEventListener("input", onInput);
+      input.addEventListener("search", onInput);
+
+      if (clearBtn) {
+        clearBtn.addEventListener("click", () => {
+          input.value = "";
+          clearBtn.hidden = true;
+          input.focus();
+          render("");
+        });
+      }
+    }
   });
 
   /* ---- Contact form: AJAX submit + success/error popup ---- */
